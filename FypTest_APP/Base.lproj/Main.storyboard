@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pz3-yE-Z0x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pz3-yE-Z0x">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -24,12 +24,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="996" y="760"/>
+            <point key="canvasLocation" x="301" y="806"/>
         </scene>
-        <!--Mac View Controller-->
+        <!--Search Map View Controller-->
         <scene sceneID="BcM-7D-fS3">
             <objects>
-                <viewController id="y0b-kq-rkq" customClass="MacViewController" customModule="FYP_SECOND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y0b-kq-rkq" customClass="SearchMapViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cDu-CT-GLO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,12 +45,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhG-Pn-jtd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1595.6521739130435" y="69.642857142857139"/>
+            <point key="canvasLocation" x="300" y="70"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="GV3-90-5z9">
             <objects>
-                <viewController id="EG9-ax-bVg" customClass="homeViewController" customModule="FYP_SECOND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="EG9-ax-bVg" customClass="HomeViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tWI-Vq-ISX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -211,7 +211,7 @@
         <!--TRAINING-->
         <scene sceneID="hdu-7K-vAh">
             <objects>
-                <viewController id="vUC-OD-De1" customClass="TrainingConfirmViewController" customModule="FYP_SECOND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vUC-OD-De1" customClass="TrainingRecordViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJm-et-YUU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,12 +314,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwq-x7-kXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4.3478260869565224" y="790.84821428571422"/>
+            <point key="canvasLocation" x="-564" y="806"/>
         </scene>
         <!--TRAINING-->
         <scene sceneID="lIc-wP-vOO">
             <objects>
-                <viewController id="jkS-5e-hcS" customClass="TrainingSelectionViewController" customModule="FYP_SECOND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jkS-5e-hcS" customClass="TrainingSelectionViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AyG-Ry-Csp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -484,12 +484,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyk-0q-zeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-772.46376811594212" y="790.84821428571422"/>
+            <point key="canvasLocation" x="-1500" y="806"/>
         </scene>
         <!--GYM SEARCH-->
         <scene sceneID="oSl-lC-Uew">
             <objects>
-                <viewController id="3Pw-zv-i4l" customClass="SearchViewController" customModule="FYP_SECOND" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3Pw-zv-i4l" customClass="SearchViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gvB-7i-epE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -525,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akh-kU-jzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.94202898550736" y="69.642857142857139"/>
+            <point key="canvasLocation" x="-564" y="70"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xwe-jo-k8x">
