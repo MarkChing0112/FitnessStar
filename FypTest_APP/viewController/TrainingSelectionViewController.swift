@@ -144,16 +144,20 @@ class TrainingSelectionViewController: UIViewController {
     }
     func toTrainBRecord(){
         let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR1")
-        
-
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR1") as! TrainingRecord1ViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
     @IBAction func NextPageBtnOnTap(_ sender: Any) {
         let ref = Database.database().reference()
         if BICEPS == true{
             ref.child("Record").child("Record1").setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             toTrainBRecord()
+        }else if TRICEPS == true{
+            
+        }else if CHEST == true{
+            
+        }else if BACK == true{
+            
         }
-        
     }
 }

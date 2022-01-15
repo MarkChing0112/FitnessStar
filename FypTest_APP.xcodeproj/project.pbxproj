@@ -22,6 +22,9 @@
 		83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E2E2792CCB600600104 /* HomeViewController.swift */; };
 		83329E312792CE9300600104 /* FYP_Gym_demo 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 83329E302792CE9300600104 /* FYP_Gym_demo 1.mlmodel */; };
 		83329E332792D08F00600104 /* AI2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E322792D08E00600104 /* AI2ViewController.swift */; };
+		83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */; };
+		83329E3727931C9E00600104 /* TrainingRecord3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */; };
+		83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */; };
 		838BF7D42792B2370015AC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 838BF7D32792B2370015AC84 /* GoogleService-Info.plist */; };
 		838BF7D72792B6110015AC84 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7D62792B6110015AC84 /* FirebaseAnalytics */; };
 		838BF7D92792B6110015AC84 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7D82792B6110015AC84 /* FirebaseAuth */; };
@@ -51,6 +54,9 @@
 		83329E2E2792CCB600600104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		83329E302792CE9300600104 /* FYP_Gym_demo 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FYP_Gym_demo 1.mlmodel"; sourceTree = "<group>"; };
 		83329E322792D08E00600104 /* AI2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI2ViewController.swift; sourceTree = "<group>"; };
+		83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord2ViewController.swift; sourceTree = "<group>"; };
+		83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord3ViewController.swift; sourceTree = "<group>"; };
+		83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord4ViewController.swift; sourceTree = "<group>"; };
 		838BF7D32792B2370015AC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +123,9 @@
 				83329E2C2792CCAB00600104 /* SearchMapViewController.swift */,
 				83329E2E2792CCB600600104 /* HomeViewController.swift */,
 				83329E322792D08E00600104 /* AI2ViewController.swift */,
+				83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */,
+				83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */,
+				83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -214,9 +223,12 @@
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
+				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,
 				4F10C20026F748D10032B955 /* SceneDelegate.swift in Sources */,
+				83329E3727931C9E00600104 /* TrainingRecord3ViewController.swift in Sources */,
 				83329E312792CE9300600104 /* FYP_Gym_demo 1.mlmodel in Sources */,
+				83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
