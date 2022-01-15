@@ -36,7 +36,7 @@ class TrainingSelectionViewController: UIViewController {
         TrainAmountLabel.text = String(trainamount);
     }
     
-
+//Btn func
     @IBAction func BicepsBtn(_ sender: Any) {
         BICEPS = true;
         TRICEPS = false;
@@ -142,22 +142,48 @@ class TrainingSelectionViewController: UIViewController {
             showAlertAP()
         }
     }
+    //to Selected body part page
     func toTrainBRecord(){
         let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = namestoryboard.instantiateViewController(withIdentifier: "TR1") as! TrainingRecord1ViewController
         navigationController?.pushViewController(vc, animated: true)
     }
+    func toTrainTRecord(){
+        let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR2") as! TrainingRecord2ViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    func toTrainCRecord(){
+        let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR3") as! TrainingRecord3ViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    func toTrainBARecord(){
+        let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR4") as! TrainingRecord4ViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func NextPageBtnOnTap(_ sender: Any) {
+        //firebase setup
         let ref = Database.database().reference()
+        
         if BICEPS == true{
             ref.child("Record").child("Record1").setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            //TO next page
             toTrainBRecord()
         }else if TRICEPS == true{
-            
+            ref.child("Record").child("Record1").setValue(["BodyPart": "TRICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            //To next page
+            toTrainTRecord()
         }else if CHEST == true{
-            
+            ref.child("Record").child("Record1").setValue(["BodyPart": "CHEST" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            //To next page
+            toTrainCRecord()
         }else if BACK == true{
-            
+            ref.child("Record").child("Record1").setValue(["BodyPart": "BACK" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            //To next page
+            toTrainBARecord()
         }
     }
 }

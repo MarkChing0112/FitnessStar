@@ -6,24 +6,32 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class TrainingRecord3ViewController: UIViewController {
-
+    @IBOutlet weak var TrainAmount: UILabel!
+    @IBOutlet weak var TrainSetLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        GetUserData()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func GetUserData(){
+        let ref = Database.database().reference()
+        ref.child("Record").child("Record1").observeSingleEvent(of: .value, with: { snapshot in
+          // Get user value
+            let value = snapshot.value as? NSDictionary
+           // let body = value?["Bodypart"] as? String ?? ""
+            let TrainAmount = value?["TrainAmount"] as? String ?? ""
+            let TrainsetAmount = value?["TrainSetAmount"] as? String ?? ""
+            //show user selected session
+            self.TrainSetLabel.text =  String(TrainsetAmount)
+            self.TrainAmount.text = String(TrainAmount)
+        }) { error in
+          print(error.localizedDescription)
+        }
     }
-    */
-
 }
