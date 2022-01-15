@@ -18,7 +18,7 @@ class TrainingSelectionViewController: UIViewController {
     var BACK = false;
     //var of program amount
     var trainSet = 0;
-    var trainamount = 0;
+    var trainamount = 6;
     //btn outlet use to set stroke
     @IBOutlet var BicepsOutBtn: UIButton!
     @IBOutlet var TricepsOutBtn: UIButton!
@@ -31,8 +31,8 @@ class TrainingSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        SetAmountLabel.text = String(trainSet);
+        TrainAmountLabel.text = String(trainamount);
     }
     
 
@@ -94,23 +94,54 @@ class TrainingSelectionViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
+    func showAlertP(){
+        let alert = UIAlertController(title: "amount can't > 6", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
+    func showAlertAP(){
+        let alert = UIAlertController(title: "amount can't > 30", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
     
+    //Set btn
     @IBAction func minBtn(_ sender: Any) {
         if trainSet > 0{
             trainSet -= 1
+            SetAmountLabel.text = String(trainSet)
         }else{
             showAlertM()
         }
-    
     }
+    
     @IBAction func trainsetplus(_ sender: Any) {
         if trainSet <= 5{
-            trainSet +1
+            trainSet+=1
+            SetAmountLabel.text = String(trainSet)
         }else{
-            
+            showAlertP()
         }
-
     }
+    //amount Btn
+    @IBAction func amountminBtn(_ sender: Any) {
+        if trainamount > 0{
+            trainamount -= 1
+            TrainAmountLabel.text = String(trainamount)
+        }else{
+            showAlertM()
+        }
+    }
+    
+    @IBAction func amountPlusBtn(_ sender: Any) {
+        if trainamount <= 30{
+            trainamount += 1
+            TrainAmountLabel.text = String(trainamount)
+        }else{
+            showAlertAP()
+        }
+    }
+    
     @IBAction func NextPageBtnOnTap(_ sender: Any) {
         
         
