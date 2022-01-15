@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TrainingRecordViewController: UIViewController {
+class TrainingRecord1ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

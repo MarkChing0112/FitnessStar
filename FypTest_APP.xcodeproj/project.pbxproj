@@ -16,11 +16,13 @@
 		4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10C21126F74EEB0032B955 /* VideoCapture.swift */; };
 		4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB64CC26F8FC6C008BFF14 /* predictor.swift */; };
 		83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E262792CC7800600104 /* TrainingSelectionViewController.swift */; };
-		83329E292792CC8E00600104 /* TrainingRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E282792CC8E00600104 /* TrainingRecordViewController.swift */; };
+		83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */; };
 		83329E2B2792CC9D00600104 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E2A2792CC9D00600104 /* SearchViewController.swift */; };
 		83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E2C2792CCAB00600104 /* SearchMapViewController.swift */; };
 		83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E2E2792CCB600600104 /* HomeViewController.swift */; };
-		838BF7D42792B2370015AC84 /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 838BF7D32792B2370015AC84 /* GoogleService-Info (2).plist */; };
+		83329E312792CE9300600104 /* FYP_Gym_demo 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 83329E302792CE9300600104 /* FYP_Gym_demo 1.mlmodel */; };
+		83329E332792D08F00600104 /* AI2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E322792D08E00600104 /* AI2ViewController.swift */; };
+		838BF7D42792B2370015AC84 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 838BF7D32792B2370015AC84 /* GoogleService-Info.plist */; };
 		838BF7D72792B6110015AC84 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7D62792B6110015AC84 /* FirebaseAnalytics */; };
 		838BF7D92792B6110015AC84 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7D82792B6110015AC84 /* FirebaseAuth */; };
 		838BF7DB2792B6110015AC84 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7DA2792B6110015AC84 /* FirebaseDatabase */; };
@@ -42,13 +44,14 @@
 		4F10C20B26F748D30032B955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F10C21126F74EEB0032B955 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		4FAB64CC26F8FC6C008BFF14 /* predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = predictor.swift; sourceTree = "<group>"; };
-		4FDD012B27903816000545A8 /* FYP_Gym_demo 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FYP_Gym_demo 1.mlmodel"; sourceTree = "<group>"; };
 		83329E262792CC7800600104 /* TrainingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSelectionViewController.swift; sourceTree = "<group>"; };
-		83329E282792CC8E00600104 /* TrainingRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecordViewController.swift; sourceTree = "<group>"; };
+		83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord1ViewController.swift; sourceTree = "<group>"; };
 		83329E2A2792CC9D00600104 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		83329E2C2792CCAB00600104 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
 		83329E2E2792CCB600600104 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		838BF7D32792B2370015AC84 /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (2).plist"; sourceTree = "<group>"; };
+		83329E302792CE9300600104 /* FYP_Gym_demo 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FYP_Gym_demo 1.mlmodel"; sourceTree = "<group>"; };
+		83329E322792D08E00600104 /* AI2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI2ViewController.swift; sourceTree = "<group>"; };
+		838BF7D32792B2370015AC84 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,14 +92,13 @@
 		4F10C1FC26F748D10032B955 /* FypTest_APP */ = {
 			isa = PBXGroup;
 			children = (
-				4FDD012B27903816000545A8 /* FYP_Gym_demo 1.mlmodel */,
 				4F10C1FD26F748D10032B955 /* AppDelegate.swift */,
 				4F10C1FF26F748D10032B955 /* SceneDelegate.swift */,
 				83329E252792CC4700600104 /* viewController */,
 				4F10C20326F748D10032B955 /* Main.storyboard */,
 				4F10C20626F748D30032B955 /* Assets.xcassets */,
 				4F10C20826F748D30032B955 /* LaunchScreen.storyboard */,
-				838BF7D32792B2370015AC84 /* GoogleService-Info (2).plist */,
+				838BF7D32792B2370015AC84 /* GoogleService-Info.plist */,
 				4F10C20B26F748D30032B955 /* Info.plist */,
 			);
 			path = FypTest_APP;
@@ -105,14 +107,16 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				83329E302792CE9300600104 /* FYP_Gym_demo 1.mlmodel */,
 				4F10C21126F74EEB0032B955 /* VideoCapture.swift */,
 				4F10C20126F748D10032B955 /* ViewController.swift */,
 				4FAB64CC26F8FC6C008BFF14 /* predictor.swift */,
 				83329E262792CC7800600104 /* TrainingSelectionViewController.swift */,
-				83329E282792CC8E00600104 /* TrainingRecordViewController.swift */,
+				83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */,
 				83329E2A2792CC9D00600104 /* SearchViewController.swift */,
 				83329E2C2792CCAB00600104 /* SearchMapViewController.swift */,
 				83329E2E2792CCB600600104 /* HomeViewController.swift */,
+				83329E322792D08E00600104 /* AI2ViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -187,7 +191,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				838BF7D42792B2370015AC84 /* GoogleService-Info (2).plist in Resources */,
+				838BF7D42792B2370015AC84 /* GoogleService-Info.plist in Resources */,
 				4F10C20A26F748D30032B955 /* LaunchScreen.storyboard in Resources */,
 				4F10C20726F748D30032B955 /* Assets.xcassets in Resources */,
 				4F10C20526F748D10032B955 /* Main.storyboard in Resources */,
@@ -201,16 +205,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83329E292792CC8E00600104 /* TrainingRecordViewController.swift in Sources */,
+				83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */,
 				4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */,
 				83329E2B2792CC9D00600104 /* SearchViewController.swift in Sources */,
 				83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */,
 				83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */,
+				83329E332792D08F00600104 /* AI2ViewController.swift in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,
 				4F10C20026F748D10032B955 /* SceneDelegate.swift in Sources */,
+				83329E312792CE9300600104 /* FYP_Gym_demo 1.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
