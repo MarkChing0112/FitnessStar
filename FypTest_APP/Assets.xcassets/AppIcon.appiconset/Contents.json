@@ -1,11 +1,13 @@
 {
   "images" : [
     {
+      "filename" : "AppIcon_HomeVc@2x.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "AppIcon_HomeVc@3x.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
@@ -35,6 +37,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "AppIcon_HomeVc-5.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
@@ -58,46 +61,55 @@
       "size" : "20x20"
     },
     {
+      "filename" : "AppIcon_HomeVc@3x-1.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
+      "filename" : "AppIcon_HomeVc@2x-1.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
+      "filename" : "AppIcon_HomeVc@3x-2.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
+      "filename" : "AppIcon_HomeVc-1.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "40x40"
     },
     {
+      "filename" : "AppIcon_HomeVc-2.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
+      "filename" : "AppIcon_HomeVc@3x-3.png",
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
+      "filename" : "AppIcon_HomeVc-3.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
     },
     {
+      "filename" : "AppIcon_HomeVc-4.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "83.5x83.5"
     },
     {
+      "filename" : "AppIcon_HomeVc.png",
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"

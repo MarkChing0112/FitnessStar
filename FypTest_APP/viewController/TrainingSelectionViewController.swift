@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 import Firebase
 import FirebaseAuth
+import FirebaseFirestore
 
 class TrainingSelectionViewController: UIViewController {
     //var
@@ -67,22 +68,22 @@ class TrainingSelectionViewController: UIViewController {
     
     func CheckBSelect(){
         if (BICEPS == true){
-            self.BicepsOutBtn.backgroundColor = UIColor.green
+            self.BicepsOutBtn.backgroundColor = UIColor(red: 95/255, green: 201/255, blue: 200/255, alpha: 0.5)
             self.TricepsOutBtn.backgroundColor = UIColor.white
             self.ChestOutBtn.backgroundColor = UIColor.white
             self.BackOutBtn.backgroundColor = UIColor.white
         }else if(TRICEPS == true){
-            self.TricepsOutBtn.backgroundColor = UIColor.green
+            self.TricepsOutBtn.backgroundColor = UIColor(red: 95/255, green: 201/255, blue: 200/255, alpha: 0.5)
             self.BicepsOutBtn.backgroundColor = UIColor.white
             self.ChestOutBtn.backgroundColor = UIColor.white
             self.BackOutBtn.backgroundColor = UIColor.white
         }else if(CHEST == true){
-            self.ChestOutBtn.backgroundColor = UIColor.green
+            self.ChestOutBtn.backgroundColor = UIColor(red: 95/255, green: 201/255, blue: 200/255, alpha: 0.5)
             self.TricepsOutBtn.backgroundColor = UIColor.white
             self.BicepsOutBtn.backgroundColor = UIColor.white
             self.BackOutBtn.backgroundColor = UIColor.white
         }else if(BACK == true){
-            self.BackOutBtn.backgroundColor = UIColor.green
+            self.BackOutBtn.backgroundColor = UIColor(red: 95/255, green: 201/255, blue: 200/255, alpha: 0.5)
             self.ChestOutBtn.backgroundColor = UIColor.white
             self.TricepsOutBtn.backgroundColor = UIColor.white
             self.BicepsOutBtn.backgroundColor = UIColor.white
@@ -134,16 +135,25 @@ class TrainingSelectionViewController: UIViewController {
     }
     
     @IBAction func amountPlusBtn(_ sender: Any) {
-        if trainamount <= 30{
+        if trainamount <= 29{
             trainamount += 1
             TrainAmountLabel.text = String(trainamount)
         }else{
             showAlertAP()
         }
     }
-    
-    @IBAction func NextPageBtnOnTap(_ sender: Any) {
+    func toTrainBRecord(){
+        let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR1")
         
+
+    }
+    @IBAction func NextPageBtnOnTap(_ sender: Any) {
+        let ref = Database.database().reference()
+        if BICEPS == true{
+            ref.child("Record").child("Record1").setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            toTrainBRecord()
+        }
         
     }
 }

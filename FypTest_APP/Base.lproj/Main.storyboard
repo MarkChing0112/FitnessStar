@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pz3-yE-Z0x">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
+        <deployment version="5376" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -189,6 +189,7 @@
                             <constraint firstItem="ncv-9a-ESv" firstAttribute="trailing" secondItem="39N-xq-yrh" secondAttribute="trailing" constant="128" id="bD3-rG-jIG"/>
                             <constraint firstItem="mIC-QF-Ygf" firstAttribute="top" secondItem="AKO-rN-YLU" secondAttribute="bottom" constant="8" symbolic="YES" id="d9r-1n-BCe"/>
                             <constraint firstItem="LFn-e2-ved" firstAttribute="top" secondItem="39N-xq-yrh" secondAttribute="bottom" constant="45.5" id="fnn-yj-QM5"/>
+                            <constraint firstItem="ncv-9a-ESv" firstAttribute="bottom" secondItem="pPQ-Mc-lcp" secondAttribute="bottom" constant="35" id="g4b-N6-7b5"/>
                             <constraint firstItem="ncv-9a-ESv" firstAttribute="trailing" secondItem="LXH-4S-51U" secondAttribute="trailing" constant="20" id="kLc-03-OvT"/>
                             <constraint firstItem="pPQ-Mc-lcp" firstAttribute="top" secondItem="3Rv-7n-o48" secondAttribute="bottom" constant="35.5" id="lNC-0v-Uxn"/>
                             <constraint firstItem="LFn-e2-ved" firstAttribute="leading" secondItem="ncv-9a-ESv" secondAttribute="leading" constant="84" id="lxj-dl-dfj"/>
@@ -211,7 +212,7 @@
         <!--TRAINING-->
         <scene sceneID="hdu-7K-vAh">
             <objects>
-                <viewController storyboardIdentifier="TR" id="vUC-OD-De1" customClass="TracesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TR1" id="vUC-OD-De1" customClass="TracesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cJm-et-YUU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -319,7 +320,7 @@
         <!--View Controller-->
         <scene sceneID="Tbd-fv-GYI">
             <objects>
-                <viewController id="STK-Fd-0hL" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TR2" id="STK-Fd-0hL" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3hk-sH-bAl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -448,7 +449,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_54_1" translatesAutoresizingMaskIntoConstraints="NO" id="eIE-lQ-BsM">
-                                <rect key="frame" x="20" y="88" width="50" height="50"/>
+                                <rect key="frame" x="20" y="88" width="50" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_54_2" translatesAutoresizingMaskIntoConstraints="NO" id="A1O-Am-uXH">
@@ -481,19 +482,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="BicepsBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="r6f-EW-XjW"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVh-fH-fEv">
-                                <rect key="frame" x="41" y="301" width="150" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="Icon_110_Chest">
-                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </backgroundConfiguration>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="ChestBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="S8A-11-XFa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1qF-Gu-fG6">
@@ -536,6 +524,9 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="Icon_46_plus"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="trainsetplus:" destination="jkS-5e-hcS" eventType="touchUpInside" id="zDq-1v-3nC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fsb-HJ-mLZ">
                                 <rect key="frame" x="40" y="579" width="30" height="28"/>
@@ -552,6 +543,9 @@
                                         </imageReference>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="minBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="LPh-wD-X2D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJX-Qy-olg">
                                 <rect key="frame" x="221" y="579" width="30" height="28"/>
@@ -568,6 +562,9 @@
                                         </imageReference>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="amountminBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="Wmy-HL-cpT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kny-WJ-wmk">
                                 <rect key="frame" x="349" y="574" width="38" height="38"/>
@@ -576,11 +573,21 @@
                                 <buttonConfiguration key="configuration" style="plain" title="">
                                     <backgroundConfiguration key="background" image="Icon_46_plus"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="amountPlusBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="STT-kk-Nbg"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-rb-HqY">
+                                <rect key="frame" x="92" y="554" width="41" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                <color key="textColor" red="0.45711052419999998" green="0.87483745810000002" blue="0.84706479310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txg-Sv-fYJ">
                                 <rect key="frame" x="254" y="555" width="95" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="62"/>
                                 <color key="textColor" red="0.45711052419999998" green="0.87483745810000002" blue="0.84706479310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -600,14 +607,23 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="NextPageBtnOnTap:" destination="jkS-5e-hcS" eventType="touchUpInside" id="GTp-oe-dC3"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PQI-rb-HqY">
-                                <rect key="frame" x="81" y="555" width="69" height="73"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bVh-fH-fEv">
+                                <rect key="frame" x="41" y="301" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="61"/>
-                                <color key="textColor" red="0.45711052419999998" green="0.87483745810000002" blue="0.84706479310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="Icon_110_Chest">
+                                        <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </backgroundConfiguration>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="ChestBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="S8A-11-XFa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9b2-mW-x31"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -618,8 +634,8 @@
                         <outlet property="BicepsOutBtn" destination="K8C-DS-dbW" id="Zxz-TR-0Nr"/>
                         <outlet property="ChestOutBtn" destination="bVh-fH-fEv" id="32i-Ea-hvZ"/>
                         <outlet property="SetAmountLabel" destination="PQI-rb-HqY" id="m5j-ac-q57"/>
+                        <outlet property="TrainAmountLabel" destination="txg-Sv-fYJ" id="lfC-sP-Ybg"/>
                         <outlet property="TricepsOutBtn" destination="EhP-9h-jA8" id="r4D-Uv-bgC"/>
-                        <outlet property="min1Btn" destination="fsb-HJ-mLZ" id="RCS-3S-o1z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xyk-0q-zeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -686,7 +702,7 @@
         <!--View Controller-->
         <scene sceneID="6lq-Ir-6VN">
             <objects>
-                <viewController id="9Aj-ZD-vAM" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TR3" id="9Aj-ZD-vAM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z6h-c5-n19">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
