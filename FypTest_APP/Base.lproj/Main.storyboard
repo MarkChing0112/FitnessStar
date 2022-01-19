@@ -43,6 +43,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="dtA-vs-C12"/>
+                    <connections>
+                        <outlet property="mapView" destination="y8M-KD-HUD" id="ICK-lq-RUr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhG-Pn-jtd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

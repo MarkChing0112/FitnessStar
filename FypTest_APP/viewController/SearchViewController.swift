@@ -42,6 +42,16 @@ class SearchViewController: UIViewController {
         })
     }
     
+    @IBAction func location(_ sender: Any) {
+        database.child("\(searchBar)").observeSingleEvent(of: .value, with:
+                                                            {snapshot in guard
+            let value = snapshot.value as? [String: Any] else {return}
+            let gym1 = value["Gym1"] as! String
+            
+        })
+    }
+    }
+    
 
     /*
     // MARK: - Navigation
