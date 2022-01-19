@@ -1,28 +1,25 @@
 //
-//  ViewController.swift
+//  AI2ViewController.swift
 //  FypTest_APP
 //
-//  Created by TLok  on 19/9/2021.
+//  Created by kin ming ching on 15/1/2022.
 //
 
 import UIKit
 import AVFoundation
 import AudioToolbox
-
-class ViewController: UIViewController {
-
+class AI2ViewController: UIViewController {
     
     let videoCapture = VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
     var Actioncount: Int = 0
     var  pointLayer = CAShapeLayer()
+    
     private let AcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         Label.layer.borderWidth = 10
         Label.layer.borderColor = UIColor.white.cgColor
         return Label }()
-
-
     
     @IBOutlet var actionCountLabel: UILabel!
     var isThrowDetected = false
@@ -36,12 +33,13 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-        
+
+        // Do any additional setup after loading the view.
         setupVideoPreview()
         
         videoCapture.predictor.delegate = self
     }
+
     private func setupVideoPreview(){
         videoCapture.startCaptureSession()
         previewLayer = AVCaptureVideoPreviewLayer(session: videoCapture.captureSession)
@@ -58,8 +56,7 @@ class ViewController: UIViewController {
     }
 
 }
-
-extension ViewController: PredictorDelegte{
+extension AI2ViewController: PredictorDelegte{
     func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
         if action == "Throw" && confience > 0.95 && isThrowDetected == false{
             Actioncount += 1;
@@ -95,4 +92,3 @@ extension ViewController: PredictorDelegte{
         }
     }
 }
-
