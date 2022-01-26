@@ -9,6 +9,9 @@ import UIKit
 import FirebaseDatabase
 
 class SearchViewController: UIViewController {
+    
+    var searchMap : SearchMapViewController = SearchMapViewController()
+    
     @IBOutlet weak var gymRoom1: UILabel!
     @IBOutlet weak var gymRoom2: UILabel!
     @IBOutlet weak var gymRoom3: UILabel!
@@ -47,9 +50,21 @@ class SearchViewController: UIViewController {
         
     }
     
-    @IBAction func location(_ sender: Any) {
+    @IBAction func gym1Location(_ sender: Any) {
+        searchMap.x = 22.447640
+        searchMap.y = 114.169125
+    }
+    
+    @IBAction func gym2Location(_ sender: Any) {
         
     }
+    
+    @IBAction func gym3Location(_ sender: Any) {
+    }
+    
+    @IBAction func gym4Location(_ sender: Any) {
+    }
+    
     }
     
 

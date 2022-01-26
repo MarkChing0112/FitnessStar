@@ -15,13 +15,16 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     let manager = CLLocationManager()
     let geoCoder = CLGeocoder()
     
+    var x = 22.421609
+    var y = 114.169242
+    
     @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // set location xy
-        let coordation = CLLocationCoordinate2D(latitude: 35, longitude: 20)
+        let coordation = CLLocationCoordinate2D(latitude: x, longitude: y)
         
         let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         
