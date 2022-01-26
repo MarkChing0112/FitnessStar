@@ -16,16 +16,18 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
     
-    
-    let database = Database.database().reference()
+    private let database = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func searchButton(_ sender: Any) {
-        database.child("\(searchBar)").observeSingleEvent(of: .value, with:
+        
+        database.child("TaiPo").observeSingleEvent(of: .value, with:
                                                             {snapshot in guard
             let value = snapshot.value as? [String: Any] else {return}
             
@@ -39,7 +41,10 @@ class SearchViewController: UIViewController {
             self.gymRoom3?.text = "\(gym3)"
             self.gymRoom4?.text = "\(gym4)"
             
+            return
         })
+        
+        
     }
     
     @IBAction func location(_ sender: Any) {
