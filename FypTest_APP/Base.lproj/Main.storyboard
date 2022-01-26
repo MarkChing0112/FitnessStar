@@ -712,6 +712,23 @@
                                     <segue destination="y0b-kq-rkq" kind="show" id="idx-7z-4ED"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJU-Kb-97h">
+                                <rect key="frame" x="20" y="352" width="274" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="20" height="-1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCd-Lp-6pO">
+                                <rect key="frame" x="272" y="352" width="122" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Location"/>
+                                <connections>
+                                    <action selector="location:" destination="3Pw-zv-i4l" eventType="touchUpInside" id="fJb-Cm-IHA"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4LZ-Qw-TN6">
                                 <rect key="frame" x="20" y="139" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -727,6 +744,23 @@
                                     <action selector="searchButton:" destination="3Pw-zv-i4l" eventType="touchUpInside" id="NUj-Na-0zS"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKi-oZ-yg5">
+                                <rect key="frame" x="20" y="391" width="274" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="20" height="-1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U3z-yi-UdM">
+                                <rect key="frame" x="272" y="391" width="122" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Location"/>
+                                <connections>
+                                    <action selector="location:" destination="3Pw-zv-i4l" eventType="touchUpInside" id="P5P-7F-Jl4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zEp-Bi-qvT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -735,6 +769,8 @@
                     <connections>
                         <outlet property="gymRoom1" destination="R6i-EZ-ep2" id="qjL-kR-dom"/>
                         <outlet property="gymRoom2" destination="VF0-OM-PPU" id="fwo-ho-qp7"/>
+                        <outlet property="gymRoom3" destination="TJU-Kb-97h" id="MzT-60-73g"/>
+                        <outlet property="gymRoom4" destination="iKi-oZ-yg5" id="Sjs-Kb-vGd"/>
                         <outlet property="searchBar" destination="4LZ-Qw-TN6" id="veL-Vy-EOJ"/>
                     </connections>
                 </viewController>

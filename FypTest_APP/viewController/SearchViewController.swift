@@ -31,9 +31,13 @@ class SearchViewController: UIViewController {
             
             let gym1 = value["Gym1"] as! String
             let gym2 = value["Gym2"] as! String
+            let gym3 = value["Gym3"] as! String
+            let gym4 = value["Gym4"] as! String
             
             self.gymRoom1?.text = "\(gym1)"
             self.gymRoom2?.text = "\(gym2)"
+            self.gymRoom3?.text = "\(gym3)"
+            self.gymRoom4?.text = "\(gym4)"
             
         })
     }

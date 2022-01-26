@@ -8,12 +8,9 @@
 import UIKit
 import MapKit
 import CoreLocation
-import FirebaseDatabase
 
 class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     
-    
-    let database = Database.database().reference()
     
     let manager = CLLocationManager()
     let geoCoder = CLGeocoder()
