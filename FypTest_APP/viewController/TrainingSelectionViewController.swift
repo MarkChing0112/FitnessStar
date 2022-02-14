@@ -18,7 +18,7 @@ class TrainingSelectionViewController: UIViewController {
     var CHEST = false;
     var BACK = false;
     //var of program amount
-    var trainSet = 0;
+    var trainSet = 1;
     var trainamount = 6;
     //btn outlet use to set stroke
     @IBOutlet var BicepsOutBtn: UIButton!
@@ -38,33 +38,49 @@ class TrainingSelectionViewController: UIViewController {
     
 //Btn func
     @IBAction func BicepsBtn(_ sender: Any) {
+        if (BICEPS == true){
+            BICEPS = false;
+            self.BicepsOutBtn.backgroundColor = UIColor.white
+        }else{
         BICEPS = true;
         TRICEPS = false;
         CHEST = false;
         BACK = false;
         CheckBSelect()
-    }
+        }}
     @IBAction func TricepsBtn(_ sender: Any) {
+        if (TRICEPS == true){
+            TRICEPS = false;
+            self.TricepsOutBtn.backgroundColor = UIColor.white
+        }else{
         BICEPS = false;
         TRICEPS = true;
         CHEST = false;
         BACK = false;
         CheckBSelect()
-    }
+        }}
     @IBAction func ChestBtn(_ sender: Any) {
+        if (CHEST == true){
+            CHEST = false;
+            self.ChestOutBtn.backgroundColor = UIColor.white
+        }else{
         BICEPS = false;
         TRICEPS = false;
         CHEST = true;
         BACK = false;
         CheckBSelect()
-    }
+        }}
     @IBAction func BackBtn(_ sender: Any) {
+        if (BACK == true){
+            BACK = false;
+            self.BackOutBtn.backgroundColor = UIColor.white
+        }else{
         BICEPS = false;
         TRICEPS = false;
         CHEST = false;
         BACK = true;
         CheckBSelect()
-    }
+    }}
     
     func CheckBSelect(){
         if (BICEPS == true){
@@ -91,7 +107,7 @@ class TrainingSelectionViewController: UIViewController {
     }
     //show Alert
     func showAlertM(){
-        let alert = UIAlertController(title: "amount can't < 0!!!!", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "amount can't < 1!!!!", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
@@ -105,10 +121,14 @@ class TrainingSelectionViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
-    
+    func showAlertError(){
+        let alert = UIAlertController(title: "Error!!!!!", message: "Please select the body part", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: nil))
+        present(alert, animated: true)
+    }
     //Set btn
     @IBAction func minBtn(_ sender: Any) {
-        if trainSet > 0{
+        if trainSet > 1{
             trainSet -= 1
             SetAmountLabel.text = String(trainSet)
         }else{
@@ -126,7 +146,7 @@ class TrainingSelectionViewController: UIViewController {
     }
     //amount Btn
     @IBAction func amountminBtn(_ sender: Any) {
-        if trainamount > 0{
+        if trainamount > 1{
             trainamount -= 1
             TrainAmountLabel.text = String(trainamount)
         }else{
@@ -184,6 +204,8 @@ class TrainingSelectionViewController: UIViewController {
             ref.child("Record").child("Record1").setValue(["BodyPart": "BACK" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainBARecord()
+        }else{
+            showAlertError()
         }
     }
 }
