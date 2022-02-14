@@ -33,7 +33,7 @@ class LoginViewController: UIViewController {
         Utilities.styleTextField(emailTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(loginButton)
-        
+        self.passwordTextField.isSecureTextEntry = true
     }
     
     @IBAction func loginTapped(_ sender: Any) {
@@ -58,4 +58,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    @IBAction func ForgotPasswordBtnOnTap(_ sender: Any) {
+        
+    }
 }

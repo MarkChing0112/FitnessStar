@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
         // Style the elements
         Utilities.styleTextField(firstNameText)
         Utilities.styleTextField(lastNameText)
+        Utilities.styleTextField(User_NameText)
         Utilities.styleTextField(emailText)
         Utilities.styleTextField(passwordText)
         Utilities.styleFilledButton(signUp)
