@@ -11,7 +11,7 @@ import FirebaseDatabase
 
 class Firebase {
     
-    //private let database = Database.database().reference()
+    private let database = Database.database().reference()
     
     func readData() {
         
