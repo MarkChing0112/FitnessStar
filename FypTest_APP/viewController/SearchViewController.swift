@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseDatabase
 
 class SearchViewController: UIViewController {
     
@@ -19,7 +18,6 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
     
-    private let database = Database.database().reference()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,24 +27,6 @@ class SearchViewController: UIViewController {
     }
     
     @IBAction func searchButton(_ sender: Any) {
-        
-        database.child("TaiPo").observeSingleEvent(of: .value, with:
-                                                            {snapshot in guard
-            let value = snapshot.value as? [String: Any] else {return}
-            
-            let gym1 = value["Gym1"] as! String
-            let gym2 = value["Gym2"] as! String
-            let gym3 = value["Gym3"] as! String
-            let gym4 = value["Gym4"] as! String
-            
-            self.gymRoom1?.text = "\(gym1)"
-            self.gymRoom2?.text = "\(gym2)"
-            self.gymRoom3?.text = "\(gym3)"
-            self.gymRoom4?.text = "\(gym4)"
-            
-            return
-        })
-        
         
     }
     
