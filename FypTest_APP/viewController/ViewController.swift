@@ -70,9 +70,21 @@ class ViewController: UIViewController {
         
     }
     func Check_amount(){
-        if ((Actioncount == User_ActionAmount) && (TrainSetCount == User_TrainSetAmount) ){
-            
+        //Set firebase var
+        let ref = Database.database().reference()
+        let user = Auth.auth().currentUser
+        //check the user action equal the user amount setting
+        if let user = user {
+        if ((Actioncount == User_ActionAmount) && (TrainSetCount < User_TrainSetAmount)){
+            TrainSetCount += 1
+            Actioncount = 0
+        }else if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
+            Actioncount += 1
+        }else if((Actioncount==User_ActionAmount)&&(TrainSetCount == User_TrainSetAmount)){
+            ref.child("Record").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": User_TrainSetAmount,"TrainAmount":User_ActionAmount])
         }
+        }
+        
     }
     
     func Add_Amount(){
