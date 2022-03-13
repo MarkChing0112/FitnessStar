@@ -8,13 +8,20 @@
 import UIKit
 import AVFoundation
 import AudioToolbox
+import Firebase
+import FirebaseAuth
 
 class ViewController: UIViewController {
 
-    var cout_trainNum: Int = 0
+
     let videoCapture = VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
+    //user data and user train amount count
+    var User_ActionAmount: Int = 0
+    var User_TrainSetAmount: Int = 0
+    var TrainSetCount: Int = 0
     var Actioncount: Int = 0
+    
     var  pointLayer = CAShapeLayer()
     private let AcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
@@ -37,10 +44,39 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
  
-        
+        Read_Data()
         setupVideoPreview()
         
         videoCapture.predictor.delegate = self
+        
+    }
+    func Read_Data(){
+        let ref = Database.database().reference()
+        let userID = Auth.auth().currentUser?.uid
+        ref.child("User_Train_Selection").child(userID!).observeSingleEvent(of: .value, with: { snapshot in
+          // Get user value
+            let value = snapshot.value as? NSDictionary
+            let actionamount = value?["TrainAnount"] as?  String ?? ""
+            let TrainSetAmount = value?["TrainSetAmount"] as? String ?? ""
+
+            let User_ActionAmount = Int(actionamount)
+            let User_TrainSetAmount = Int(TrainSetAmount)
+          // ...
+        }) { error in
+          print(error.localizedDescription)
+            }}
+
+    func toRecordPage(){
+        
+    }
+    func Check_amount(){
+        if ((Actioncount == User_ActionAmount) && (TrainSetCount == User_TrainSetAmount) ){
+            
+        }
+    }
+    
+    func Add_Amount(){
+        Actioncount+=1
     }
     private func setupVideoPreview(){
         videoCapture.startCaptureSession()
@@ -61,7 +97,7 @@ class ViewController: UIViewController {
            label.center = CGPoint(x: 160, y: 285)
            label.textAlignment = .center
            label.textColor = UIColor.black
-           label.text = "\(cout_trainNum)"
+           label.text = "\(Actioncount)"
         
         view.addSubview(label)
         
@@ -72,10 +108,10 @@ class ViewController: UIViewController {
 extension ViewController: PredictorDelegte{
     func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
         if action == "Throw" && confience > 0.95 && isThrowDetected == false{
-            Actioncount += 1;
+            
             print("Throw detected")
             isThrowDetected = true
-            cout_trainNum += 1
+            Add_Amount()
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }

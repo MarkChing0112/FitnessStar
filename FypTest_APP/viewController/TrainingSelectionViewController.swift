@@ -187,25 +187,27 @@ class TrainingSelectionViewController: UIViewController {
     @IBAction func NextPageBtnOnTap(_ sender: Any) {
         //firebase setup
         let ref = Database.database().reference()
-        
+        let user = Auth.auth().currentUser
+        if let user = user {
         if BICEPS == true{
-            ref.child("Record").child("Record1").setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //TO next page
             toTrainBRecord()
         }else if TRICEPS == true{
-            ref.child("Record").child("Record1").setValue(["BodyPart": "TRICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "TRICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainTRecord()
         }else if CHEST == true{
-            ref.child("Record").child("Record1").setValue(["BodyPart": "CHEST" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainCRecord()
         }else if BACK == true{
-            ref.child("Record").child("Record1").setValue(["BodyPart": "BACK" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
+            ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "BACK" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainBARecord()
         }else{
             showAlertError()
         }
+    }
     }
 }
