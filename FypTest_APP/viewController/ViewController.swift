@@ -11,7 +11,7 @@ import AudioToolbox
 
 class ViewController: UIViewController {
 
-    
+    var cout_trainNum: Int = 0
     let videoCapture = VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
     var Actioncount: Int = 0
@@ -57,11 +57,11 @@ class ViewController: UIViewController {
         pointLayer.strokeColor = UIColor.green.cgColor
         
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        let label = UILabel(frame: CGRect(x: 300, y: 50, width: 200, height: 21))
            label.center = CGPoint(x: 160, y: 285)
            label.textAlignment = .center
            label.textColor = UIColor.black
-           label.text = "I'm a test label"
+           label.text = "\(cout_trainNum)"
         
         view.addSubview(label)
         
@@ -75,7 +75,7 @@ extension ViewController: PredictorDelegte{
             Actioncount += 1;
             print("Throw detected")
             isThrowDetected = true
-            
+            cout_trainNum += 1
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
