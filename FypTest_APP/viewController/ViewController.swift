@@ -13,7 +13,6 @@ import FirebaseAuth
 
 class ViewController: UIViewController {
 
-
     let videoCapture = VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
     //user data and user train amount count
@@ -23,6 +22,7 @@ class ViewController: UIViewController {
     var Actioncount: Int = 0
     
     var  pointLayer = CAShapeLayer()
+    
     private let AcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         Label.layer.borderWidth = 10
@@ -108,14 +108,22 @@ class ViewController: UIViewController {
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
+        let UserUIView = UIView()
+        UserUIView.backgroundColor = UIColor.white
+        UserUIView.center = self.view.center
+        UserUIView.layer.cornerRadius = 9
+        self.view.addSubview(UserUIView)
         
+        //label
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
-           label.center = CGPoint(x: 160, y: 285)
-           label.textAlignment = .center
-           label.textColor = UIColor.black
-           label.text = "This is Your Action count:\(Actioncount)"
+            label.center = CGPoint(x: 160, y: 285)
+            label.textAlignment = .center
+            label.textColor = UIColor.black
+            label.backgroundColor = UIColor.white
+            label.text = "This is Your Action count:\(Actioncount)"
         
-        view.addSubview(label)
+        UserUIView.addSubview(label)
+
         
     }
 
@@ -132,7 +140,7 @@ extension ViewController: PredictorDelegte{
             }
             DispatchQueue.main.async {
                 AudioServicesPlayAlertSound(SystemSoundID(1322))
-                Add_Amount()
+                self.Add_Amount()
             }
             
         }
