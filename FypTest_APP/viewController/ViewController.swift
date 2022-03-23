@@ -108,11 +108,6 @@ class ViewController: UIViewController {
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
-        let UserUIView = UIView()
-        UserUIView.backgroundColor = UIColor.white
-        UserUIView.center = self.view.center
-        UserUIView.layer.cornerRadius = 9
-        self.view.addSubview(UserUIView)
         
         //label
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
@@ -122,7 +117,7 @@ class ViewController: UIViewController {
             label.backgroundColor = UIColor.white
             label.text = "This is Your Action count:\(Actioncount)"
         
-        UserUIView.addSubview(label)
+        view.addSubview(label)
 
         
     }
