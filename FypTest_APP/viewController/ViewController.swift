@@ -67,8 +67,11 @@ class ViewController: UIViewController {
             }}
 
     func toRecordPage(){
-        
+        let bicepsViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.bicepsViewController) as? BicepsViewController
+        self.view.window?.rootViewController = bicepsViewController
+        self.view.window?.makeKeyAndVisible()
     }
+    
     func Check_amount(){
         //Set firebase var
         let ref = Database.database().reference()
@@ -90,6 +93,7 @@ class ViewController: UIViewController {
     func Add_Amount(){
         Actioncount+=1
     }
+    
     private func setupVideoPreview(){
         videoCapture.startCaptureSession()
         previewLayer = AVCaptureVideoPreviewLayer(session: videoCapture.captureSession)
@@ -105,11 +109,11 @@ class ViewController: UIViewController {
         pointLayer.strokeColor = UIColor.green.cgColor
         
         
-        let label = UILabel(frame: CGRect(x: 300, y: 50, width: 200, height: 21))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
            label.center = CGPoint(x: 160, y: 285)
            label.textAlignment = .center
            label.textColor = UIColor.black
-           label.text = "\(Actioncount)"
+           label.text = "This is Your Action count:\(Actioncount)"
         
         view.addSubview(label)
         
@@ -123,12 +127,12 @@ extension ViewController: PredictorDelegte{
             
             print("Throw detected")
             isThrowDetected = true
-            Add_Amount()
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
                 AudioServicesPlayAlertSound(SystemSoundID(1322))
+                Add_Amount()
             }
             
         }
