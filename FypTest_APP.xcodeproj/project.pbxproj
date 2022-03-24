@@ -15,6 +15,8 @@
 		4F10C20A26F748D30032B955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F10C20826F748D30032B955 /* LaunchScreen.storyboard */; };
 		4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10C21126F74EEB0032B955 /* VideoCapture.swift */; };
 		4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB64CC26F8FC6C008BFF14 /* predictor.swift */; };
+		5D4A60DD27ECCD13004070D6 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A60DC27ECCD13004070D6 /* Activity.swift */; };
+		5D4A60E027ECD166004070D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */; };
 		5D5BB0D627C764C300CF2920 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5BB0D527C764C300CF2920 /* Firebase.swift */; };
 		5D5BB0D827C7816B00CF2920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */; };
 		83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E262792CC7800600104 /* TrainingSelectionViewController.swift */; };
@@ -57,6 +59,7 @@
 		4F10C20B26F748D30032B955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F10C21126F74EEB0032B955 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		4FAB64CC26F8FC6C008BFF14 /* predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = predictor.swift; sourceTree = "<group>"; };
+		5D4A60DC27ECCD13004070D6 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		5D5BB0D527C764C300CF2920 /* Firebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83329E262792CC7800600104 /* TrainingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSelectionViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +93,7 @@
 				838BF7DB2792B6110015AC84 /* FirebaseDatabase in Frameworks */,
 				838BF7DD2792B6110015AC84 /* FirebaseFirestore in Frameworks */,
 				838BF7DF2792B6110015AC84 /* FirebaseFunctions in Frameworks */,
+				5D4A60E027ECD166004070D6 /* FirebaseStorageSwift-Beta in Frameworks */,
 				838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */,
 				838BF7D72792B6110015AC84 /* FirebaseAnalytics in Frameworks */,
 				838BF7D92792B6110015AC84 /* FirebaseAuth in Frameworks */,
@@ -102,8 +106,10 @@
 		4F10C1F126F748D10032B955 = {
 			isa = PBXGroup;
 			children = (
+				5D4A60DC27ECCD13004070D6 /* Activity.swift */,
 				4F10C1FC26F748D10032B955 /* FypTest_APP */,
 				4F10C1FB26F748D10032B955 /* Products */,
+				5D4A60DE27ECD166004070D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +134,13 @@
 				4F10C20B26F748D30032B955 /* Info.plist */,
 			);
 			path = FypTest_APP;
+			sourceTree = "<group>";
+		};
+		5D4A60DE27ECD166004070D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		83329E252792CC4700600104 /* viewController */ = {
@@ -193,6 +206,7 @@
 				838BF7E02792B6110015AC84 /* FirebaseMessaging */,
 				838BF7E22792B6110015AC84 /* FirebasePerformance */,
 				838BF7E42792B6110015AC84 /* FirebaseStorage */,
+				5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */,
 			);
 			productName = FypTest_APP;
 			productReference = 4F10C1FA26F748D10032B955 /* FypTest_APP.app */;
@@ -276,6 +290,7 @@
 				83329E312792CE9300600104 /* FYP_Gym_demo 1.mlmodel in Sources */,
 				83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */,
 				835E26DC27BA850600CD79BB /* FirstPageNavigationController.swift in Sources */,
+				5D4A60DD27ECCD13004070D6 /* Activity.swift in Sources */,
 				835E26ED27BA8E9B00CD79BB /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +510,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 838BF7D52792B60E0015AC84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
 		838BF7D62792B6110015AC84 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 838BF7D52792B60E0015AC84 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

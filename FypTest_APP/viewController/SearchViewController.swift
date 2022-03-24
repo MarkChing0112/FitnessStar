@@ -18,10 +18,9 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UITextField!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Do any additional setup after loading the view.
     }

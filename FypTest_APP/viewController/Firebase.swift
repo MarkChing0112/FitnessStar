@@ -6,18 +6,28 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseFirestore
 
 
 class Firebase {
     
-    private let database = Database.database().reference()
+    var p = [Activity]()
     
-    func readData() {
+    func FireStorereadData() {
         
     }
     
-    func getlocation() {
+    func getlocation(searchDistrict: String) {
+        let database = Firestore.firestore()
         
+        database.collection(searchDistrict).getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                
+            } else {
+                for document in querySnapshot!.documents {
+                    Activity.init(x: nil, y: nil, district: nil, gymroom: ["\(document.data())"])
+                }
+            }
+        }
     }
 }

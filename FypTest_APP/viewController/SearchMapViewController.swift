@@ -11,7 +11,6 @@ import CoreLocation
 
 class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     
-    
     let manager = CLLocationManager()
     let geoCoder = CLGeocoder()
     
