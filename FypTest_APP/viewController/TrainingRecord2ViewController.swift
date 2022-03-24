@@ -2,7 +2,7 @@
 //  TrainingRecord2ViewController.swift
 //  FypTest_APP
 //
-//  Created by kin ming ching on 15/1/2022.
+//  Created by MARK ching on 15/1/2022.
 //
 
 import UIKit

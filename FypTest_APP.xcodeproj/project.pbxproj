@@ -46,6 +46,7 @@
 		838BF7E12792B6110015AC84 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E02792B6110015AC84 /* FirebaseMessaging */; };
 		838BF7E32792B6110015AC84 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E22792B6110015AC84 /* FirebasePerformance */; };
 		838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E42792B6110015AC84 /* FirebaseStorage */; };
+		839B89CD27EB008200FC0CBF /* BicepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B89CC27EB008200FC0CBF /* BicepsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		835E26EC27BA8E9B00CD79BB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		835E26F027BA9E0500CD79BB /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
+		839B89CC27EB008200FC0CBF /* BicepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 				83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */,
 				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
 				5D5BB0D527C764C300CF2920 /* Firebase.swift */,
+				839B89CC27EB008200FC0CBF /* BicepsViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
+				839B89CD27EB008200FC0CBF /* BicepsViewController.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
 				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
