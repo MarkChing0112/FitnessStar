@@ -21,8 +21,9 @@ class ViewController: UIViewController {
     var TrainSetCount: Int = 0
     var Actioncount: Int = 0
     
-    var  pointLayer = CAShapeLayer()
+    var pointLayer = CAShapeLayer()
     
+    @IBOutlet weak var AClabel: UILabel!
     private let AcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         Label.layer.borderWidth = 10
@@ -130,6 +131,10 @@ extension ViewController: PredictorDelegte{
             
             print("Throw detected")
             isThrowDetected = true
+            DispatchQueue.main.async{
+                //update label
+                self.AClabel.text = String(self.Actioncount)
+            }
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
