@@ -1,0 +1,18 @@
+{
+  "Outputs" : {
+    "label" : {
+      "MLFeatureShortDescription" : "Most likely action category"
+    },
+    "labelProbabilities" : {
+      "MLFeatureShortDescription" : "Probability of each category"
+    }
+  },
+  "Inputs" : {
+    "poses" : {
+      "MLFeatureShortDescription" : "A sequence of body poses to classify. Its multiarray encoding uses the first dimension to index time over 45 frames. The second dimension indexes x, y, and confidence of pose keypoint locations. The last dimension indexes the keypoint type, ordered as: nose, neck, right shoulder, right elbow, right wrist, left shoulder, left elbow, left wrist, right hip, right knee, right ankle, left hip, left knee, left ankle, right eye, left eye, right ear, left ear"
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}

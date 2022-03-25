@@ -8,7 +8,7 @@
 import Foundation
 import Vision
 
-typealias ThrowingClassifies = FYP_Gym_demo_1
+typealias ThrowingClassifies = Biceps_1
 protocol PredictorDelegte: AnyObject {
     func predictor( predictor: Predictor,didFindNewRecognizedPoints point:[CGPoint])
     func predictor( predictor: Predictor, didLableAction action:String, with confience: Double)
