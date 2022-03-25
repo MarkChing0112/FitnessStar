@@ -111,12 +111,12 @@ class ViewController: UIViewController {
         
         
         //label
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+        let label = UILabel(frame: CGRect(x: 269, y: 20, width: 200, height: 21))
             label.center = CGPoint(x: 160, y: 285)
             label.textAlignment = .center
             label.textColor = UIColor.black
             label.backgroundColor = UIColor.white
-            label.text = "This is Your Action count:\(Actioncount)"
+            label.text = "This is Your Action count:\(String(Actioncount))"
         
         view.addSubview(label)
 
@@ -131,18 +131,19 @@ extension ViewController: PredictorDelegte{
             
             print("Throw detected")
             isThrowDetected = true
-            DispatchQueue.main.async{
-                //update label
+            DispatchQueue.main.async {
+                //upload label
                 self.AClabel.text = String(self.Actioncount)
             }
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
-                AudioServicesPlayAlertSound(SystemSoundID(1322))
+                //when detected alert
+                AudioServicesPlayAlertSound(SystemSoundID(1332))
+                self.AClabel.backgroundColor = UIColor.green
                 self.Add_Amount()
             }
-            
         }
     }
     
