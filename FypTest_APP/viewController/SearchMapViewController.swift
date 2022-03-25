@@ -11,19 +11,23 @@ import CoreLocation
 
 class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     
+    //mpa
     let manager = CLLocationManager()
     let geoCoder = CLGeocoder()
     
-    var x = 22.421609
-    var y = 114.169242
+    // firebase
+    var x: String!
+    var y: String!
+    var gymroom: String!
     
     @IBOutlet weak var mapView: MKMapView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(_ animated: Bool) {
+        
+        super.viewWillAppear(animated)
+        // call search the location function
         // set location xy
-        let coordation = CLLocationCoordinate2D(latitude: x, longitude: y)
+        let coordation = CLLocationCoordinate2D(latitude: Double(x) ?? 0.0, longitude: Double(y) ?? 0.0)
         
         let span = MKCoordinateSpan(latitudeDelta: 0.001, longitudeDelta: 0.001)
         
@@ -32,11 +36,8 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordation
-        pin.title = "gymroom"
+        pin.title = gymroom
         mapView.addAnnotation(pin)
-        // Do any additional setup after loading the view.
     }
-    // call search the location function
- 
 
 }

@@ -8,8 +8,7 @@
 import Foundation
 
 struct Activity{
-    var x: Double!
-    var y: Double!
-    var district: String!
-    var gymroom: [String]
+    var x: String!
+    var y: String!
+    var gymroom: String!
 }
