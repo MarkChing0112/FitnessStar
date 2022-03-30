@@ -8,7 +8,7 @@
 import Foundation
 import Vision
 //AImodel biceps file
-typealias ThrowingClassifies = Biceps_1
+typealias ThrowingClassifies = Biceps_20220328_1
 
 protocol PredictorDelegte: AnyObject {
     func predictor( predictor: Predictor,didFindNewRecognizedPoints point:[CGPoint])
