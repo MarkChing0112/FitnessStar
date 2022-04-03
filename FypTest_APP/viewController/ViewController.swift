@@ -127,21 +127,20 @@ class ViewController: UIViewController {
 
 extension ViewController: PredictorDelegte{
     func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
-        if action == "Throw" && confience > 0.95 && isThrowDetected == false{
+        print("Detected: \(action),Confidence: \(confience)")
+        if action == "Correct" && confience > 0.90 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true
             DispatchQueue.main.async {
                 //upload label
-                self.AClabel.text = String(self.Actioncount)
             }
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
                 //when detected alert
-                AudioServicesPlayAlertSound(SystemSoundID(1332))
-                self.AClabel.backgroundColor = UIColor.green
+                AudioServicesPlayAlertSound(SystemSoundID(1331))
                 self.Add_Amount()
             }
         }
