@@ -66,6 +66,7 @@ class SearchGymRoomTableViewController: UITableViewController {
         return cell
     }
     
+    // pass data to next page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SearchMapViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
