@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     var pointLayer = CAShapeLayer()
     
-    @IBOutlet weak var AClabel: UILabel!
+    @IBOutlet weak var Aclabel: UILabel!
     private let AcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         Label.layer.borderWidth = 10
@@ -134,14 +134,14 @@ extension ViewController: PredictorDelegte{
             isThrowDetected = true
             DispatchQueue.main.async {
                 //upload label
-                self.AClabel.text = String(self.Actioncount)
+                self.Aclabel.text = String(self.Actioncount)
             }
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
                 //when detected alert
-                self.AClabel.backgroundColor = UIColor.green
+                self.Aclabel.backgroundColor = UIColor.green
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
                 self.Add_Amount()
             }
