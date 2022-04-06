@@ -109,16 +109,7 @@ class ViewController: UIViewController {
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
-        
-        //label
-        let label = UILabel(frame: CGRect(x: 269, y: 20, width: 200, height: 21))
-            label.center = CGPoint(x: 160, y: 285)
-            label.textAlignment = .center
-            label.textColor = UIColor.black
-            label.backgroundColor = UIColor.white
-            label.text = "This is Your Action count:\(String(Actioncount))"
-        
-        view.addSubview(label)
+    
 
         
     }
@@ -128,7 +119,7 @@ class ViewController: UIViewController {
 extension ViewController: PredictorDelegte{
     func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
-        if action == "Correct" && confience > 0.90 && isThrowDetected == false{
+        if action == "Biceps" && confience > 0.70 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true
