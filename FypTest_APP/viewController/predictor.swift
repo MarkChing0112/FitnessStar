@@ -8,7 +8,7 @@
 import Foundation
 import Vision
 //AImodel biceps file
-typealias ThrowingClassifies = Biceps_20220328_1
+typealias ThrowingClassifies = FitnessPose_1
 
 protocol PredictorDelegte: AnyObject {
     func predictor( predictor: Predictor,didFindNewRecognizedPoints point:[CGPoint])
@@ -19,7 +19,7 @@ class Predictor {
     
     weak var  delegate: PredictorDelegte?
     
-    let predictionWindowSize = 30
+    let predictionWindowSize = 60
     var posesWindow: [VNHumanBodyPoseObservation] = []
     
     init(){
@@ -65,7 +65,7 @@ class Predictor {
     
     func prepareInputWithObservation( observation: [VNHumanBodyPoseObservation])-> MLMultiArray? {
         let numAvilbleFrame = observation.count
-        let observationNeeded = 30
+        let observationNeeded = 60
         var multiArryBuffer = [MLMultiArray]()
         
         for frameIndex in 0..<min( numAvilbleFrame, observationNeeded){
