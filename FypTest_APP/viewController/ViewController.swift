@@ -134,6 +134,7 @@ extension ViewController: PredictorDelegte{
             isThrowDetected = true
             DispatchQueue.main.async {
                 //upload label
+                self.AClabel.text = String(self.Actioncount)
             }
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
