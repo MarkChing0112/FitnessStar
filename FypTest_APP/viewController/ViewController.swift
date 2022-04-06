@@ -141,6 +141,7 @@ extension ViewController: PredictorDelegte{
             }
             DispatchQueue.main.async {
                 //when detected alert
+                self.AClabel.backgroundColor = UIColor.green
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
                 self.Add_Amount()
             }
