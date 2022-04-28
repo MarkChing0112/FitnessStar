@@ -21,11 +21,7 @@ class ViewController: UIViewController {
     var pointLayer = CAShapeLayer()
     //traing count
     @IBOutlet weak var Aclabel: UILabel!
-    private let AcLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-        Label.layer.borderWidth = 10
-        Label.layer.borderColor = UIColor.white.cgColor
-        return Label }()
+
     @IBOutlet weak var TotalActionLBL: UILabel!
     @IBOutlet weak var TrainSETLBL: UILabel!
     @IBOutlet weak var TrainingCount: UILabel!
@@ -35,7 +31,12 @@ class ViewController: UIViewController {
     var isThrowDetected = false
     
 
-
+    //private let AcLabel: UILabel = {
+       // let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+       // Label.layer.borderWidth = 10
+       // Label.layer.borderColor = UIColor.white.cgColor
+       // return Label }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //get firebase data
@@ -53,7 +54,7 @@ class ViewController: UIViewController {
             ref.child("User_Train_Selection").child(user.uid).observeSingleEvent(of: .value, with: { snapshot in
           // Get user value
             let value = snapshot.value as? NSDictionary
-            let actionamount = value?["TrainAnount"] as?  String ?? ""
+            let actionamount = value?["TrainAmount"] as?  String ?? ""
             let TrainSetAmount = value?["TrainSetAmount"] as? String ?? ""
 
             let User_ActionAmount = Int(actionamount)
@@ -123,19 +124,18 @@ extension ViewController: PredictorDelegte{
             
             print("Throw detected")
             isThrowDetected = true
-            DispatchQueue.main.async {
-                //upload label
-                self.Aclabel.text = String(self.Actioncount)
-                
-            }
+
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
+                //upload label
+                self.Aclabel.text = String(self.Actioncount)
+                self.TrainSETLBL.text = "\(self.TrainSetCount)/\(String(self.User_TrainSetAmount))"
                 //when detected alert
                 self.Aclabel.backgroundColor = UIColor.green
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
-                self.Add_Amount()
+                self.Check_amount()
             }
         }
     }
