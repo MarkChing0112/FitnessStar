@@ -14,6 +14,7 @@ class SearchGymRoomTableViewController: UITableViewController {
     var activity = [Activity]()
     var searchValue: String!
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getGymRoom()
@@ -21,10 +22,12 @@ class SearchGymRoomTableViewController: UITableViewController {
     }
     
     @IBAction func searchBtn(_ sender: Any) {
-        getGymRoom()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        
+        self.tableView.reloadData()
+    }
+    
+    func upperLetter(t: String) -> String{
+        return t.uppercased()
     }
     
     
@@ -32,7 +35,8 @@ class SearchGymRoomTableViewController: UITableViewController {
         let db = Firestore.firestore()
         //self.searchValue = searchTextFied.text
         //\(String(describing: searchTextFied.text?.uppercased()))
-        db.collection("TAIPO").getDocuments() {(snapshot, err) in
+        
+        db.collection("District").getDocuments() {(snapshot, err) in
             
             if err == nil {
                 if let snapshot = snapshot {
@@ -40,7 +44,8 @@ class SearchGymRoomTableViewController: UITableViewController {
                         d in
                         return Activity(x: d["x"] as? String ?? "",
                                         y: d["y"] as? String ?? "",
-                                        gymroom: d["name"] as? String ?? "")
+                                        gymroom: d["name"] as? String ?? "",
+                                        district: d["district"] as? String ?? "")
                     }
                     
                     DispatchQueue.main.async {

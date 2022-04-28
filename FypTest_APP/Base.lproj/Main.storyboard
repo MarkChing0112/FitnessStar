@@ -1157,7 +1157,6 @@
         <!--Search Gym Room Table View Controller-->
         <scene sceneID="i6E-pv-BLz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NNa-Vo-Pfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="DhR-d5-xdg" customClass="SearchGymRoomTableViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Enm-NP-Wls">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1218,6 +1217,7 @@
                         <outlet property="searchTextFied" destination="LJV-TT-TRW" id="YRS-HR-IfY"/>
                     </connections>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNa-Vo-Pfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-457.97101449275368" y="67.633928571428569"/>
         </scene>
