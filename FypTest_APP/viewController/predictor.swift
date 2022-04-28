@@ -1,9 +1,7 @@
 //
 //  predictor.swift
 //  FypTest_APP
-//
-//  Created by TLok  on 21/9/2021.
-//
+
 
 import Foundation
 import Vision

@@ -1,9 +1,7 @@
 //
 //  VideoCapture.swift
 //  FypTest_APP
-//
-//  Created by TLok  on 19/9/2021.
-//
+
 
 import Foundation
 import AVFoundation

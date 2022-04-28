@@ -1,9 +1,7 @@
 //
 //  TrainingRecord2ViewController.swift
 //  FypTest_APP
-//
-//  Created by MARK ching on 15/1/2022.
-//
+
 
 import UIKit
 import Firebase

@@ -1,9 +1,6 @@
 //
 //  constant.swift
 //  FypTest_APP
-//
-//  Created by MARK on 14/2/2022.
-//
 
 import Foundation
 

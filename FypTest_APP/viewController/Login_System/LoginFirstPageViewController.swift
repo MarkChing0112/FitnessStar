@@ -1,9 +1,6 @@
 //
 //  LoginFirstPageViewController.swift
 //  FypTest_APP
-//
-//  Created by kin ming ching on 14/2/2022.
-//
 
 import UIKit
 
