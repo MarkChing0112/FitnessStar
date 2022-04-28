@@ -75,14 +75,14 @@
 		83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord4ViewController.swift; sourceTree = "<group>"; };
 		83500BAB27EDB73700C14FAE /* Biceps 1.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Biceps 1.mlpackage"; sourceTree = "<group>"; };
 		835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageNavigationController.swift; sourceTree = "<group>"; };
-		835E26DD27BA89D700CD79BB /* LoginFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFirstPageViewController.swift; sourceTree = "<group>"; };
-		835E26DF27BA8A0D00CD79BB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		835E26E127BA8A1400CD79BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		835E26E427BA8A6D00CD79BB /* LoginHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginHomeViewController.swift; sourceTree = "<group>"; };
-		835E26E627BA8A8900CD79BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		835E26EC27BA8E9B00CD79BB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
-		835E26F027BA9E0500CD79BB /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignOut.swift; sourceTree = "<group>"; };
+		835E26DD27BA89D700CD79BB /* LoginFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginFirstPageViewController.swift; path = Login_System/LoginFirstPageViewController.swift; sourceTree = "<group>"; };
+		835E26DF27BA8A0D00CD79BB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Login_System/SignUpViewController.swift; sourceTree = "<group>"; };
+		835E26E127BA8A1400CD79BB /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Login_System/LoginViewController.swift; sourceTree = "<group>"; };
+		835E26E427BA8A6D00CD79BB /* LoginHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginHomeViewController.swift; path = Login_System/LoginHomeViewController.swift; sourceTree = "<group>"; };
+		835E26E627BA8A8900CD79BB /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utilities.swift; path = Login_System/Utilities.swift; sourceTree = "<group>"; };
+		835E26EC27BA8E9B00CD79BB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = viewController/Login_System/Constant.swift; sourceTree = "<group>"; };
+		835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Login_System/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		835E26F027BA9E0500CD79BB /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignOut.swift; path = Login_System/SignOut.swift; sourceTree = "<group>"; };
 		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
 		83D60D9627F42E190094CDB5 /* Biceps_20220328_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Biceps_20220328_1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4F10C1FD26F748D10032B955 /* AppDelegate.swift */,
+				835E26EC27BA8E9B00CD79BB /* Constant.swift */,
 				4F10C1FF26F748D10032B955 /* SceneDelegate.swift */,
 				83329E252792CC4700600104 /* viewController */,
 				4F10C20326F748D10032B955 /* Main.storyboard */,
@@ -149,31 +150,16 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				836EFF72281A8A98009FFE4A /* Login */,
 				836EFF71281A874D009FFE4A /* RecordView */,
 				836EFF6E281A8231009FFE4A /* AImodel */,
 				836EFF6D281A8212009FFE4A /* SearchMapView */,
 				836EFF6C281A81EB009FFE4A /* AI_VIEW */,
 				836EFF6B281A8193009FFE4A /* TrainingView */,
-				835E26E327BA8A1E00CD79BB /* Login_System */,
 				83329E2E2792CCB600600104 /* HomeViewController.swift */,
 				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
 			);
 			path = viewController;
-			sourceTree = "<group>";
-		};
-		835E26E327BA8A1E00CD79BB /* Login_System */ = {
-			isa = PBXGroup;
-			children = (
-				835E26E627BA8A8900CD79BB /* Utilities.swift */,
-				835E26DD27BA89D700CD79BB /* LoginFirstPageViewController.swift */,
-				835E26DF27BA8A0D00CD79BB /* SignUpViewController.swift */,
-				835E26E127BA8A1400CD79BB /* LoginViewController.swift */,
-				835E26E427BA8A6D00CD79BB /* LoginHomeViewController.swift */,
-				835E26EC27BA8E9B00CD79BB /* Constant.swift */,
-				835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */,
-				835E26F027BA9E0500CD79BB /* SignOut.swift */,
-			);
-			path = Login_System;
 			sourceTree = "<group>";
 		};
 		836EFF6B281A8193009FFE4A /* TrainingView */ = {
@@ -225,6 +211,20 @@
 				839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */,
 			);
 			path = RecordView;
+			sourceTree = "<group>";
+		};
+		836EFF72281A8A98009FFE4A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				835E26E127BA8A1400CD79BB /* LoginViewController.swift */,
+				835E26F027BA9E0500CD79BB /* SignOut.swift */,
+				835E26E627BA8A8900CD79BB /* Utilities.swift */,
+				835E26DD27BA89D700CD79BB /* LoginFirstPageViewController.swift */,
+				835E26DF27BA8A0D00CD79BB /* SignUpViewController.swift */,
+				835E26E427BA8A6D00CD79BB /* LoginHomeViewController.swift */,
+				835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */,
+			);
+			name = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

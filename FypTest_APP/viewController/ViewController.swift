@@ -22,26 +22,22 @@ class ViewController: UIViewController {
     var Actioncount: Int = 0
     
     var pointLayer = CAShapeLayer()
-    
+    //traing count
     @IBOutlet weak var Aclabel: UILabel!
     private let AcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
         Label.layer.borderWidth = 10
         Label.layer.borderColor = UIColor.white.cgColor
         return Label }()
-
-
+    @IBOutlet weak var TotalActionLBL: UILabel!
+    @IBOutlet weak var TrainSETLBL: UILabel!
     
-    @IBOutlet var actionCountLabel: UILabel!
+    //time
+    @IBOutlet weak var DurationLBL: UILabel!
     var isThrowDetected = false
     
 
-    func ActionCountlabelSelect(){
-        var tempAC: String
-        tempAC = String(Actioncount)
-        actionCountLabel.text = tempAC;
-        
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
  
@@ -60,16 +56,18 @@ class ViewController: UIViewController {
             let actionamount = value?["TrainAnount"] as?  String ?? ""
             let TrainSetAmount = value?["TrainSetAmount"] as? String ?? ""
 
-            let User_ActionAmount = Int(actionamount)
-            let User_TrainSetAmount = Int(TrainSetAmount)
+            let User_ActionAmount = Int(actionamount)!
+            let User_TrainSetAmount = Int(TrainSetAmount)!
+            self.TotalActionLBL.text = actionamount
+            self.TrainSETLBL.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
           // ...
         }) { error in
           print(error.localizedDescription)
             }}
 
     func toRecordPage(){
-        let bicepsViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.bicepsViewController) as? BicepsViewController
-        self.view.window?.rootViewController = bicepsViewController
+        let bicepsRecordViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.bicepsRecordViewController) as? BicepsRecordViewController
+        self.view.window?.rootViewController = bicepsRecordViewController
         self.view.window?.makeKeyAndVisible()
     }
     

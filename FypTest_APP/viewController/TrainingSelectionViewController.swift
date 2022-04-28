@@ -29,11 +29,12 @@ class TrainingSelectionViewController: UIViewController {
     //imageview
     @IBOutlet weak var Bicepsimage: UIButton!
     @IBOutlet weak var Tricepsimage: UIButton!
-    
+    @IBOutlet weak var ChestImage: UIButton!
+    @IBOutlet weak var BackImage: UIButton!
     //label amount
     @IBOutlet var SetAmountLabel: UILabel!
     @IBOutlet var TrainAmountLabel: UILabel!
-    @IBOutlet weak var ChestImage: UIButton!
+
     
     
     override func viewDidLoad() {
@@ -196,18 +197,31 @@ class TrainingSelectionViewController: UIViewController {
         let user = Auth.auth().currentUser
         if let user = user {
         if BICEPS == true{
+           
+            
+            
+            
             ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //TO next page
             toTrainBRecord()
         }else if TRICEPS == true{
+            
+            
             ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "TRICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainTRecord()
         }else if CHEST == true{
+            
+            
+            
+            
             ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainCRecord()
         }else if BACK == true{
+            
+            
+            
             ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "BACK" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainBARecord()

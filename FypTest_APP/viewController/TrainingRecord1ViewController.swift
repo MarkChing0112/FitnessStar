@@ -26,6 +26,7 @@ class TrainingRecord1ViewController: UIViewController {
           // Get user value
             let value = snapshot.value as? NSDictionary
            // let body = value?["Bodypart"] as? String ?? ""
+            let bodypart = value?["Bodypart"] as? String ?? ""
             let TrainAmount = value?["TrainAmount"] as? String ?? ""
             let TrainsetAmount = value?["TrainSetAmount"] as? String ?? ""
             //show user selected session

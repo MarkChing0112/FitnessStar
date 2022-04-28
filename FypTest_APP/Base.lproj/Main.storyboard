@@ -98,6 +98,9 @@
                     <navigationItem key="navigationItem" id="oJB-zr-3bH"/>
                     <connections>
                         <outlet property="Aclabel" destination="gnj-P0-WRg" id="QYj-hD-4fw"/>
+                        <outlet property="DurationLBL" destination="TzW-Sg-Dyl" id="6ds-uF-hiW"/>
+                        <outlet property="TotalActionLBL" destination="H8H-Vh-SZH" id="deb-DI-0iz"/>
+                        <outlet property="TrainSETLBL" destination="bK5-vt-pW0" id="vGp-Yu-2QU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -780,6 +783,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="TRAINING" id="Tx9-Bj-a6d"/>
                     <connections>
+                        <outlet property="BackImage" destination="1qF-Gu-fG6" id="op6-be-MNj"/>
                         <outlet property="BackOutBtn" destination="1qF-Gu-fG6" id="NUB-ju-kEL"/>
                         <outlet property="BicepsOutBtn" destination="K8C-DS-dbW" id="Zxz-TR-0Nr"/>
                         <outlet property="Bicepsimage" destination="K8C-DS-dbW" id="zHA-nd-sBd"/>
