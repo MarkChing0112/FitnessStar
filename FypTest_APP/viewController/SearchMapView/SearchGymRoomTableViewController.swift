@@ -9,7 +9,10 @@ import FirebaseFirestore
 
 class SearchGymRoomTableViewController: UITableViewController {
 
+    @IBOutlet weak var searchTextFied: UITextField!
+    
     var activity = [Activity]()
+    var searchValue: String!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -17,9 +20,18 @@ class SearchGymRoomTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
+    @IBAction func searchBtn(_ sender: Any) {
+        getGymRoom()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    
     func getGymRoom() {
         let db = Firestore.firestore()
-        
+        //self.searchValue = searchTextFied.text
+        //\(String(describing: searchTextFied.text?.uppercased()))
         db.collection("TAIPO").getDocuments() {(snapshot, err) in
             
             if err == nil {
