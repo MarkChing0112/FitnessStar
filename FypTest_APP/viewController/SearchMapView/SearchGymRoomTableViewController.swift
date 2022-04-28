@@ -24,7 +24,7 @@ class SearchGymRoomTableViewController: UITableViewController {
     func getGymRoom() {
         let db = Firestore.firestore()
         
-        db.collection("TaiPo").getDocuments() {(snapshot, err) in
+        db.collection("\(searchBar)").getDocuments() {(snapshot, err) in
             
             if err == nil {
                 if let snapshot = snapshot {
