@@ -11,8 +11,6 @@ class SearchGymRoomTableViewController: UITableViewController {
 
     var activity = [Activity]()
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getGymRoom()
@@ -22,7 +20,7 @@ class SearchGymRoomTableViewController: UITableViewController {
     func getGymRoom() {
         let db = Firestore.firestore()
         
-        db.collection("\(searchBar)").getDocuments() {(snapshot, err) in
+        db.collection("TAIPO").getDocuments() {(snapshot, err) in
             
             if err == nil {
                 if let snapshot = snapshot {
@@ -55,7 +53,7 @@ class SearchGymRoomTableViewController: UITableViewController {
 
     //cell
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! searchGymRoomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "gymRoomCell", for: indexPath) as! searchGymRoomTableViewCell
         
         cell.gymRoom.text = activity[indexPath.row].gymroom
 
