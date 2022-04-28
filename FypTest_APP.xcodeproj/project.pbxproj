@@ -38,6 +38,10 @@
 		835E26ED27BA8E9B00CD79BB /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E26EC27BA8E9B00CD79BB /* Constant.swift */; };
 		835E26EF27BA93CE00CD79BB /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */; };
 		835E26F127BA9E0500CD79BB /* SignOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E26F027BA9E0500CD79BB /* SignOut.swift */; };
+		836EFF77281A8F8C009FFE4A /* Biceps.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 836EFF73281A8F8B009FFE4A /* Biceps.mlmodel */; };
+		836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 836EFF74281A8F8C009FFE4A /* Pushup.mlmodel */; };
+		836EFF79281A8F8C009FFE4A /* Sit.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 836EFF75281A8F8C009FFE4A /* Sit.mlmodel */; };
+		836EFF7A281A8F8C009FFE4A /* Stand.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 836EFF76281A8F8C009FFE4A /* Stand.mlmodel */; };
 		838BF7D72792B6110015AC84 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7D62792B6110015AC84 /* FirebaseAnalytics */; };
 		838BF7D92792B6110015AC84 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7D82792B6110015AC84 /* FirebaseAuth */; };
 		838BF7DB2792B6110015AC84 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7DA2792B6110015AC84 /* FirebaseDatabase */; };
@@ -83,6 +87,10 @@
 		835E26EC27BA8E9B00CD79BB /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = viewController/Login_System/Constant.swift; sourceTree = "<group>"; };
 		835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForgotPasswordViewController.swift; path = Login_System/ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		835E26F027BA9E0500CD79BB /* SignOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignOut.swift; path = Login_System/SignOut.swift; sourceTree = "<group>"; };
+		836EFF73281A8F8B009FFE4A /* Biceps.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Biceps.mlmodel; path = Transfer/Biceps.mlmodel; sourceTree = SOURCE_ROOT; };
+		836EFF74281A8F8C009FFE4A /* Pushup.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Pushup.mlmodel; path = Transfer/Pushup.mlmodel; sourceTree = SOURCE_ROOT; };
+		836EFF75281A8F8C009FFE4A /* Sit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Sit.mlmodel; path = Transfer/Sit.mlmodel; sourceTree = SOURCE_ROOT; };
+		836EFF76281A8F8C009FFE4A /* Stand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Stand.mlmodel; path = Transfer/Stand.mlmodel; sourceTree = SOURCE_ROOT; };
 		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
 		83D60D9627F42E190094CDB5 /* Biceps_20220328_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Biceps_20220328_1.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +206,10 @@
 		836EFF6E281A8231009FFE4A /* AImodel */ = {
 			isa = PBXGroup;
 			children = (
+				836EFF73281A8F8B009FFE4A /* Biceps.mlmodel */,
+				836EFF74281A8F8C009FFE4A /* Pushup.mlmodel */,
+				836EFF75281A8F8C009FFE4A /* Sit.mlmodel */,
+				836EFF76281A8F8C009FFE4A /* Stand.mlmodel */,
 				83500BAB27EDB73700C14FAE /* Biceps 1.mlpackage */,
 				83225D3E27FD5FD600571DAB /* FitnessPose 1.mlmodel */,
 				83D60D9627F42E190094CDB5 /* Biceps_20220328_1.mlmodel */,
@@ -314,6 +326,7 @@
 			files = (
 				83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */,
 				835E26EF27BA93CE00CD79BB /* ForgotPasswordViewController.swift in Sources */,
+				836EFF79281A8F8C009FFE4A /* Sit.mlmodel in Sources */,
 				83500BAC27EDB73700C14FAE /* Biceps 1.mlpackage in Sources */,
 				4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */,
 				83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */,
@@ -325,6 +338,7 @@
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
 				83D60D9727F42E190094CDB5 /* Biceps_20220328_1.mlmodel in Sources */,
+				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
@@ -340,6 +354,8 @@
 				83225D3F27FD5FD600571DAB /* FitnessPose 1.mlmodel in Sources */,
 				5D4A60DD27ECCD13004070D6 /* Activity.swift in Sources */,
 				835E26ED27BA8E9B00CD79BB /* Constant.swift in Sources */,
+				836EFF77281A8F8C009FFE4A /* Biceps.mlmodel in Sources */,
+				836EFF7A281A8F8C009FFE4A /* Stand.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

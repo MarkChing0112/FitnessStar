@@ -22,11 +22,12 @@ class TrainingRecord1ViewController: UIViewController {
     
     func GetUserData(){
         let ref = Database.database().reference()
-        ref.child("Record").child("Record1").observeSingleEvent(of: .value, with: { snapshot in
+        let user = Auth.auth().currentUser
+        if let user = user {
+            ref.child("User_Train_Selection").child(user.uid).observeSingleEvent(of: .value, with: { snapshot in
           // Get user value
             let value = snapshot.value as? NSDictionary
            // let body = value?["Bodypart"] as? String ?? ""
-            let bodypart = value?["Bodypart"] as? String ?? ""
             let TrainAmount = value?["TrainAmount"] as? String ?? ""
             let TrainsetAmount = value?["TrainSetAmount"] as? String ?? ""
             //show user selected session
@@ -36,5 +37,5 @@ class TrainingRecord1ViewController: UIViewController {
           print(error.localizedDescription)
         }
     }
-
+    }
 }

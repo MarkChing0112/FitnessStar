@@ -16,8 +16,8 @@ class ViewController: UIViewController {
     let videoCapture = VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
     //user data and user train amount count
-    var User_ActionAmount: Int = 0
-    var User_TrainSetAmount: Int = 0
+    public var User_ActionAmount: Int = 0
+    public var User_TrainSetAmount: Int = 0
     var TrainSetCount: Int = 0
     var Actioncount: Int = 0
     
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         return Label }()
     @IBOutlet weak var TotalActionLBL: UILabel!
     @IBOutlet weak var TrainSETLBL: UILabel!
+    @IBOutlet weak var TrainingCount: UILabel!
     
     //time
     @IBOutlet weak var DurationLBL: UILabel!
@@ -40,30 +41,34 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        //get firebase data
         Read_Data()
+        //setup camera
         setupVideoPreview()
-        
+        //pose detection
         videoCapture.predictor.delegate = self
         
     }
     func Read_Data(){
         let ref = Database.database().reference()
-        let userID = Auth.auth().currentUser?.uid
-        ref.child("User_Train_Selection").child(userID!).observeSingleEvent(of: .value, with: { snapshot in
+        let user = Auth.auth().currentUser
+        if let user = user {
+            ref.child("User_Train_Selection").child(user.uid).observeSingleEvent(of: .value, with: { snapshot in
           // Get user value
             let value = snapshot.value as? NSDictionary
             let actionamount = value?["TrainAnount"] as?  String ?? ""
             let TrainSetAmount = value?["TrainSetAmount"] as? String ?? ""
 
-            let User_ActionAmount = Int(actionamount)!
-            let User_TrainSetAmount = Int(TrainSetAmount)!
-            self.TotalActionLBL.text = actionamount
+            let User_ActionAmount = Int(actionamount)
+            let User_TrainSetAmount = Int(TrainSetAmount)
+            self.TotalActionLBL.text = "/\(actionamount)"
+            self.TrainingCount.text = "\(self.TrainSetCount)"
             self.TrainSETLBL.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
           // ...
         }) { error in
           print(error.localizedDescription)
             }}
+    }
 
     func toRecordPage(){
         let bicepsRecordViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.bicepsRecordViewController) as? BicepsRecordViewController
@@ -124,6 +129,7 @@ extension ViewController: PredictorDelegte{
             DispatchQueue.main.async {
                 //upload label
                 self.Aclabel.text = String(self.Actioncount)
+                
             }
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false

@@ -194,13 +194,10 @@ class TrainingSelectionViewController: UIViewController {
     @IBAction func NextPageBtnOnTap(_ sender: Any) {
         //firebase setup
         let ref = Database.database().reference()
+        if Auth.auth().currentUser != nil {
         let user = Auth.auth().currentUser
         if let user = user {
         if BICEPS == true{
-           
-            
-            
-            
             ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //TO next page
             toTrainBRecord()
@@ -213,8 +210,7 @@ class TrainingSelectionViewController: UIViewController {
         }else if CHEST == true{
             
             
-            
-            
+        
             ref.child("User_Train_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"TrainSetAmount": SetAmountLabel.text!,"TrainAmount":TrainAmountLabel.text!])
             //To next page
             toTrainCRecord()
@@ -228,6 +224,7 @@ class TrainingSelectionViewController: UIViewController {
         }else{
             showAlertError()
         }
+    }
     }
     }
 }
