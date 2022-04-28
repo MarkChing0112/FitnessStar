@@ -149,11 +149,25 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
-				83DC04702806F6C400F0EEC3 /* Home_View */,
-				83DC046F2806F6A100F0EEC3 /* AI_System&model */,
-				83DC046E2806F66300F0EEC3 /* TrainingView */,
-				83DC046D2806F61600F0EEC3 /* SearchGymView */,
 				835E26E327BA8A1E00CD79BB /* Login_System */,
+				83500BAB27EDB73700C14FAE /* Biceps 1.mlpackage */,
+				83225D3E27FD5FD600571DAB /* FitnessPose 1.mlmodel */,
+				83D60D9627F42E190094CDB5 /* Biceps_20220328_1.mlmodel */,
+				4F10C21126F74EEB0032B955 /* VideoCapture.swift */,
+				4F10C20126F748D10032B955 /* ViewController.swift */,
+				4FAB64CC26F8FC6C008BFF14 /* predictor.swift */,
+				83329E262792CC7800600104 /* TrainingSelectionViewController.swift */,
+				83329E2C2792CCAB00600104 /* SearchMapViewController.swift */,
+				83329E2E2792CCB600600104 /* HomeViewController.swift */,
+				83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */,
+				83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */,
+				83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */,
+				83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */,
+				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
+				5D4A60DC27ECCD13004070D6 /* Activity.swift */,
+				839B89CC27EB008200FC0CBF /* BicepsViewController.swift */,
+				5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */,
+				5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -171,60 +185,6 @@
 				835E26F027BA9E0500CD79BB /* SignOut.swift */,
 			);
 			path = Login_System;
-			sourceTree = "<group>";
-		};
-		83DC046D2806F61600F0EEC3 /* SearchGymView */ = {
-			isa = PBXGroup;
-			children = (
-				5D4A60DC27ECCD13004070D6 /* Activity.swift */,
-				83329E2C2792CCAB00600104 /* SearchMapViewController.swift */,
-				5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */,
-				5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */,
-			);
-			path = SearchGymView;
-			sourceTree = "<group>";
-		};
-		83DC046E2806F66300F0EEC3 /* TrainingView */ = {
-			isa = PBXGroup;
-			children = (
-				83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */,
-				83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */,
-				83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */,
-				83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */,
-				83329E262792CC7800600104 /* TrainingSelectionViewController.swift */,
-			);
-			path = TrainingView;
-			sourceTree = "<group>";
-		};
-		83DC046F2806F6A100F0EEC3 /* AI_System&model */ = {
-			isa = PBXGroup;
-			children = (
-				83DC04712806F6E900F0EEC3 /* AI_Model */,
-				4FAB64CC26F8FC6C008BFF14 /* predictor.swift */,
-				4F10C21126F74EEB0032B955 /* VideoCapture.swift */,
-				4F10C20126F748D10032B955 /* ViewController.swift */,
-				839B89CC27EB008200FC0CBF /* BicepsViewController.swift */,
-			);
-			path = "AI_System&model";
-			sourceTree = "<group>";
-		};
-		83DC04702806F6C400F0EEC3 /* Home_View */ = {
-			isa = PBXGroup;
-			children = (
-				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
-				83329E2E2792CCB600600104 /* HomeViewController.swift */,
-			);
-			path = Home_View;
-			sourceTree = "<group>";
-		};
-		83DC04712806F6E900F0EEC3 /* AI_Model */ = {
-			isa = PBXGroup;
-			children = (
-				83D60D9627F42E190094CDB5 /* Biceps_20220328_1.mlmodel */,
-				83225D3E27FD5FD600571DAB /* FitnessPose 1.mlmodel */,
-				83500BAB27EDB73700C14FAE /* Biceps 1.mlpackage */,
-			);
-			path = AI_Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
