@@ -17,13 +17,38 @@ class ViewController: UIViewController {
     public var User_TrainSetAmount: Int = 0
     var TrainSetCount: Int = 0
     var Actioncount: Int = 0
-    
     var pointLayer = CAShapeLayer()
+    //Duration
+    //image icon
+    @IBOutlet weak var IconImageView: UIImageView!
+    
+    //background
+    @IBOutlet weak var BackgroundLBL: UILabel!
+    
+    //TEXT Label
+    @IBOutlet weak var TitleLBL: UILabel!
+    
+    @IBOutlet weak var SETSLBL: UILabel!
+    private let SetSLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
+
+        return Label }()
+    @IBOutlet weak var REPSLBL: UILabel!
+    private let RepSLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
+
+        return Label }()
     //traing count
     @IBOutlet weak var Aclabel: UILabel!
+    
+    private let AcLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
 
+        return Label }()
     @IBOutlet weak var TotalActionLBL: UILabel!
+    
     @IBOutlet weak var TrainSETLBL: UILabel!
+    
     @IBOutlet weak var TrainingCount: UILabel!
     
     //time
@@ -31,11 +56,7 @@ class ViewController: UIViewController {
     var isThrowDetected = false
     
 
-    //private let AcLabel: UILabel = {
-       // let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
-       // Label.layer.borderWidth = 10
-       // Label.layer.borderColor = UIColor.white.cgColor
-       // return Label }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,12 +107,18 @@ class ViewController: UIViewController {
         }else if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
             Actioncount += 1
         }else if((Actioncount==User_ActionAmount)&&(TrainSetCount == User_TrainSetAmount)){
-            ref.child("Record").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"TrainSetAmount": User_TrainSetAmount,"TrainAmount":User_ActionAmount])
+            //show alert
+            
+            
         }
         }
         
     }
+    func showAlertF(){
+        
+    }
     
+    //test function
     func Add_Amount(){
         Actioncount+=1
     }
@@ -110,11 +137,7 @@ class ViewController: UIViewController {
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
-    
-
-        
     }
-
 }
 
 extension ViewController: PredictorDelegte{
@@ -133,7 +156,6 @@ extension ViewController: PredictorDelegte{
                 self.Aclabel.text = String(self.Actioncount)
                 self.TrainSETLBL.text = "\(self.TrainSetCount)/\(String(self.User_TrainSetAmount))"
                 //when detected alert
-                self.Aclabel.backgroundColor = UIColor.green
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
                 self.Check_amount()
             }
