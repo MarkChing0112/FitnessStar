@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BicepsViewController: UIViewController {
+class BicepsRecordViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
