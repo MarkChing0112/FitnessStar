@@ -64,7 +64,7 @@
 		5D4A60DC27ECCD13004070D6 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGymRoomTableViewCell.swift; sourceTree = "<group>"; };
-		5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomTableViewController.swift; sourceTree = "<group>"; };
+		5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		83225D3E27FD5FD600571DAB /* FitnessPose 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FitnessPose 1.mlmodel"; sourceTree = "<group>"; };
 		83329E262792CC7800600104 /* TrainingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSelectionViewController.swift; sourceTree = "<group>"; };
 		83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord1ViewController.swift; sourceTree = "<group>"; };

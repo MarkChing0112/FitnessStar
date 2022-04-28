@@ -12,6 +12,21 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class TrainingSelectionViewController: UIViewController {
+    internal init(BICEPS: Bool = false, TRICEPS: Bool = false, CHEST: Bool = false, BACK: Bool = false, trainSet: Int = 1, trainamount: Int = 6, BicepsOutBtn: UIButton? = nil, TricepsOutBtn: UIButton? = nil, ChestOutBtn: UIButton? = nil, BackOutBtn: UIButton? = nil, SetAmountLabel: UILabel? = nil, TrainAmountLabel: UILabel? = nil) {
+        self.BICEPS = BICEPS
+        self.TRICEPS = TRICEPS
+        self.CHEST = CHEST
+        self.BACK = BACK
+        self.trainSet = trainSet
+        self.trainamount = trainamount
+        self.BicepsOutBtn = BicepsOutBtn
+        self.TricepsOutBtn = TricepsOutBtn
+        self.ChestOutBtn = ChestOutBtn
+        self.BackOutBtn = BackOutBtn
+        self.SetAmountLabel = SetAmountLabel
+        self.TrainAmountLabel = TrainAmountLabel
+    }
+    
     //var
     var BICEPS = false;
     var TRICEPS = false;
