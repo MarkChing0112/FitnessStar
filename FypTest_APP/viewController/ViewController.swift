@@ -21,38 +21,66 @@ class ViewController: UIViewController {
     //Duration
     //image icon
     @IBOutlet weak var IconImageView: UIImageView!
+    private let iconImage: UIImageView = {
+        let iconimage = UIImageView(frame: CGRect(x: 20, y: 64, width: 60, height: 60))
+        iconimage.image = UIImage(named: "Icon_110_Biceps")
+        return iconimage}()
     
     //background
     @IBOutlet weak var BackgroundLBL: UILabel!
-    
+    private let backgroundLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 414, height: 136))
+
+        return Label }()
     //TEXT Label
     @IBOutlet weak var TitleLBL: UILabel!
+    private let titleLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 78, y: 64, width: 122, height: 63))
+
+        return Label }()
     
     @IBOutlet weak var SETSLBL: UILabel!
     private let SetSLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
 
         return Label }()
+    
     @IBOutlet weak var REPSLBL: UILabel!
     private let RepSLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
 
         return Label }()
-    //traing count
-    @IBOutlet weak var Aclabel: UILabel!
     
-    private let AcLabel: UILabel = {
+    @IBOutlet weak var DurationTLBL: UILabel!
+    private let durationsLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 30, y: 11, width: 109, height: 21))
+
+        return Label }()
+    //traing count
+    @IBOutlet weak var TotalActionLBL: UILabel!
+    private let totalLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 305, y: 84, width: 63, height: 44))
+
+        return Label }()
+    
+    @IBOutlet weak var TrainSETLBL: UILabel!
+    private let trainLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 297, y: 61, width: 61, height: 44))
+
+        return Label }()
+    
+    @IBOutlet weak var TrainingCount: UILabel!
+    private let trainingcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
 
         return Label }()
-    @IBOutlet weak var TotalActionLBL: UILabel!
-    
-    @IBOutlet weak var TrainSETLBL: UILabel!
-    
-    @IBOutlet weak var TrainingCount: UILabel!
-    
     //time
     @IBOutlet weak var DurationLBL: UILabel!
+    private let durationLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 30, y: 30, width: 88, height: 24))
+
+        return Label }()
+    
     var isThrowDetected = false
     
 
@@ -137,6 +165,7 @@ class ViewController: UIViewController {
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
+        view.addSubview(SetSLBL)
     }
 }
 
@@ -153,7 +182,7 @@ extension ViewController: PredictorDelegte{
             }
             DispatchQueue.main.async {
                 //upload label
-                self.Aclabel.text = String(self.Actioncount)
+               // self.Aclabel.text = String(self.Actioncount)
                 self.TrainSETLBL.text = "\(self.TrainSetCount)/\(String(self.User_TrainSetAmount))"
                 //when detected alert
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
