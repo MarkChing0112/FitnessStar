@@ -16,7 +16,6 @@ class SearchGymRoomTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getGymRoom(searchTextFied.text!)
     }
     
     @IBAction func searchBtn(_ sender: Any) {
