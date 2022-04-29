@@ -12,31 +12,22 @@ class SearchGymRoomTableViewController: UITableViewController {
     @IBOutlet weak var searchTextFied: UITextField!
     
     var activity = [Activity]()
-    var searchValue: String!
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getGymRoom()
-        self.tableView.reloadData()
+        getGymRoom(searchTextFied.text!)
     }
     
     @IBAction func searchBtn(_ sender: Any) {
-        
-        self.tableView.reloadData()
+        getGymRoom(searchTextFied.text!)
     }
     
-    func upperLetter(t: String) -> String{
-        return t.uppercased()
-    }
-    
-    
-    func getGymRoom() {
+    // get value from firebase
+    func getGymRoom(_ searchValue: String) {
         let db = Firestore.firestore()
-        //self.searchValue = searchTextFied.text
-        //\(String(describing: searchTextFied.text?.uppercased()))
         
-        db.collection("District").getDocuments() {(snapshot, err) in
+        db.collection("\(searchValue.uppercased())").getDocuments() {(snapshot, err) in
             
             if err == nil {
                 if let snapshot = snapshot {
@@ -68,7 +59,7 @@ class SearchGymRoomTableViewController: UITableViewController {
         return activity.count
     }
 
-    //cell
+    //cell view
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gymRoomCell", for: indexPath) as! searchGymRoomTableViewCell
         
