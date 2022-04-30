@@ -30,55 +30,75 @@ class ViewController: UIViewController {
     @IBOutlet weak var BackgroundLBL: UILabel!
     private let backgroundLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 0, y: 0, width: 414, height: 136))
-
+        Label.backgroundColor = UIColor(red: 81/255, green: 57/255, blue: 0/255, alpha: 0.65)
+        Label.bounds.origin = CGPoint(x:0, y: 0)
+        Label.textColor = UIColor.white
         return Label }()
     //TEXT Label
     @IBOutlet weak var TitleLBL: UILabel!
     private let titleLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 78, y: 64, width: 122, height: 63))
-
+        Label.text = "BICEPS\nTRAINING"
+        Label.bounds.origin = CGPoint(x: 78, y:64)
+        Label.numberOfLines = 2
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.white
         return Label }()
     
     @IBOutlet weak var SETSLBL: UILabel!
     private let SetSLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
-
+        let Label = UILabel(frame: CGRect(x: 346, y: 14, width: 63, height: 39))
+        Label.text = "SET"
+        Label.bounds.origin = CGPoint(x: 346, y: 14)
+        Label.textColor = UIColor.lightGray
         return Label }()
     
     @IBOutlet weak var REPSLBL: UILabel!
     private let RepSLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
-
+        let Label = UILabel(frame: CGRect(x: 348, y: 89, width: 63, height: 39))
+        Label.text = "REPS"
+        Label.bounds.origin = CGPoint(x: 348, y: 89)
+        Label.textColor = UIColor.lightGray
         return Label }()
     
     @IBOutlet weak var DurationTLBL: UILabel!
     private let durationsLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 30, y: 11, width: 109, height: 21))
-
+        Label.text = "DURATION"
+        Label.bounds.origin = CGPoint(x: 30, y: 11)
+        Label.textColor = UIColor.lightGray
         return Label }()
     //traing count
     @IBOutlet weak var TotalActionLBL: UILabel!
     private let totalLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 305, y: 84, width: 63, height: 44))
-
+        Label.bounds.origin = CGPoint(x: 305, y: 84)
+        Label.textColor = UIColor.white
         return Label }()
     
     @IBOutlet weak var TrainSETLBL: UILabel!
     private let trainLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 297, y: 61, width: 61, height: 44))
-
+        Label.bounds.origin = CGPoint(x: 297, y: 61)
+        Label.textColor = UIColor.white
         return Label }()
     
     @IBOutlet weak var TrainingCount: UILabel!
     private let trainingcLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 252, y: 66, width: 68, height: 62))
-
+        Label.text = "0"
+        Label.bounds.origin = CGPoint(x: 252, y: 66)
+        Label.font = Label.font.withSize(22)
+        Label.textColor = UIColor.white
         return Label }()
     //time
     @IBOutlet weak var DurationLBL: UILabel!
     private let durationLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 30, y: 30, width: 88, height: 24))
-
+        Label.text = "08:00"
+        Label.font = Label.font.withSize(20)
+        Label.bounds.origin = CGPoint(x: 30, y: 30)
+        Label.textColor = UIColor.white
         return Label }()
     
     var isThrowDetected = false
@@ -108,9 +128,9 @@ class ViewController: UIViewController {
 
             let User_ActionAmount = Int(actionamount)
             let User_TrainSetAmount = Int(TrainSetAmount)
-            self.TotalActionLBL.text = "/\(actionamount)"
-            self.TrainingCount.text = "\(self.TrainSetCount)"
-            self.TrainSETLBL.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
+            self.totalLabel.text = "/\(actionamount)"
+            self.trainingcLabel.text = "\(self.TrainSetCount)"
+            self.trainLabel.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
           // ...
         }) { error in
           print(error.localizedDescription)
@@ -137,8 +157,7 @@ class ViewController: UIViewController {
         }else if((Actioncount==User_ActionAmount)&&(TrainSetCount == User_TrainSetAmount)){
             //show alert
             
-            
-        }
+            }
         }
         
     }
@@ -165,7 +184,16 @@ class ViewController: UIViewController {
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
+        view.addSubview(iconImage)
+        view.addSubview(backgroundLBL)
+        view.addSubview(titleLBL)
         view.addSubview(SetSLBL)
+        view.addSubview(RepSLBL)
+        view.addSubview(durationsLBL)
+        view.addSubview(totalLabel)
+        view.addSubview(trainLabel)
+        view.addSubview(trainingcLabel)
+        view.addSubview(durationLabel)
     }
 }
 
@@ -210,4 +238,3 @@ extension ViewController: PredictorDelegte{
         }
     }
 }
-
