@@ -21,6 +21,7 @@
 		5D60824A281AB21400A76B99 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D608248281AB21400A76B99 /* Model.xcdatamodeld */; };
 		5D608258281C364F00A76B99 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D608257281C364F00A76B99 /* RecordTableViewCell.swift */; };
 		5D60825C281C36AA00A76B99 /* RecordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D60825B281C36AA00A76B99 /* RecordTableViewController.swift */; };
+		5D817F1D281D2281005FCD70 /* RecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D817F1C281D2281005FCD70 /* RecordModel.swift */; };
 		5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */; };
 		5DA6A1E627EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */; };
 		83225D3F27FD5FD600571DAB /* FitnessPose 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 83225D3E27FD5FD600571DAB /* FitnessPose 1.mlmodel */; };
@@ -73,6 +74,7 @@
 		5D608249281AB21400A76B99 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		5D608257281C364F00A76B99 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		5D60825B281C36AA00A76B99 /* RecordTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewController.swift; sourceTree = "<group>"; };
+		5D817F1C281D2281005FCD70 /* RecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModel.swift; sourceTree = "<group>"; };
 		5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGymRoomTableViewCell.swift; sourceTree = "<group>"; };
 		5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		83225D3E27FD5FD600571DAB /* FitnessPose 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "FitnessPose 1.mlmodel"; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */,
 				5D608257281C364F00A76B99 /* RecordTableViewCell.swift */,
 				5D60825B281C36AA00A76B99 /* RecordTableViewController.swift */,
+				5D817F1C281D2281005FCD70 /* RecordModel.swift */,
 			);
 			path = RecordView;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
 				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
+				5D817F1D281D2281005FCD70 /* RecordModel.swift in Sources */,
 				5D608258281C364F00A76B99 /* RecordTableViewCell.swift in Sources */,
 				5D60824A281AB21400A76B99 /* Model.xcdatamodeld in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,

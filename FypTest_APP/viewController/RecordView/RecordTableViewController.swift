@@ -4,9 +4,12 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class RecordTableViewController: UITableViewController {
 
+    var record = [RecordModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -14,7 +17,25 @@ class RecordTableViewController: UITableViewController {
     func getRecord() {
         let db = Firestore.firestore()
         
-        //db.collection("Reocrd").
+        if Auth.auth().currentUser != nil {
+            let user = Auth.auth().currentUser
+            
+            if let user = user {
+                db.collection("Reocrd").document(user.uid).collection("data").getDocuments() {
+                    (snapshot, err) in
+                    
+                    if err == nil {
+                        if let snapshot = snapshot {
+                            self.record = snapshot.documents.map {
+                                r in
+                                
+                                return RecordModel()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
