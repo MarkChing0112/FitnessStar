@@ -203,7 +203,7 @@ class ViewController: UIViewController {
 extension ViewController: PredictorDelegte{
     func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
-        if action == "Biceps" && confience > 0.70 && isThrowDetected == false{
+        if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true
