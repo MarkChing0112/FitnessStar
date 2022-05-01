@@ -10,6 +10,7 @@ struct Constants {
         static let firstPageNavigationController = "FirstPage_Con"
         static let loginFirstPageViewController = "LoginFPageC"
         static let bicepsRecordViewController = "BVC"
+        static let recordTableViewController = "RTVC"
     }
     
     

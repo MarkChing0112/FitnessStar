@@ -17,10 +17,27 @@ class ViewController: UIViewController {
     public var User_TrainSetAmount: Int = 0
     var TrainSetCount: Int = 0
     var Actioncount: Int = 0
+    var Accuracy_STR : String = ""
+   
     var pointLayer = CAShapeLayer()
-    //Duration
-    //image icon
+    //time
+    let formatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.timeZone = .current
+        formatter.locale = .current
+        formatter.dateFormat = "MM/dd/yyyy-HH:mm:a"
+        return formatter
+    }()
+    let formatter2: DateFormatter = {
+        let formatter2 = DateFormatter()
+        formatter2.timeZone = .current
+        formatter2.locale = .current
+        formatter2.dateFormat = "MM-dd-yyyy-HH:mm:a"
+        return formatter2
+    }()
 
+
+    //image icon
     private let iconImage: UIImageView = {
         let iconimage = UIImageView(frame: CGRect(x: 20, y: 125, width: 60, height: 60))
         iconimage.image = UIImage(named: "Icon_110_Biceps")
@@ -96,8 +113,8 @@ class ViewController: UIViewController {
         return Label }()
     //time
     private let durationLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 40, y: 95, width: 88, height: 24))
-        Label.text = "08:00"
+        let Label = UILabel(frame: CGRect(x: 40, y: 95, width: 100, height: 24))
+        Label.text = ""
         Label.font = Label.font.withSize(20)
         Label.bounds.origin = CGPoint(x: 30, y: 60)
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
@@ -106,15 +123,48 @@ class ViewController: UIViewController {
     
     var isThrowDetected = false
     
+    //time count
+    var timer:Timer = Timer()
+    var Time_S : Int = 0
+    var timerCounting:Bool = false
+    @objc func timeCounter() -> Void{
+        Time_S += 1
+        let time = secondsToMinutesSconds(seconds: Time_S)
+        let timeString = makeTimeString(minutes: time.0, seconds: time.1)
+        durationLabel.text = timeString
+    }
+    func timerc(){
+        if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
+            timer = Timer.scheduledTimer(
+            timeInterval: 1,
+            target: self,
+            selector: #selector(timeCounter),
+            userInfo: nil,
+            repeats: true)
+        }else{
+            timer.invalidate()
+        }
+    }
+    func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
+        return (((seconds%3600)/60),((seconds % 3600)%60))
+    }
+    func makeTimeString(minutes: Int, seconds : Int) -> String{
+        var timeString = ""
+        timeString += String(format: "%02d", minutes)
+        timeString += ":"
+        timeString += String(format: "%02d", seconds)
+        return timeString
+    }
 
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         //get firebase data
         Read_Data()
         //setup camera
         setupVideoPreview()
+        //timer
+        timerc()
         //pose detection
         videoCapture.predictor.delegate = self
         
@@ -129,8 +179,10 @@ class ViewController: UIViewController {
             let actionamount = value?["TrainAmount"] as?  String ?? ""
             let TrainSetAmount = value?["TrainSetAmount"] as? String ?? ""
 
-            let User_ActionAmount = Int(actionamount)
-            let User_TrainSetAmount = Int(TrainSetAmount)
+            let U_ActionAmount = (actionamount as NSString).integerValue
+            let U_TrainSetAmount = (TrainSetAmount as NSString).integerValue
+            self.User_TrainSetAmount = U_TrainSetAmount
+            self.User_ActionAmount = U_ActionAmount
             self.totalLabel.text = "/\(actionamount)"
             self.trainingcLabel.text = "\(self.TrainSetCount)"
             self.trainsetLabel.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
@@ -141,31 +193,48 @@ class ViewController: UIViewController {
     }
 
     func toRecordPage(){
-        let bicepsRecordViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.bicepsRecordViewController) as? BicepsRecordViewController
-        self.view.window?.rootViewController = bicepsRecordViewController
+        let recordTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordTableViewController) as? RecordTableViewController
+        self.view.window?.rootViewController = recordTableViewController
         self.view.window?.makeKeyAndVisible()
     }
     
     func Check_amount(){
-        //Set firebase var
-        let ref = Database.database().reference()
+
         let user = Auth.auth().currentUser
         //check the user action equal the user amount setting
         if let user = user {
         if ((Actioncount == User_ActionAmount) && (TrainSetCount < User_TrainSetAmount)){
             TrainSetCount += 1
             Actioncount = 0
+            trainingcLabel.text = "\(Actioncount)"
+            trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
         }else if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
             Actioncount += 1
+            trainingcLabel.text = "\(Actioncount)"
         }else if((Actioncount==User_ActionAmount)&&(TrainSetCount == User_TrainSetAmount)){
-            //show alert
-        
+            //show alert & save data to firebase
+            let db = Firestore.firestore()
+            let date = Date()
+            let time1 = formatter.string(from: date)
+            let time2 = formatter2.string(from: date)
+            db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
+                        "lastUpdated":time1,
+                        "GymType": self.titleLBL.text!,
+                        "Accuracy": self.Accuracy_STR,
+                        "User_Train_Set": self.TrainSetCount,
+                        "User_Train_Amount": self.Actioncount,
+                        "User_Time": self.durationLabel.text!
+                    ])
+                //show alertf
+                showAlertF()
             }
         }
-        
     }
     func showAlertF(){
-        
+        let alert = UIAlertController(title: "Fininsh Training", message: "did you want to check your Record?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.toRecordPage()}))
+        alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: nil))
+        present(alert, animated: true)
     }
     
     //test function
@@ -203,23 +272,21 @@ class ViewController: UIViewController {
 extension ViewController: PredictorDelegte{
     func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
+        print("\(TrainSetCount) && Action Count\(Actioncount)")
         if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true
-
             DispatchQueue.main.asyncAfter(deadline: .now()+3){
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
+                //get confience
+                self.Accuracy_STR = "\(String(format: "%.2f",confience * 100)) %"
                 //when detected alert
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
                 //upload label
                 self.Check_amount()
-                self.trainingcLabel.text = String(self.Actioncount)
-                self.view.addSubview(self.trainingcLabel)
-                self.trainsetLabel.text = "\(self.TrainSetCount)/\(String(self.User_TrainSetAmount))"
-                self.view.addSubview(self.trainsetLabel)
             }
         }
     }
@@ -243,4 +310,3 @@ extension ViewController: PredictorDelegte{
         }
     }
 }
-

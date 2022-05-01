@@ -29,10 +29,11 @@ class RecordTableViewController: UITableViewController {
                             self.record = snapshot.documents.map {
                                 r in
                                 
-                                return RecordModel(gymType: r["gymType"] as? String ?? "",
-                                                   gymSet: r["set"] as? String ?? "",
-                                                   gymTime: r["time"] as? String ?? "",
-                                                   gymAccuracy: r["accuracy"] as? String ?? "")
+                                return RecordModel(
+                                    gymType: r["gymType"] as? String ?? "",
+                                    gymSet: r["User_Train_Set"] as? String ?? "",
+                                    gymTime: r["time"] as? String ?? "",
+                                    gymAccuracy: r["Accuracy"] as? String ?? "")
                             }
                         }
                     }
