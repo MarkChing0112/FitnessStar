@@ -22,24 +22,24 @@ class ViewController: UIViewController {
     //image icon
 
     private let iconImage: UIImageView = {
-        let iconimage = UIImageView(frame: CGRect(x: 20, y: 64, width: 60, height: 60))
+        let iconimage = UIImageView(frame: CGRect(x: 20, y: 125, width: 60, height: 60))
         iconimage.image = UIImage(named: "Icon_110_Biceps")
         return iconimage}()
     
     //background
 
     private let backgroundLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 0, y: 30, width: 414, height: 136))
-        Label.backgroundColor = UIColor(red: 81/255, green: 57/255, blue: 0/255, alpha: 0.65)
+        let Label = UILabel(frame: CGRect(x: 0, y: 60, width: 414, height: 136))
+        Label.backgroundColor = UIColor(red: 81/255, green: 57/255, blue: 0/255, alpha: 0.6)
         Label.bounds.origin = CGPoint(x:0, y: 30)
         Label.textColor = UIColor.white
         return Label }()
     //TEXT Label
 
     private let titleLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 78, y: 95, width: 122, height: 63))
+        let Label = UILabel(frame: CGRect(x: 78, y: 125, width: 122, height: 63))
         Label.text = "BICEPS\nTRAINING"
-        Label.bounds.origin = CGPoint(x: 78, y:95)
+        Label.bounds.origin = CGPoint(x: 78, y:125)
         Label.numberOfLines = 2
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.white
@@ -49,50 +49,58 @@ class ViewController: UIViewController {
     private let SetSLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 348, y: 98, width: 63, height: 39))
         Label.text = "SET"
-        Label.bounds.origin = CGPoint(x: 348, y: 98)
+        Label.bounds.origin = CGPoint(x: 348, y: 108)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.lightGray
         return Label }()
     
 
     private let RepSLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 348, y: 118, width: 63, height: 39))
+        let Label = UILabel(frame: CGRect(x: 348, y: 148, width: 63, height: 39))
         Label.text = "REPS"
-        Label.bounds.origin = CGPoint(x: 348, y: 118)
+        Label.bounds.origin = CGPoint(x: 348, y: 148)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.lightGray
         return Label }()
     
     private let durationsLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 30, y: 41, width: 109, height: 21))
+        let Label = UILabel(frame: CGRect(x: 35, y: 80, width: 109, height: 21))
         Label.text = "DURATION"
-        Label.bounds.origin = CGPoint(x: 30, y: 41)
+        Label.bounds.origin = CGPoint(x: 35, y: 80)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.lightGray
         return Label }()
     //traing count
     private let totalLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 305, y: 114, width: 63, height: 44))
-        Label.bounds.origin = CGPoint(x: 305, y: 114)
+        let Label = UILabel(frame: CGRect(x: 310, y: 144, width: 63, height: 44))
+        Label.bounds.origin = CGPoint(x: 305, y: 144)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.white
         return Label }()
     
     private let trainsetLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 297, y: 55, width: 61, height: 44))
-        Label.bounds.origin = CGPoint(x: 297, y: 55)
+        let Label = UILabel(frame: CGRect(x: 300, y: 95, width: 61, height: 44))
+        Label.bounds.origin = CGPoint(x: 300, y: 95)
+        Label.font = Label.font.withSize(25)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.white
         return Label }()
     
     private let trainingcLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 290, y: 96, width: 68, height: 62))
+        let Label = UILabel(frame: CGRect(x: 295, y: 126, width: 68, height: 62))
         Label.text = "0"
-        Label.bounds.origin = CGPoint(x: 290, y: 96)
+        Label.bounds.origin = CGPoint(x: 295, y: 126)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.font = Label.font.withSize(25)
         Label.textColor = UIColor.white
         return Label }()
     //time
     private let durationLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 30, y: 60, width: 88, height: 24))
+        let Label = UILabel(frame: CGRect(x: 40, y: 95, width: 88, height: 24))
         Label.text = "08:00"
         Label.font = Label.font.withSize(20)
         Label.bounds.origin = CGPoint(x: 30, y: 60)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.white
         return Label }()
     
