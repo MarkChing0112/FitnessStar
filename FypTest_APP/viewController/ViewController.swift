@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     //background
 
     private let backgroundLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 0, y: 60, width: 414, height: 136))
+        let Label = UILabel(frame: CGRect(x: 0, y: 78, width: 414, height: 110))
         Label.backgroundColor = UIColor(red: 81/255, green: 57/255, blue: 0/255, alpha: 0.6)
         Label.bounds.origin = CGPoint(x:0, y: 30)
         Label.textColor = UIColor.white
@@ -212,12 +212,14 @@ extension ViewController: PredictorDelegte{
                 self.isThrowDetected = false
             }
             DispatchQueue.main.async {
-                //upload label
-                self.trainingcLabel.text = String(self.Actioncount)
-                self.trainsetLabel.text = "\(self.TrainSetCount)/\(String(self.User_TrainSetAmount))"
                 //when detected alert
                 AudioServicesPlayAlertSound(SystemSoundID(1331))
+                //upload label
                 self.Check_amount()
+                self.trainingcLabel.text = String(self.Actioncount)
+                self.view.addSubview(self.trainingcLabel)
+                self.trainsetLabel.text = "\(self.TrainSetCount)/\(String(self.User_TrainSetAmount))"
+                self.view.addSubview(self.trainsetLabel)
             }
         }
     }
