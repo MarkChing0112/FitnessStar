@@ -7,7 +7,8 @@ import UIKit
 
 class RecordTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var recordLabel: UILabel!
+    @IBOutlet weak var gymTypeLabel: UILabel!
+    @IBOutlet weak var gymTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

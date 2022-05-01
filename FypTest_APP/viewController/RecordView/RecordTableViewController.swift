@@ -29,7 +29,10 @@ class RecordTableViewController: UITableViewController {
                             self.record = snapshot.documents.map {
                                 r in
                                 
-                                return RecordModel()
+                                return RecordModel(gymType: r["gymType"] as? String ?? "",
+                                                   gymSet: r["set"] as? String ?? "",
+                                                   gymTime: r["time"] as? String ?? "",
+                                                   gymAccuracy: r["accuracy"] as? String ?? "")
                             }
                         }
                     }
@@ -47,19 +50,35 @@ class RecordTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return record.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordTableViewCell
 
+        cell.gymTypeLabel.text = record[indexPath.row].gymType
+        cell.gymTimeLabel.text = record[indexPath.row].gymTime
         // Configure the cell...
 
         return cell
     }
     
-
+    // pass data to next page
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? BicepsRecordViewController {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                destination.gymType = record[indexPath.row].gymType
+                destination.gymSet = record[indexPath.row].gymSet
+                destination.gymTime = record[indexPath.row].gymTime
+                destination.gymAccuracy = record[indexPath.row].gymAccuracy
+                
+            }
+        }
+    }
+    
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
