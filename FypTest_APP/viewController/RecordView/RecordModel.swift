@@ -8,7 +8,7 @@ struct RecordModel {
     var lastUpdated: String!
     var gymType: String!
     var gymAccuracy: String!
-    var gymTrainSet: String!    
+    var gymTrainSet: Int!
     var gymTrainAmount: Int!
     var gymTrainTime: String!
 }

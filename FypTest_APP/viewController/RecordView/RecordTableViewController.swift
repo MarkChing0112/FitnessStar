@@ -36,7 +36,7 @@ class RecordTableViewController: UITableViewController {
                                     lastUpdated: r["lastUpdated"] as? String ?? "",
                                     gymType: r["GymType"] as? String ?? "",
                                     gymAccuracy: r["Accuracy"] as? String ?? "",
-                                    gymTrainSet: r["User_Train_Set"] as? String ?? "",
+                                    gymTrainSet: r["User_Train_Set"] as? Int ?? 0,
                                     gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0,
                                     gymTrainTime: r["User_Time"] as? String ?? ""
                                     )

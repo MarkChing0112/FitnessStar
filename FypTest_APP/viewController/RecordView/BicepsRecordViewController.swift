@@ -10,7 +10,7 @@ class BicepsRecordViewController: UIViewController {
     var lastUpdated: String!
     var gymType: String!
     var gymAccuracy: String!
-    var gymTrainSet: String!
+    var gymTrainSet: Int!
     var gymTrainAmount: Int!
     var gymTrainTime: String!
     
@@ -27,6 +27,6 @@ class BicepsRecordViewController: UIViewController {
     func outPutData() {
         recordDate.text = lastUpdated
         recordTime.text = gymTrainTime
-        recordTrainSet.text = gymTrainSet
+        recordTrainSet.text = String(gymTrainSet)
     }
 }
