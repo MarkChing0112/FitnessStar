@@ -14,7 +14,11 @@ class BicepsRecordViewController: UIViewController {
     var gymTrainAmount: String!
     var gymTrainTime: String!
     
-
+    @IBOutlet weak var recordName: UILabel!
+    @IBOutlet weak var recordDate: UILabel!
+    @IBOutlet weak var recordTime: UILabel!
+    @IBOutlet weak var recordTrainSet: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
