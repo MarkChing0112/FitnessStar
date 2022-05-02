@@ -64,12 +64,12 @@ class RecordTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordTableViewCell
+        let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordTableViewCell
 
-        cell.gymTypeLabel.text = record[indexPath.row].gymType
-        cell.gymTimeLabel.text = record[indexPath.row].lastUpdated
+        RecordCell.gymTypeLabel.text = record[indexPath.row].gymType
+        RecordCell.gymTimeLabel.text = record[indexPath.row].lastUpdated
 
-        return cell
+        return RecordCell
     }
     
     // pass data to next page
@@ -88,6 +88,10 @@ class RecordTableViewController: UITableViewController {
                 
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
     }
     
     
