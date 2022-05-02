@@ -5,6 +5,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseAuth
 
 class RecordTableViewController: UITableViewController {
 
@@ -40,12 +41,13 @@ class RecordTableViewController: UITableViewController {
                                     gymTrainTime: r["User_Time"] as? String ?? ""
                                     )
                             }
+                            
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
                         }
                     }
                 }
-            }
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
             }
         }
     }

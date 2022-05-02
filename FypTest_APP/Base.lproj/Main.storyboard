@@ -926,28 +926,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" rowHeight="51" id="z1b-NW-yPi" customClass="RecordTableViewCell" customModule="FypTest_APP" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="51"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" rowHeight="73" id="z1b-NW-yPi" customClass="RecordTableViewCell" customModule="FypTest_APP" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="73"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="z1b-NW-yPi" id="P2O-Q7-Ah9">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiO-wh-F3O">
-                                            <rect key="frame" x="32" y="30" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiO-wh-F3O">
+                                            <rect key="frame" x="32" y="30" width="362" height="43"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu0-h9-VZ2">
-                                            <rect key="frame" x="32" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gu0-h9-VZ2">
+                                            <rect key="frame" x="32" y="11" width="362" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jiO-wh-F3O" firstAttribute="top" secondItem="P2O-Q7-Ah9" secondAttribute="top" constant="30" id="C48-7n-OOY"/>
+                                        <constraint firstAttribute="trailing" secondItem="jiO-wh-F3O" secondAttribute="trailing" constant="20" symbolic="YES" id="Cgh-Wd-tO1"/>
+                                        <constraint firstAttribute="bottom" secondItem="jiO-wh-F3O" secondAttribute="bottom" id="UUW-GL-zX3"/>
+                                        <constraint firstItem="Gu0-h9-VZ2" firstAttribute="top" secondItem="P2O-Q7-Ah9" secondAttribute="topMargin" id="eZH-Md-boz"/>
+                                        <constraint firstItem="Gu0-h9-VZ2" firstAttribute="leading" secondItem="P2O-Q7-Ah9" secondAttribute="leadingMargin" constant="12" id="sKj-Do-nxZ"/>
+                                        <constraint firstItem="Gu0-h9-VZ2" firstAttribute="trailing" secondItem="P2O-Q7-Ah9" secondAttribute="trailingMargin" id="zfv-Hr-Cfe"/>
+                                        <constraint firstItem="jiO-wh-F3O" firstAttribute="leading" secondItem="P2O-Q7-Ah9" secondAttribute="leading" constant="32" id="zpb-mQ-8Y2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="gymTimeLabel" destination="jiO-wh-F3O" id="7yb-MQ-PLM"/>
@@ -965,7 +972,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B9A-xH-yWw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1603" y="902"/>
+            <point key="canvasLocation" x="-1604.3478260869567" y="901.33928571428567"/>
         </scene>
         <!--Biceps Record View Controller-->
         <scene sceneID="iIa-Zw-EQ6">
