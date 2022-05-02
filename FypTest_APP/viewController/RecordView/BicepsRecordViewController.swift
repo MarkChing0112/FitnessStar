@@ -11,7 +11,7 @@ class BicepsRecordViewController: UIViewController {
     var gymType: String!
     var gymAccuracy: String!
     var gymTrainSet: String!
-    var gymTrainAmount: String!
+    var gymTrainAmount: Int!
     var gymTrainTime: String!
     
     @IBOutlet weak var recordName: UILabel!
@@ -21,9 +21,12 @@ class BicepsRecordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        outPutData()
     }
-
-
+    
+    func outPutData() {
+        recordDate.text = lastUpdated
+        recordTime.text = gymTrainTime
+        recordTrainSet.text = gymTrainSet
+    }
 }

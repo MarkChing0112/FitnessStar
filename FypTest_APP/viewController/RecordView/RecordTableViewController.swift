@@ -10,8 +10,10 @@ class RecordTableViewController: UITableViewController {
 
     var record = [RecordModel]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getRecord()
+        self.tableView.reloadData()
     }
     
     func getRecord() {
@@ -34,13 +36,16 @@ class RecordTableViewController: UITableViewController {
                                     gymType: r["GymType"] as? String ?? "",
                                     gymAccuracy: r["Accuracy"] as? String ?? "",
                                     gymTrainSet: r["User_Train_Set"] as? String ?? "",
-                                    gymTrainAmount: r["User_Train_Amount"] as? String ?? "",
+                                    gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0,
                                     gymTrainTime: r["User_Time"] as? String ?? ""
                                     )
                             }
                         }
                     }
                 }
+            }
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
             }
         }
     }
@@ -63,7 +68,6 @@ class RecordTableViewController: UITableViewController {
 
         cell.gymTypeLabel.text = record[indexPath.row].gymType
         cell.gymTimeLabel.text = record[indexPath.row].lastUpdated
-        // Configure the cell...
 
         return cell
     }
