@@ -114,7 +114,7 @@ class ViewController: UIViewController {
     //time
     private let durationLabel: UILabel = {
         let Label = UILabel(frame: CGRect(x: 40, y: 95, width: 100, height: 24))
-        Label.text = ""
+        Label.text = "00:00"
         Label.font = Label.font.withSize(20)
         Label.bounds.origin = CGPoint(x: 30, y: 60)
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
@@ -211,7 +211,7 @@ class ViewController: UIViewController {
         }else if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
             Actioncount += 1
             trainingcLabel.text = "\(Actioncount)"
-        }else if((Actioncount==User_ActionAmount)&&(TrainSetCount == User_TrainSetAmount)){
+        }else if((TrainSetCount == User_TrainSetAmount)){
             //show alert & save data to firebase
             let db = Firestore.firestore()
             let date = Date()
@@ -255,6 +255,7 @@ class ViewController: UIViewController {
         view.layer.addSublayer(pointLayer)
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
+        
         //display top bar of user information
         view.addSubview(iconImage)
         view.addSubview(backgroundLBL)
