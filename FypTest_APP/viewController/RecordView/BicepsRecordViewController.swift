@@ -7,10 +7,13 @@ import UIKit
 
 class BicepsRecordViewController: UIViewController {
     
+    var lastUpdated: String!
     var gymType: String!
-    var gymSet: String!
-    var gymTime: String!
     var gymAccuracy: String!
+    var gymTrainSet: String!
+    var gymTrainAmount: String!
+    var gymTrainTime: String!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

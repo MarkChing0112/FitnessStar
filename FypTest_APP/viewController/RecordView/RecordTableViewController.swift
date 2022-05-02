@@ -30,10 +30,13 @@ class RecordTableViewController: UITableViewController {
                                 r in
                                 
                                 return RecordModel(
-                                    gymType: r["gymType"] as? String ?? "",
-                                    gymSet: r["User_Train_Set"] as? String ?? "",
-                                    gymTime: r["time"] as? String ?? "",
-                                    gymAccuracy: r["Accuracy"] as? String ?? "")
+                                    lastUpdated: r["lastUpdated"] as? String ?? "",
+                                    gymType: r["GymType"] as? String ?? "",
+                                    gymAccuracy: r["Accuracy"] as? String ?? "",
+                                    gymTrainSet: r["User_Train_Set"] as? String ?? "",
+                                    gymTrainAmount: r["User_Train_Amount"] as? String ?? "",
+                                    gymTrainTime: r["User_Time"] as? String ?? ""
+                                    )
                             }
                         }
                     }
@@ -59,7 +62,7 @@ class RecordTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordTableViewCell
 
         cell.gymTypeLabel.text = record[indexPath.row].gymType
-        cell.gymTimeLabel.text = record[indexPath.row].gymTime
+        cell.gymTimeLabel.text = record[indexPath.row].lastUpdated
         // Configure the cell...
 
         return cell
@@ -70,10 +73,14 @@ class RecordTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? BicepsRecordViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
+                
+                destination.lastUpdated = record[indexPath.row].lastUpdated
                 destination.gymType = record[indexPath.row].gymType
-                destination.gymSet = record[indexPath.row].gymSet
-                destination.gymTime = record[indexPath.row].gymTime
                 destination.gymAccuracy = record[indexPath.row].gymAccuracy
+                destination.gymTrainSet = record[indexPath.row].gymTrainSet
+                destination.gymTrainAmount = record[indexPath.row].gymTrainAmount
+                destination.gymTrainTime = record[indexPath.row].gymTrainTime
+                
                 
             }
         }
