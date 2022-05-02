@@ -167,11 +167,11 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				836EFF6C281A81EB009FFE4A /* AI_VIEW */,
 				836EFF72281A8A98009FFE4A /* Login */,
 				836EFF71281A874D009FFE4A /* RecordView */,
 				836EFF6E281A8231009FFE4A /* AImodel */,
 				836EFF6D281A8212009FFE4A /* SearchMapView */,
-				836EFF6C281A81EB009FFE4A /* AI_VIEW */,
 				836EFF6B281A8193009FFE4A /* TrainingView */,
 				83329E2E2792CCB600600104 /* HomeViewController.swift */,
 				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
@@ -194,9 +194,10 @@
 		836EFF6C281A81EB009FFE4A /* AI_VIEW */ = {
 			isa = PBXGroup;
 			children = (
-				4F10C21126F74EEB0032B955 /* VideoCapture.swift */,
-				4F10C20126F748D10032B955 /* ViewController.swift */,
-				4FAB64CC26F8FC6C008BFF14 /* predictor.swift */,
+				83FAEED9281FDEE000C5FD5A /* Stand */,
+				83FAEED7281FDEC900C5FD5A /* PushUp */,
+				83FAEED5281FDEA700C5FD5A /* Sit */,
+				83FAEED6281FDEAE00C5FD5A /* Biceps */,
 			);
 			name = AI_VIEW;
 			sourceTree = "<group>";
@@ -249,6 +250,37 @@
 				835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		83FAEED5281FDEA700C5FD5A /* Sit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sit;
+			sourceTree = "<group>";
+		};
+		83FAEED6281FDEAE00C5FD5A /* Biceps */ = {
+			isa = PBXGroup;
+			children = (
+				4F10C21126F74EEB0032B955 /* VideoCapture.swift */,
+				4F10C20126F748D10032B955 /* ViewController.swift */,
+				4FAB64CC26F8FC6C008BFF14 /* predictor.swift */,
+			);
+			name = Biceps;
+			sourceTree = "<group>";
+		};
+		83FAEED7281FDEC900C5FD5A /* PushUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = PushUp;
+			sourceTree = "<group>";
+		};
+		83FAEED9281FDEE000C5FD5A /* Stand */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stand;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
