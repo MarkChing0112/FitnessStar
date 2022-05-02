@@ -78,7 +78,7 @@ class Predictor {
         if numAvilbleFrame < observationNeeded{
             for _ in 0 ..< (observationNeeded - numAvilbleFrame) {
                 do{
-                    let oneFrameMultiArray = try MLMultiArray(shape:[1,3,18], dataType: .double)
+                    let oneFrameMultiArray = try MLMultiArray(shape:[60,3,18], dataType: .double)
                     try resetMultiArray(predictionWindow: oneFrameMultiArray)
                     multiArryBuffer.append(oneFrameMultiArray)
                 }catch{
