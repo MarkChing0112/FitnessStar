@@ -163,8 +163,6 @@ class ViewController: UIViewController {
         Read_Data()
         //setup camera
         setupVideoPreview()
-        //timer
-        timerc()
         //pose detection
         videoCapture.predictor.delegate = self
         
@@ -217,12 +215,13 @@ class ViewController: UIViewController {
             let date = Date()
             let time1 = formatter.string(from: date)
             let time2 = formatter2.string(from: date)
+            let total_User_Train = User_ActionAmount * User_TrainSetAmount
             db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
                         "lastUpdated":time1,
                         "GymType": self.titleLBL.text!,
                         "Accuracy": self.Accuracy_STR,
                         "User_Train_Set": self.TrainSetCount,
-                        "User_Train_Amount": self.Actioncount,
+                        "User_Train_Amount": total_User_Train,
                         "User_Time": self.durationLabel.text!
                     ])
                 //show alertf
@@ -267,6 +266,8 @@ class ViewController: UIViewController {
         view.addSubview(trainsetLabel)
         view.addSubview(trainingcLabel)
         view.addSubview(durationLabel)
+        //timer
+        timerc()
     }
 }
 
