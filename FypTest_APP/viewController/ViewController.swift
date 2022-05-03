@@ -128,25 +128,29 @@ class ViewController: UIViewController {
     var Time_S : Int = 0
     var timerCounting:Bool = false
     
-    @objc func timeCounter() -> Void{
+
+    func timerc(){
+
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
+                guard let self = self else { return }
+                self.Time_S += 1
+                let time = self.secondsToMinutesSconds(seconds: self.Time_S)
+                let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
+                self.durationLabel.text = timeString
+                print("\(timeString)")
+                if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
+                    self.timer.invalidate()
+                        }
+            })
+
+    }
+    
+    @objc func timeCounter(){
         Time_S += 1
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
         durationLabel.text = timeString
         print("\(timeString)")
-    }
-    
-    func timerc(){
-        if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
-            timer = Timer.scheduledTimer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(timeCounter),
-            userInfo: nil,
-            repeats: true)
-        }else if(TrainSetCount == User_TrainSetAmount && Actioncount == 0){
-            timer.invalidate()
-        }
     }
     
     func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
@@ -171,7 +175,10 @@ class ViewController: UIViewController {
         //pose detection
         videoCapture.predictor.delegate = self
     }
-    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.invalidate()
+    }
     func Read_Data(){
         let ref = Database.database().reference()
         let user = Auth.auth().currentUser

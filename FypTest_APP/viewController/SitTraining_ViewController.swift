@@ -70,23 +70,24 @@ class SitTraining_ViewController: UIViewController {
     func StopTimer(){
         timer.invalidate()
     }
-    @objc func timeCounter() -> Void{
+    @objc func timeCounter(){
         Time_S += 1
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
-        self.durationcLBL.text = timeString
+        DispatchQueue.main.async {
+            self.durationcLBL.text = timeString
+        }
     }
     
     func timerc(){
         if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
-            DispatchQueue.main.async {
+
                 self.timer = Timer.scheduledTimer(
                 timeInterval: 1,
                 target: self,
                 selector: #selector(self.timeCounter),
                 userInfo: nil,
                 repeats: true)
-            }
         }else if(TrainSetCount == User_TrainSetAmount && Actioncount == 0){
             timer.invalidate()
         }
