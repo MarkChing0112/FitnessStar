@@ -127,12 +127,15 @@ class ViewController: UIViewController {
     var timer:Timer = Timer()
     var Time_S : Int = 0
     var timerCounting:Bool = false
+    
     @objc func timeCounter() -> Void{
         Time_S += 1
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
         durationLabel.text = timeString
+        print("\(timeString)")
     }
+    
     func timerc(){
         if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
             timer = Timer.scheduledTimer(
@@ -141,13 +144,15 @@ class ViewController: UIViewController {
             selector: #selector(timeCounter),
             userInfo: nil,
             repeats: true)
-        }else{
+        }else if(TrainSetCount == User_TrainSetAmount && Actioncount == 0){
             timer.invalidate()
         }
     }
+    
     func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
         return (((seconds%3600)/60),((seconds % 3600)%60))
     }
+    
     func makeTimeString(minutes: Int, seconds : Int) -> String{
         var timeString = ""
         timeString += String(format: "%02d", minutes)
@@ -165,8 +170,8 @@ class ViewController: UIViewController {
         setupVideoPreview()
         //pose detection
         videoCapture.predictor.delegate = self
-        
     }
+    
     func Read_Data(){
         let ref = Database.database().reference()
         let user = Auth.auth().currentUser
@@ -192,8 +197,7 @@ class ViewController: UIViewController {
 
     func toRecordPage(){
         let recordTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordTableViewController) as? RecordTableViewController
-        self.view.window?.rootViewController = recordTableViewController
-        self.view.window?.makeKeyAndVisible()
+        self.navigationController?.pushViewController(recordTableViewController!, animated: true)
     }
     
     func Check_amount(){
@@ -201,34 +205,37 @@ class ViewController: UIViewController {
         let user = Auth.auth().currentUser
         //check the user action equal the user amount setting
         if let user = user {
-        if ((Actioncount == User_ActionAmount) && (TrainSetCount < User_TrainSetAmount)){
-            TrainSetCount += 1
-            Actioncount = 0
-            trainingcLabel.text = "\(Actioncount)"
-            trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
-        }else if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
-            Actioncount += 1
-            trainingcLabel.text = "\(Actioncount)"
-        }else if((TrainSetCount == User_TrainSetAmount)){
-            //show alert & save data to firebase
-            let db = Firestore.firestore()
-            let date = Date()
-            let time1 = formatter.string(from: date)
-            let time2 = formatter2.string(from: date)
-            let total_User_Train = User_ActionAmount * User_TrainSetAmount
-            db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
-                        "lastUpdated":time1,
-                        "GymType": self.titleLBL.text!,
-                        "Accuracy": self.Accuracy_STR,
-                        "User_Train_Set": self.TrainSetCount,
-                        "User_Train_Amount": total_User_Train,
-                        "User_Time": self.durationLabel.text!
-                    ])
-                //show alertf
-                showAlertF()
+            if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
+                Actioncount += 1
+                trainingcLabel.text = "\(Actioncount)"
+                if((Actioncount == User_ActionAmount)&&(TrainSetCount < User_TrainSetAmount)){
+                    TrainSetCount += 1
+                    Actioncount = 0
+                    trainingcLabel.text = "\(Actioncount)"
+                    trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
+                    if((TrainSetCount == User_TrainSetAmount)){
+                    //show alert & save data to firebase
+                        let db = Firestore.firestore()
+                        let date = Date()
+                        let time1 = formatter.string(from: date)
+                        let time2 = formatter2.string(from: date)
+                        let total_User_Train = User_ActionAmount * User_TrainSetAmount
+                        db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
+                                    "lastUpdated":time1,
+                                    "GymType": self.titleLBL.text!,
+                                    "Accuracy": self.Accuracy_STR,
+                                    "User_Train_Set": self.TrainSetCount,
+                                    "User_Train_Amount": total_User_Train,
+                                    "User_Time": self.durationLabel.text!
+                                ])
+                            //show alertf
+                            showAlertF()
+                    }
+                }
             }
         }
     }
+    
     func showAlertF(){
         let alert = UIAlertController(title: "Fininsh Training", message: "did you want to check your Record?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.toRecordPage()}))
