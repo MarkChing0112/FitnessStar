@@ -74,7 +74,7 @@ class SitTraining_ViewController: UIViewController {
         Time_S += 1
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
-        durationcLBL.text = timeString
+        self.durationcLBL.text = timeString
     }
     
     func timerc(){
