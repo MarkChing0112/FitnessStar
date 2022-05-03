@@ -1,23 +1,19 @@
 //
-//  predictor.swift
+//  Biceps_Challenge.swift
 //  FypTest_APP
-
 
 import Foundation
 import Vision
-//AImodel biceps file
 
-//set AI Model
-typealias ThrowingClassifies = Biceps_1
+typealias ThrowingClassifies_1 = Biceps_1
 
-protocol PredictorDelegte: AnyObject {
-    func predictor( predictor: Predictor,didFindNewRecognizedPoints point:[CGPoint])
-    func predictor( predictor: Predictor, didLableAction action:String, with confience: Double)
+protocol Biceps_ChallengeDelegte: AnyObject {
+    func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Challenge,didFindNewRecognizedPoints point:[CGPoint])
+    func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Challenge, didLableAction action:String, with confience: Double)
 }
 
-class Predictor {
-    
-    weak var  delegate: PredictorDelegte?
+class Biceps_Challenge {
+    weak var  delegate: Biceps_ChallengeDelegte?
     
     let predictionWindowSize = 60
     var posesWindow: [VNHumanBodyPoseObservation] = []
@@ -52,14 +48,14 @@ class Predictor {
     }
     
     func  labelActionType(){
-        guard let throwingClassifier = try? ThrowingClassifies(configuration:         MLModelConfiguration()),
+        guard let throwingClassifier = try? ThrowingClassifies_1(configuration:         MLModelConfiguration()),
               let poseMultiArray = prepareInputWithObservation( observation:posesWindow),
               let predictions = try? throwingClassifier.prediction( poses: poseMultiArray)else{ return }
         
         let label = predictions.label
         let confience = predictions.labelProbabilities[label] ?? 0
         
-        delegate?.predictor(predictor: self, didLableAction: label, with: confience)
+        delegate?.Biceps_Challenge(Biceps_Challenge_predictor: self, didLableAction: label, with: confience)
       
     }
     
@@ -110,7 +106,7 @@ class Predictor {
                 CGPoint(x: $0.value.x, y: 1-$0.value.y)
             }
             
-            delegate?.predictor(predictor: self, didFindNewRecognizedPoints: displayPoints)
+            delegate?.Biceps_Challenge(Biceps_Challenge_predictor: self, didFindNewRecognizedPoints: displayPoints)
         }
          catch {
             print("Error,find recognizedPoints")
