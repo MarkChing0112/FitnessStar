@@ -59,6 +59,9 @@
 		838BF7E32792B6110015AC84 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E22792B6110015AC84 /* FirebasePerformance */; };
 		838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E42792B6110015AC84 /* FirebaseStorage */; };
 		839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */; };
+		83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */; };
+		83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549ED282167A800A48745 /* SitTraining_Predictor.swift */; };
+		83F549F0282167C100A48745 /* SitTraining_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EF282167C100A48745 /* SitTraining_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		836EFF75281A8F8C009FFE4A /* Sit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Sit.mlmodel; path = Transfer/Sit.mlmodel; sourceTree = SOURCE_ROOT; };
 		836EFF76281A8F8C009FFE4A /* Stand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Stand.mlmodel; path = Transfer/Stand.mlmodel; sourceTree = SOURCE_ROOT; };
 		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
+		83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_VideoCapture.swift; sourceTree = "<group>"; };
+		83F549ED282167A800A48745 /* SitTraining_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_Predictor.swift; sourceTree = "<group>"; };
+		83F549EF282167C100A48745 /* SitTraining_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,9 +216,9 @@
 		836EFF6C281A81EB009FFE4A /* AI_VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				83F549EA2821677300A48745 /* Sit */,
+				83F549E9282164EF00A48745 /* PushUp */,
 				83FAEED9281FDEE000C5FD5A /* Stand */,
-				83FAEED7281FDEC900C5FD5A /* PushUp */,
-				83FAEED5281FDEA700C5FD5A /* Sit */,
 				83FAEED6281FDEAE00C5FD5A /* Biceps */,
 			);
 			name = AI_VIEW;
@@ -269,11 +275,21 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
-		83FAEED5281FDEA700C5FD5A /* Sit */ = {
+		83F549E9282164EF00A48745 /* PushUp */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Sit;
+			name = PushUp;
+			sourceTree = "<group>";
+		};
+		83F549EA2821677300A48745 /* Sit */ = {
+			isa = PBXGroup;
+			children = (
+				83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */,
+				83F549ED282167A800A48745 /* SitTraining_Predictor.swift */,
+				83F549EF282167C100A48745 /* SitTraining_ViewController.swift */,
+			);
+			name = Sit;
 			sourceTree = "<group>";
 		};
 		83FAEED6281FDEAE00C5FD5A /* Biceps */ = {
@@ -284,13 +300,6 @@
 				4FAB64CC26F8FC6C008BFF14 /* predictor.swift */,
 			);
 			name = Biceps;
-			sourceTree = "<group>";
-		};
-		83FAEED7281FDEC900C5FD5A /* PushUp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = PushUp;
 			sourceTree = "<group>";
 		};
 		83FAEED9281FDEE000C5FD5A /* Stand */ = {
@@ -408,15 +417,18 @@
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				5D9F74A5282130960094DB19 /* Biceps_1.mlmodel in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
+				83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */,
 				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
 				5D9F74B228213E2A0094DB19 /* Biceps_VideoCapture.swift in Sources */,
 				5D817F1D281D2281005FCD70 /* RecordModel.swift in Sources */,
 				5D608258281C364F00A76B99 /* RecordTableViewCell.swift in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,
+				83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */,
 				5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */,
 				5D60825C281C36AA00A76B99 /* RecordTableViewController.swift in Sources */,
 				835E26DE27BA89D700CD79BB /* LoginFirstPageViewController.swift in Sources */,
 				4F10C20026F748D10032B955 /* SceneDelegate.swift in Sources */,
+				83F549F0282167C100A48745 /* SitTraining_ViewController.swift in Sources */,
 				83329E3727931C9E00600104 /* TrainingRecord3ViewController.swift in Sources */,
 				83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */,
 				835E26DC27BA850600CD79BB /* FirstPageNavigationController.swift in Sources */,
