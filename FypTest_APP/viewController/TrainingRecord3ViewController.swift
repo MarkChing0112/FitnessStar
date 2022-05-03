@@ -19,6 +19,8 @@ class TrainingRecord3ViewController: UIViewController {
     
     func GetUserData(){
         let ref = Database.database().reference()
+        let user = Auth.auth().currentUser
+        if let user = user {
         ref.child("User_Train_Selection").child(user.uid).observeSingleEvent(of: .value, with: { snapshot in
           // Get user value
             let value = snapshot.value as? NSDictionary
@@ -31,5 +33,6 @@ class TrainingRecord3ViewController: UIViewController {
         }) { error in
           print(error.localizedDescription)
         }
+    }
     }
 }
