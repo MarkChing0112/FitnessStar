@@ -1,9 +1,7 @@
 //
-//  SitTraining_ViewController.swift
+//  ViewController.swift
 //  FypTest_APP
-//
-//  Created by kin ming ching on 3/5/2022.
-//
+
 import UIKit
 import AVFoundation
 import AudioToolbox
@@ -11,8 +9,9 @@ import Firebase
 import FirebaseAuth
 
 class SitTraining_ViewController: UIViewController {
+
+    let sitTraining_videoCapture = SitTraining_VideoCapture()
     
-    let SitTraining_videoCapture = SitTraining_VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
     //user data and user train amount count
     public var User_ActionAmount: Int = 0
@@ -21,14 +20,6 @@ class SitTraining_ViewController: UIViewController {
     var Actioncount: Int = 0
     var Accuracy_STR : String = ""
    
-    @IBOutlet weak var Camera_View: UIView!
-    
-    @IBOutlet weak var Objectview: UIView!
-    @IBOutlet weak var durationcLBL: UILabel!
-    @IBOutlet weak var TrainingSetCountLBL: UILabel!
-    @IBOutlet weak var ActionCountLBL: UILabel!
-    @IBOutlet weak var ActionTotalLBL: UILabel!
-    @IBOutlet weak var TitleLBL: UILabel!
     var pointLayer = CAShapeLayer()
     //time
     let formatter: DateFormatter = {
@@ -45,52 +36,114 @@ class SitTraining_ViewController: UIViewController {
         formatter2.dateFormat = "MM-dd-yyyy-HH:mm:a"
         return formatter2
     }()
+    //image icon
+    private let iconImage: UIImageView = {
+        let iconimage = UIImageView(frame: CGRect(x: 20, y: 125, width: 60, height: 60))
+        iconimage.image = UIImage(named: "Icon_110_Biceps")
+        return iconimage}()
+    //background
+    private let backgroundLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 0, y: 78, width: 414, height: 110))
+        Label.backgroundColor = UIColor(red: 81/255, green: 57/255, blue: 0/255, alpha: 0.6)
+        Label.bounds.origin = CGPoint(x:0, y: 30)
+        Label.textColor = UIColor.white
+        return Label }()
+    //TEXT Label
 
+    private let titleLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 78, y: 125, width: 122, height: 63))
+        Label.text = "BICEPS\nTRAINING"
+        Label.bounds.origin = CGPoint(x: 78, y:125)
+        Label.numberOfLines = 2
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.white
+        return Label }()
+    
+    private let SetSLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 348, y: 98, width: 63, height: 39))
+        Label.text = "SET"
+        Label.bounds.origin = CGPoint(x: 348, y: 108)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.lightGray
+        return Label }()
+    
+    private let RepSLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 348, y: 148, width: 63, height: 39))
+        Label.text = "REPS"
+        Label.bounds.origin = CGPoint(x: 348, y: 148)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.lightGray
+        return Label }()
+    
+    private let durationsLBL: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 35, y: 80, width: 109, height: 21))
+        Label.text = "DURATION"
+        Label.bounds.origin = CGPoint(x: 35, y: 80)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.lightGray
+        return Label }()
+    //traing count
+    private let totalLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 310, y: 144, width: 63, height: 44))
+        Label.bounds.origin = CGPoint(x: 305, y: 144)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.white
+        return Label }()
+    
+    private let trainsetLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 300, y: 95, width: 61, height: 44))
+        Label.bounds.origin = CGPoint(x: 300, y: 95)
+        Label.font = Label.font.withSize(25)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.white
+        return Label }()
+    
+    private let trainingcLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 295, y: 126, width: 68, height: 62))
+        Label.text = "0"
+        Label.bounds.origin = CGPoint(x: 295, y: 126)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.font = Label.font.withSize(25)
+        Label.textColor = UIColor.white
+        return Label }()
+    //time
+    private let durationLabel: UILabel = {
+        let Label = UILabel(frame: CGRect(x: 40, y: 95, width: 100, height: 24))
+        Label.text = "00:00"
+        Label.font = Label.font.withSize(20)
+        Label.bounds.origin = CGPoint(x: 30, y: 60)
+        Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
+        Label.textColor = UIColor.white
+        return Label }()
     
     var isThrowDetected = false
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        //get firebase data
-        Read_Data()
-        //setup camera
-        setupVideoPreview()
-        //pose detection
-        SitTraining_videoCapture.sitTraining_Predictor.delegate = self
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        StopTimer()
-    }
+    
     //time count
     var timer:Timer = Timer()
     var Time_S : Int = 0
     var timerCounting:Bool = false
     
-    func StopTimer(){
-        timer.invalidate()
+    func timerc(){
+            timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
+                guard let self = self else { return }
+                self.Time_S += 1
+                let time = self.secondsToMinutesSconds(seconds: self.Time_S)
+                let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
+                self.durationLabel.text = timeString
+                print("\(timeString)")
+                
+                if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
+                    self.timer.invalidate()
+                    }
+            })
     }
+    
     @objc func timeCounter(){
         Time_S += 1
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
-        DispatchQueue.main.async {
-            self.durationcLBL.text = timeString
-        }
-    }
-    
-    func timerc(){
-        if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
-
-                self.timer = Timer.scheduledTimer(
-                timeInterval: 1,
-                target: self,
-                selector: #selector(self.timeCounter),
-                userInfo: nil,
-                repeats: true)
-        }else if(TrainSetCount == User_TrainSetAmount && Actioncount == 0){
-            timer.invalidate()
-        }
+        durationLabel.text = timeString
+        print("\(timeString)")
     }
     
     func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
@@ -105,8 +158,20 @@ class SitTraining_ViewController: UIViewController {
         return timeString
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-    
+        //get firebase data
+        Read_Data()
+        //setup camera
+        setupVideoPreview()
+        //pose detection
+        sitTraining_videoCapture.sitTraining_Predictor.delegate = self
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.invalidate()
+    }
     func Read_Data(){
         let ref = Database.database().reference()
         let user = Auth.auth().currentUser
@@ -121,9 +186,9 @@ class SitTraining_ViewController: UIViewController {
             let U_TrainSetAmount = (TrainSetAmount as NSString).integerValue
             self.User_TrainSetAmount = U_TrainSetAmount
             self.User_ActionAmount = U_ActionAmount
-            self.ActionTotalLBL.text = "/\(actionamount)"
-            self.ActionCountLBL.text = "\(self.TrainSetCount)"
-            self.TrainingSetCountLBL.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
+            self.totalLabel.text = "/\(actionamount)"
+            self.trainingcLabel.text = "\(self.TrainSetCount)"
+            self.trainsetLabel.text = "\(self.TrainSetCount)/\(TrainSetAmount)"
           // ...
         }) { error in
           print(error.localizedDescription)
@@ -136,18 +201,17 @@ class SitTraining_ViewController: UIViewController {
     }
     
     func Check_amount(){
-
         let user = Auth.auth().currentUser
         //check the user action equal the user amount setting
         if let user = user {
             if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
                 Actioncount += 1
-                ActionCountLBL.text = "\(Actioncount)"
+                trainingcLabel.text = "\(Actioncount)"
                 if((Actioncount == User_ActionAmount)&&(TrainSetCount < User_TrainSetAmount)){
                     TrainSetCount += 1
                     Actioncount = 0
-                    ActionCountLBL.text = "\(Actioncount)"
-                    TrainingSetCountLBL.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
+                    trainingcLabel.text = "\(Actioncount)"
+                    trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
@@ -155,13 +219,13 @@ class SitTraining_ViewController: UIViewController {
                         let time1 = formatter.string(from: date)
                         let time2 = formatter2.string(from: date)
                         let total_User_Train = User_ActionAmount * User_TrainSetAmount
-                        db.collection("Record").document(user.uid).collection("data").document("\(self.TitleLBL.text!) \(String(time2))").setData([
+                        db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
                                     "lastUpdated":time1,
-                                    "GymType": self.TitleLBL.text!,
+                                    "GymType": self.titleLBL.text!,
                                     "Accuracy": self.Accuracy_STR,
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": total_User_Train,
-                                    "User_Time": self.durationcLBL.text!
+                                    "User_Time": self.durationLabel.text!
                                 ])
                             //show alertf
                             showAlertF()
@@ -182,31 +246,44 @@ class SitTraining_ViewController: UIViewController {
     func Add_Amount(){
         Actioncount+=1
     }
-    //preview
+    
     private func setupVideoPreview(){
-        SitTraining_videoCapture.startCaptureSession()
-        previewLayer = AVCaptureVideoPreviewLayer(session: SitTraining_videoCapture.captureSession)
+        sitTraining_videoCapture.startCaptureSession()
+        previewLayer = AVCaptureVideoPreviewLayer(session: sitTraining_videoCapture.captureSession)
         
         guard let previewLayer = previewLayer else {
             return }
         
-        Camera_View.layer.addSublayer(previewLayer)
+        view.layer.addSublayer(previewLayer)
         previewLayer.frame = view.frame
         
+        //add point layout
         view.layer.addSublayer(pointLayer)
         pointLayer.frame = view.frame
         pointLayer.strokeColor = UIColor.green.cgColor
         
-        //timer
+        //display top bar of user information
+        view.addSubview(iconImage)
+        view.addSubview(backgroundLBL)
+        view.addSubview(titleLBL)
+        view.addSubview(SetSLBL)
+        view.addSubview(RepSLBL)
+        view.addSubview(durationsLBL)
+        view.addSubview(totalLabel)
+        view.addSubview(trainsetLabel)
+        view.addSubview(trainingcLabel)
+        view.addSubview(durationLabel)
+        
+        //call timer function
         timerc()
     }
 }
 
 extension SitTraining_ViewController: SitTrainingDelegte{
-    func SitTraining(SitTraining_predictor: SitTraining_Predictor, didLableAction action: String, with confience: Double) {
+    func SitTraining(sitTraining_predictor: SitTraining_Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
         print("\(TrainSetCount) && Action Count\(Actioncount)")
-        if action == "BicepsCorrect" && confience > 0.75 && isThrowDetected == false{
+        if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true
@@ -224,7 +301,7 @@ extension SitTraining_ViewController: SitTrainingDelegte{
         }
     }
     
-    func SitTraining(SitTraining_predictor: SitTraining_Predictor, didFindNewRecognizedPoints point: [CGPoint]) {
+    func SitTraining(sitTraining_predictor: SitTraining_Predictor, didFindNewRecognizedPoints point: [CGPoint]) {
         guard let previewLayer = previewLayer else {return}
         
         let convertedPoint = point.map{
@@ -237,7 +314,6 @@ extension SitTraining_ViewController: SitTrainingDelegte{
         }
         
         pointLayer.path = combinedPath
-        
         DispatchQueue.main.async {
             self.pointLayer.didChangeValue(for: \.path)
         }

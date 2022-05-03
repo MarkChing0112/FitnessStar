@@ -10,8 +10,8 @@ import Vision
 typealias ThrowingClassifies_SitTraining = Sit_1
 
 protocol SitTrainingDelegte: AnyObject {
-    func SitTraining( SitTraining_predictor: SitTraining_Predictor,didFindNewRecognizedPoints point:[CGPoint])
-    func SitTraining( SitTraining_predictor: SitTraining_Predictor, didLableAction action:String, with confience: Double)
+    func SitTraining( sitTraining_predictor: SitTraining_Predictor,didFindNewRecognizedPoints point:[CGPoint])
+    func SitTraining( sitTraining_predictor: SitTraining_Predictor, didLableAction action:String, with confience: Double)
 }
 
 class SitTraining_Predictor {
@@ -58,7 +58,7 @@ class SitTraining_Predictor {
         let label = predictions.label
         let confience = predictions.labelProbabilities[label] ?? 0
         
-        delegate?.SitTraining(SitTraining_predictor: self, didLableAction: label, with: confience)
+        delegate?.SitTraining(sitTraining_predictor: self, didLableAction: label, with: confience)
       
     }
     
@@ -109,7 +109,7 @@ class SitTraining_Predictor {
                 CGPoint(x: $0.value.x, y: 1-$0.value.y)
             }
             
-            delegate?.SitTraining(SitTraining_predictor: self, didFindNewRecognizedPoints: displayPoints)
+            delegate?.SitTraining(sitTraining_predictor: self, didFindNewRecognizedPoints: displayPoints)
         }
          catch {
             print("Error,find recognizedPoints")

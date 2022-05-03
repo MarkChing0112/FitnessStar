@@ -138,6 +138,7 @@ class ViewController: UIViewController {
                 let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
                 self.durationLabel.text = timeString
                 print("\(timeString)")
+                
                 if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
                     self.timer.invalidate()
                         }

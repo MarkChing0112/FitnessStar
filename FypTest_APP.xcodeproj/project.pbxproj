@@ -62,6 +62,12 @@
 		83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */; };
 		83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549ED282167A800A48745 /* SitTraining_Predictor.swift */; };
 		83F549F0282167C100A48745 /* SitTraining_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EF282167C100A48745 /* SitTraining_ViewController.swift */; };
+		83F549F22821806700A48745 /* StandTraining_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549F12821806700A48745 /* StandTraining_VideoCapture.swift */; };
+		83F549F42821807D00A48745 /* StandTraining_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549F32821807C00A48745 /* StandTraining_Predictor.swift */; };
+		83F549F62821809A00A48745 /* StandTraining_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549F52821809A00A48745 /* StandTraining_ViewController.swift */; };
+		83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549F7282180D400A48745 /* PushUpTraining_VideoCapture.swift */; };
+		83F549FA282180E700A48745 /* PushUpTraining_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549F9282180E700A48745 /* PushUpTraining_Predictor.swift */; };
+		83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549FB282180F900A48745 /* PushUpTraining_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +119,12 @@
 		83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_VideoCapture.swift; sourceTree = "<group>"; };
 		83F549ED282167A800A48745 /* SitTraining_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_Predictor.swift; sourceTree = "<group>"; };
 		83F549EF282167C100A48745 /* SitTraining_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_ViewController.swift; sourceTree = "<group>"; };
+		83F549F12821806700A48745 /* StandTraining_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandTraining_VideoCapture.swift; sourceTree = "<group>"; };
+		83F549F32821807C00A48745 /* StandTraining_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandTraining_Predictor.swift; sourceTree = "<group>"; };
+		83F549F52821809A00A48745 /* StandTraining_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandTraining_ViewController.swift; sourceTree = "<group>"; };
+		83F549F7282180D400A48745 /* PushUpTraining_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpTraining_VideoCapture.swift; sourceTree = "<group>"; };
+		83F549F9282180E700A48745 /* PushUpTraining_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpTraining_Predictor.swift; sourceTree = "<group>"; };
+		83F549FB282180F900A48745 /* PushUpTraining_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpTraining_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +290,9 @@
 		83F549E9282164EF00A48745 /* PushUp */ = {
 			isa = PBXGroup;
 			children = (
+				83F549F7282180D400A48745 /* PushUpTraining_VideoCapture.swift */,
+				83F549F9282180E700A48745 /* PushUpTraining_Predictor.swift */,
+				83F549FB282180F900A48745 /* PushUpTraining_ViewController.swift */,
 			);
 			name = PushUp;
 			sourceTree = "<group>";
@@ -305,6 +320,9 @@
 		83FAEED9281FDEE000C5FD5A /* Stand */ = {
 			isa = PBXGroup;
 			children = (
+				83F549F12821806700A48745 /* StandTraining_VideoCapture.swift */,
+				83F549F32821807C00A48745 /* StandTraining_Predictor.swift */,
+				83F549F52821809A00A48745 /* StandTraining_ViewController.swift */,
 			);
 			path = Stand;
 			sourceTree = "<group>";
@@ -399,6 +417,7 @@
 				83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */,
 				835E26EF27BA93CE00CD79BB /* ForgotPasswordViewController.swift in Sources */,
 				836EFF79281A8F8C009FFE4A /* Sit.mlmodel in Sources */,
+				83F549F42821807D00A48745 /* StandTraining_Predictor.swift in Sources */,
 				5D9F74B42821410B0094DB19 /* Biceps_Predictor.swift in Sources */,
 				4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */,
 				83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */,
@@ -414,16 +433,21 @@
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				5D9F74A9282130B00094DB19 /* Sit_1.mlmodel in Sources */,
 				839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */,
+				83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */,
+				83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				5D9F74A5282130960094DB19 /* Biceps_1.mlmodel in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
+				83F549F62821809A00A48745 /* StandTraining_ViewController.swift in Sources */,
 				83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */,
 				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
 				5D9F74B228213E2A0094DB19 /* Biceps_VideoCapture.swift in Sources */,
+				83F549F22821806700A48745 /* StandTraining_VideoCapture.swift in Sources */,
 				5D817F1D281D2281005FCD70 /* RecordModel.swift in Sources */,
 				5D608258281C364F00A76B99 /* RecordTableViewCell.swift in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,
 				83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */,
+				83F549FA282180E700A48745 /* PushUpTraining_Predictor.swift in Sources */,
 				5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */,
 				5D60825C281C36AA00A76B99 /* RecordTableViewController.swift in Sources */,
 				835E26DE27BA89D700CD79BB /* LoginFirstPageViewController.swift in Sources */,

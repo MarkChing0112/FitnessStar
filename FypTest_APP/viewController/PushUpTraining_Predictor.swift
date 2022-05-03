@@ -1,29 +1,28 @@
 //
-//  predictor.swift
+//  SitTraining_Predictor.swift
 //  FypTest_APP
-
-
+//
+//  Created by kin ming ching on 3/5/2022.
+//
 import Foundation
 import Vision
 //AImodel biceps file
+typealias ThrowingClassifies_PushUpTraining = Pushup
 
-//set AI Model
-typealias ThrowingClassifies = Biceps
-
-protocol PredictorDelegte: AnyObject {
-    func predictor( predictor: Predictor,didFindNewRecognizedPoints point:[CGPoint])
-    func predictor( predictor: Predictor, didLableAction action:String, with confience: Double)
+protocol PushUpTrainingDelegte: AnyObject {
+    func PushUpTraining( pushUpTraining_predictor: PushUpTraining_Predictor,didFindNewRecognizedPoints point:[CGPoint])
+    func PushUpTraining( pushUpTraining_predictor: PushUpTraining_Predictor, didLableAction action:String, with confience: Double)
 }
 
-class Predictor {
+class PushUpTraining_Predictor {
     
-    weak var  delegate: PredictorDelegte?
+    weak var  delegate: PushUpTrainingDelegte?
     
-    let predictionWindowSize = 60
+    let predictionWindowSize_Sit = 60
     var posesWindow: [VNHumanBodyPoseObservation] = []
     
     init(){
-        posesWindow.reserveCapacity(predictionWindowSize)
+        posesWindow.reserveCapacity(predictionWindowSize_Sit)
     }
     func estmation(sampleBuffer:CMSampleBuffer){
         let RequestHeadler = VNImageRequestHandler(cmSampleBuffer: sampleBuffer, orientation: .up)
@@ -52,14 +51,14 @@ class Predictor {
     }
     
     func  labelActionType(){
-        guard let throwingClassifier = try? ThrowingClassifies(configuration:         MLModelConfiguration()),
+        guard let throwingClassifier = try? ThrowingClassifies_SitTraining(configuration:         MLModelConfiguration()),
               let poseMultiArray = prepareInputWithObservation( observation:posesWindow),
               let predictions = try? throwingClassifier.prediction( poses: poseMultiArray)else{ return }
         
         let label = predictions.label
         let confience = predictions.labelProbabilities[label] ?? 0
         
-        delegate?.predictor(predictor: self, didLableAction: label, with: confience)
+        delegate?.PushUpTraining(pushUpTraining_predictor: self, didLableAction: label, with: confience)
       
     }
     
@@ -96,7 +95,7 @@ class Predictor {
         pointer.initialize(repeating: value)
     }
     func storeObservation( observation: VNHumanBodyPoseObservation) {
-        if posesWindow.count >= predictionWindowSize{
+        if posesWindow.count >= predictionWindowSize_Sit{
             posesWindow.removeFirst()
         }
         posesWindow.append(observation)
@@ -110,7 +109,7 @@ class Predictor {
                 CGPoint(x: $0.value.x, y: 1-$0.value.y)
             }
             
-            delegate?.predictor(predictor: self, didFindNewRecognizedPoints: displayPoints)
+            delegate?.PushUpTraining(pushUpTraining_predictor: self, didFindNewRecognizedPoints: displayPoints)
         }
          catch {
             print("Error,find recognizedPoints")
