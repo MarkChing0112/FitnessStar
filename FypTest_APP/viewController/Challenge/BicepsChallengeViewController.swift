@@ -10,8 +10,9 @@ import Firebase
 import FirebaseAuth
 
 class BicepsChallengeViewController: UIViewController {
+    
 
-    let videoCapture = VideoCapture()
+    let biceps_VideoCapture = Biceps_VideoCapture()
     var previewLayer: AVCaptureVideoPreviewLayer?
     //user data and user train amount count
     public var User_ActionAmount: Int = 0
@@ -170,7 +171,7 @@ class BicepsChallengeViewController: UIViewController {
         //setup camera
         setupVideoPreview()
         //pose detection
-        videoCapture.predictor.delegate = self
+        biceps_VideoCapture.bicepsChallenge.delegate = self
     }
     
     func Read_Data(){
@@ -250,8 +251,8 @@ class BicepsChallengeViewController: UIViewController {
     }
     
     private func setupVideoPreview(){
-        videoCapture.startCaptureSession()
-        previewLayer = AVCaptureVideoPreviewLayer(session: videoCapture.captureSession)
+        biceps_VideoCapture.startCaptureSession()
+        previewLayer = AVCaptureVideoPreviewLayer(session: biceps_VideoCapture.captureSession)
         
         guard let previewLayer = previewLayer else {
             return }
@@ -279,8 +280,72 @@ class BicepsChallengeViewController: UIViewController {
     }
 }
 
-extension ViewController: PredictorDelegte{
-    func predictor(predictor: Predictor, didLableAction action: String, with confience: Double) {
+extension BicepsChallengeViewController: Biceps_ChallengeDelegte{
+    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Challenge, didLableAction action: String, with confience: Double) {
+        print("Detected: \(action),Confidence: \(confience)")
+        print("\(TrainSetCount) && Action Count\(Actioncount)")
+        if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
+            
+            print("Throw detected")
+            isThrowDetected = true
+            DispatchQueue.main.asyncAfter(deadline: .now()+3){
+                self.isThrowDetected = false
+            }
+            DispatchQueue.main.async {
+                //get confience
+                self.Accuracy_STR = "\(String(format: "%.2f",confience * 100)) %"
+                //when detected alert
+                AudioServicesPlayAlertSound(SystemSoundID(1331))
+                //upload label
+                self.Check_amount()
+            }
+        }
+    }
+    
+    
+    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Challenge, didFindNewRecognizedPoints point: [CGPoint]) {
+        guard let previewLayer = previewLayer else {return}
+        
+        let convertedPoint = point.map{
+            previewLayer.layerPointConverted(fromCaptureDevicePoint: $0)
+    }
+        let combinedPath = CGMutablePath()
+        for point in convertedPoint{
+            let dotPath = UIBezierPath(ovalIn: CGRect(x: point.x, y: point.y, width:10 , height: 10))
+            combinedPath.addPath(dotPath.cgPath)
+        }
+        
+        pointLayer.path = combinedPath
+        
+        DispatchQueue.main.async {
+            self.pointLayer.didChangeValue(for: \.path)
+        }
+    }
+    
+    /*
+    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Challenge, didLableAction action: String, with confience: Double) {
+        print("Detected: \(action),Confidence: \(confience)")
+        print("\(TrainSetCount) && Action Count\(Actioncount)")
+        if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
+            
+            print("Throw detected")
+            isThrowDetected = true
+            DispatchQueue.main.asyncAfter(deadline: .now()+3){
+                self.isThrowDetected = false
+            }
+            DispatchQueue.main.async {
+                //get confience
+                self.Accuracy_STR = "\(String(format: "%.2f",confience * 100)) %"
+                //when detected alert
+                AudioServicesPlayAlertSound(SystemSoundID(1331))
+                //upload label
+                self.Check_amount()
+            }
+        }
+    }
+    
+    
+    func Biceps_Challenge(Biceps_Challenge_predictor: Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
         print("\(TrainSetCount) && Action Count\(Actioncount)")
         if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
@@ -318,6 +383,6 @@ extension ViewController: PredictorDelegte{
         DispatchQueue.main.async {
             self.pointLayer.didChangeValue(for: \.path)
         }
-    }
+    }*/
 
 }
