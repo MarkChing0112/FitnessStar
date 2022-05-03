@@ -128,43 +128,6 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    //insert user data to database
-//    func FirebaseinsertData_Volunteer(){
-        // Create cleaned versions of the data
-  //      let firstName = firstNameText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-  //      let lastName = lastNameText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-   //     let email = emailText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-  //      let password = passwordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        //let type: String = "Volunteer"
-        
-        // Create the user
-  //      Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
-            
-            // Check for errors
-   //         if err != nil {
-                
-                // There was an error creating the user
-   //             self.showError("Error creating user")
-   //         }
-   //         else {
-                
-                // User was created successfully, now store the first name and last name
-   //             let db = Firestore.firestore()
-                
-   //             db.collection("users").document("Volunteer").setData(["firstname":firstName, "lastname":lastName,"uid": result!.user.uid ]) { (error) in
-                    
-   //                 if error != nil {
-                        // Show error message
-     //                   self.showError("Error saving user data")
-     //               }
-     //           }
-                
-                // Transition to the home screen
-      //          self.transitionToHome()
-     //       }
-            
-     //   }
-  //  }
     //show senior confirm alert
     func showAlert() {
         let alert = UIAlertController(title: "Your Account detail", message: "did you confirm data is true?", preferredStyle: .alert)
@@ -172,11 +135,4 @@ class SignUpViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
-    //show volunteer confirm alert
-//    func showVAlert() {
-  //      let alert = UIAlertController(title: "Your Account Type is Volunteer?", message: "Are you sure?", preferredStyle: .alert)
-  //      alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.FirebaseinsertData_Volunteer()}))
- //       alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: nil))
-  //      present(alert, animated: true)
- //  }
 }

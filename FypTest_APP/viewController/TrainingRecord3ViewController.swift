@@ -19,7 +19,7 @@ class TrainingRecord3ViewController: UIViewController {
     
     func GetUserData(){
         let ref = Database.database().reference()
-        ref.child("Record").child("Record1").observeSingleEvent(of: .value, with: { snapshot in
+        ref.child("User_Train_Selection").child(user.uid).observeSingleEvent(of: .value, with: { snapshot in
           // Get user value
             let value = snapshot.value as? NSDictionary
            // let body = value?["Bodypart"] as? String ?? ""
