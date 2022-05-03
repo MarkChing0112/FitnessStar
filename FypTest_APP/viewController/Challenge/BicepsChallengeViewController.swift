@@ -281,7 +281,7 @@ class BicepsChallengeViewController: UIViewController {
 }
 
 extension BicepsChallengeViewController: Biceps_ChallengeDelegte{
-    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Challenge, didLableAction action: String, with confience: Double) {
+    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
         print("\(TrainSetCount) && Action Count\(Actioncount)")
         if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
@@ -303,7 +303,7 @@ extension BicepsChallengeViewController: Biceps_ChallengeDelegte{
     }
     
     
-    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Challenge, didFindNewRecognizedPoints point: [CGPoint]) {
+    func Biceps_Challenge(Biceps_Challenge_predictor: Biceps_Predictor, didFindNewRecognizedPoints point: [CGPoint]) {
         guard let previewLayer = previewLayer else {return}
         
         let convertedPoint = point.map{

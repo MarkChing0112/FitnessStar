@@ -8,11 +8,11 @@ import Vision
 typealias ThrowingClassifies_1 = Biceps_1
 
 protocol Biceps_ChallengeDelegte: AnyObject {
-    func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Challenge,didFindNewRecognizedPoints point:[CGPoint])
-    func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Challenge, didLableAction action:String, with confience: Double)
+    func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Predictor,didFindNewRecognizedPoints point:[CGPoint])
+    func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Predictor, didLableAction action:String, with confience: Double)
 }
 
-class Biceps_Challenge {
+class Biceps_Predictor {
     weak var  delegate: Biceps_ChallengeDelegte?
     
     let predictionWindowSize = 60

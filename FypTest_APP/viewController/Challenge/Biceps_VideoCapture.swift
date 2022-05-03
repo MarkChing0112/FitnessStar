@@ -10,7 +10,7 @@ class Biceps_VideoCapture:NSObject {
     let captureSession = AVCaptureSession()
     let videoOutput = AVCaptureVideoDataOutput()
     
-    let bicepsChallenge = Biceps_Challenge()
+    let bicepsChallenge = Biceps_Predictor()
     
     override init() {
         super.init()
