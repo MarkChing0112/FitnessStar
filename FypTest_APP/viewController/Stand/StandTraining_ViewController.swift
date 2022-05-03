@@ -54,7 +54,7 @@ class StandTraining_ViewController: UIViewController {
     //TEXT Label
 
     private let titleLBL: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 78, y: 125, width: 140, height: 63))
+        let Label = UILabel(frame: CGRect(x: 78, y: 125, width: 170, height: 63))
         Label.text = "BACK_MUSCLESS\nTRAINING"
         Label.bounds.origin = CGPoint(x: 78, y:125)
         Label.numberOfLines = 2
