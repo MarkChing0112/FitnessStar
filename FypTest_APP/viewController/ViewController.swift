@@ -82,7 +82,7 @@ class ViewController: UIViewController {
     
     private let durationsLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 35, y: 80, width: 109, height: 21))
-        Label.text = "DURATION"
+        Label.text = "TIME"
         Label.bounds.origin = CGPoint(x: 35, y: 80)
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.lightGray
@@ -127,10 +127,8 @@ class ViewController: UIViewController {
     var timer:Timer = Timer()
     var Time_S : Int = 0
     var timerCounting:Bool = false
-    
-
+    //timer main
     func timerc(){
-
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
                 guard let self = self else { return }
                 self.Time_S += 1
@@ -141,23 +139,14 @@ class ViewController: UIViewController {
                 
                 if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
                     self.timer.invalidate()
-                        }
+                    }
             })
-
     }
-    
-    @objc func timeCounter(){
-        Time_S += 1
-        let time = secondsToMinutesSconds(seconds: Time_S)
-        let timeString = makeTimeString(minutes: time.0, seconds: time.1)
-        durationLabel.text = timeString
-        print("\(timeString)")
-    }
-    
+    //function to cov second to minutes
     func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
         return (((seconds%3600)/60),((seconds % 3600)%60))
     }
-    
+    //function add String
     func makeTimeString(minutes: Int, seconds : Int) -> String{
         var timeString = ""
         timeString += String(format: "%02d", minutes)

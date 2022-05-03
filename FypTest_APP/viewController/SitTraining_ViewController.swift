@@ -39,7 +39,7 @@ class SitTraining_ViewController: UIViewController {
     //image icon
     private let iconImage: UIImageView = {
         let iconimage = UIImageView(frame: CGRect(x: 20, y: 125, width: 60, height: 60))
-        iconimage.image = UIImage(named: "Icon_110_Biceps")
+        iconimage.image = UIImage(named: "Icon_110_Triceps")
         return iconimage}()
     //background
     private let backgroundLBL: UILabel = {
@@ -77,7 +77,7 @@ class SitTraining_ViewController: UIViewController {
     
     private let durationsLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 35, y: 80, width: 109, height: 21))
-        Label.text = "DURATION"
+        Label.text = "TIME"
         Label.bounds.origin = CGPoint(x: 35, y: 80)
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.textColor = UIColor.lightGray
@@ -138,13 +138,6 @@ class SitTraining_ViewController: UIViewController {
             })
     }
     
-    @objc func timeCounter(){
-        Time_S += 1
-        let time = secondsToMinutesSconds(seconds: Time_S)
-        let timeString = makeTimeString(minutes: time.0, seconds: time.1)
-        durationLabel.text = timeString
-        print("\(timeString)")
-    }
     
     func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
         return (((seconds%3600)/60),((seconds % 3600)%60))
@@ -283,7 +276,7 @@ extension SitTraining_ViewController: SitTrainingDelegte{
     func SitTraining(sitTraining_predictor: SitTraining_Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
         print("\(TrainSetCount) && Action Count\(Actioncount)")
-        if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
+        if action == "SitCorrect" && confience > 0.70 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true
