@@ -5,9 +5,8 @@
 
 import Foundation
 
-struct Activity{
+struct SearchGymRoomModel{
     var x: String!
     var y: String!
-    var gymroom: String!
-    var district: String!
+    var GymRoom_name: String!
 }

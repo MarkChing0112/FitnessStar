@@ -7,6 +7,7 @@ import UIKit
 
 class RecordTableViewCell: UITableViewCell {
 
+    
     @IBOutlet weak var gymTypeLabel: UILabel!
     @IBOutlet weak var gymTimeLabel: UILabel!
     

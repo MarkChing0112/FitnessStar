@@ -24,7 +24,7 @@ class RecordTableViewController: UITableViewController {
             let user = Auth.auth().currentUser
             
             if let user = user {
-                db.collection("Reocrd").document(user.uid).collection("data").getDocuments() {
+                db.collection("Record").document(user.uid).collection("data").getDocuments() {
                     (snapshot, err) in
                     
                     if err == nil {
@@ -93,7 +93,7 @@ class RecordTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
     }
     
     

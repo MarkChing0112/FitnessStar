@@ -11,7 +11,7 @@ class SearchGymRoomTableViewController: UITableViewController {
 
     @IBOutlet weak var searchTextFied: UITextField!
     
-    var activity = [Activity]()
+    var activity = [SearchGymRoomModel]()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,10 +32,9 @@ class SearchGymRoomTableViewController: UITableViewController {
                 if let snapshot = snapshot {
                     self.activity = snapshot.documents.map {
                         d in
-                        return Activity(x: d["x"] as? String ?? "",
+                        return SearchGymRoomModel(x: d["x"] as? String ?? "",
                                         y: d["y"] as? String ?? "",
-                                        gymroom: d["name"] as? String ?? "",
-                                        district: d["district"] as? String ?? "")
+                                        GymRoom_name: d["name"] as? String ?? "")
                     }
                     
                     DispatchQueue.main.async {
@@ -62,7 +61,7 @@ class SearchGymRoomTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gymRoomCell", for: indexPath) as! searchGymRoomTableViewCell
         
-        cell.gymRoom.text = activity[indexPath.row].gymroom
+        cell.gymRoom.text = activity[indexPath.row].GymRoom_name
 
         // Configure the cell...
 
@@ -75,7 +74,7 @@ class SearchGymRoomTableViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destination.x = activity[indexPath.row].x
                 destination.y = activity[indexPath.row].y
-                destination.gymroom = activity[indexPath.row].gymroom
+                destination.gymroom = activity[indexPath.row].GymRoom_name
                 
             }
         }

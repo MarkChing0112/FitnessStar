@@ -27,6 +27,6 @@ class BicepsRecordViewController: UIViewController {
     func outPutData() {
         recordDate.text = lastUpdated
         recordTime.text = gymTrainTime
-        recordTrainSet.text = String(gymTrainSet)
+        recordTrainSet.text = "Set: \(String(gymTrainSet))"
     }
 }
