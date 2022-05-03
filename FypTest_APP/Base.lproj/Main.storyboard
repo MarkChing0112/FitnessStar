@@ -1306,10 +1306,10 @@
             </objects>
             <point key="canvasLocation" x="298.39999999999998" y="2919.4581280788179"/>
         </scene>
-        <!--View Controller-->
+        <!--Push Up Training View Controller-->
         <scene sceneID="w0o-5c-obk">
             <objects>
-                <viewController id="RGE-aC-nIz" customClass="ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RGE-aC-nIz" customClass="PushUpTraining_ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LIJ-A9-zq6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1322,10 +1322,10 @@
             </objects>
             <point key="canvasLocation" x="1206" y="2231"/>
         </scene>
-        <!--View Controller-->
+        <!--Stand Training View Controller-->
         <scene sceneID="Inj-vS-9K9">
             <objects>
-                <viewController id="Eub-xq-bAF" customClass="ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Eub-xq-bAF" customClass="StandTraining_ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Bo-cF-8Pm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

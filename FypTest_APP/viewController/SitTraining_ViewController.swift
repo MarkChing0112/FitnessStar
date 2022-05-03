@@ -52,7 +52,7 @@ class SitTraining_ViewController: UIViewController {
 
     private let titleLBL: UILabel = {
         let Label = UILabel(frame: CGRect(x: 78, y: 125, width: 122, height: 63))
-        Label.text = "BICEPS\nTRAINING"
+        Label.text = "TRICEPS\nTRAINING"
         Label.bounds.origin = CGPoint(x: 78, y:125)
         Label.numberOfLines = 2
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
