@@ -127,12 +127,15 @@ class ViewController: UIViewController {
     var timer:Timer = Timer()
     var Time_S : Int = 0
     var timerCounting:Bool = false
+    
     @objc func timeCounter() -> Void{
         Time_S += 1
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
-        self.durationLabel.text = timeString
+        durationLabel.text = timeString
+        print("\(timeString)")
     }
+    
     func timerc(){
         if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
             timer = Timer.scheduledTimer(
@@ -141,14 +144,15 @@ class ViewController: UIViewController {
             selector: #selector(timeCounter),
             userInfo: nil,
             repeats: true)
-        }else if(TrainSetCount == User_TrainSetAmount
-        && Actioncount == 0){
+        }else if(TrainSetCount == User_TrainSetAmount && Actioncount == 0){
             timer.invalidate()
         }
     }
+    
     func secondsToMinutesSconds(seconds: Int) -> (Int,Int){
         return (((seconds%3600)/60),((seconds % 3600)%60))
     }
+    
     func makeTimeString(minutes: Int, seconds : Int) -> String{
         var timeString = ""
         timeString += String(format: "%02d", minutes)
@@ -166,8 +170,8 @@ class ViewController: UIViewController {
         setupVideoPreview()
         //pose detection
         videoCapture.predictor.delegate = self
-        
     }
+    
     func Read_Data(){
         let ref = Database.database().reference()
         let user = Auth.auth().currentUser
