@@ -79,12 +79,14 @@ class SitTraining_ViewController: UIViewController {
     
     func timerc(){
         if(TrainSetCount != User_TrainSetAmount && User_ActionAmount != Actioncount){
-            timer = Timer.scheduledTimer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(timeCounter),
-            userInfo: nil,
-            repeats: true)
+            DispatchQueue.main.async {
+                self.timer = Timer.scheduledTimer(
+                timeInterval: 1,
+                target: self,
+                selector: #selector(self.timeCounter),
+                userInfo: nil,
+                repeats: true)
+            }
         }else if(TrainSetCount == User_TrainSetAmount && Actioncount == 0){
             timer.invalidate()
         }
