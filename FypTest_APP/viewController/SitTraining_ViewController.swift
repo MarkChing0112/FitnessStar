@@ -65,6 +65,7 @@ class SitTraining_ViewController: UIViewController {
     var timer:Timer = Timer()
     var Time_S : Int = 0
     var timerCounting:Bool = false
+    
     func StopTimer(){
         timer.invalidate()
     }
