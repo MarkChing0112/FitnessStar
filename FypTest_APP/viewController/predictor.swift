@@ -6,8 +6,6 @@
 import Foundation
 import Vision
 //AImodel biceps file
-
-//set AI Model
 typealias ThrowingClassifies = Biceps_1
 
 protocol PredictorDelegte: AnyObject {
