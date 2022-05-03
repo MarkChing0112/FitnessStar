@@ -23,6 +23,7 @@ class SitTraining_ViewController: UIViewController {
    
     @IBOutlet weak var Camera_View: UIView!
     
+    @IBOutlet weak var Objectview: UIView!
     @IBOutlet weak var durationcLBL: UILabel!
     @IBOutlet weak var TrainingSetCountLBL: UILabel!
     @IBOutlet weak var ActionCountLBL: UILabel!
@@ -74,7 +75,6 @@ class SitTraining_ViewController: UIViewController {
         let time = secondsToMinutesSconds(seconds: Time_S)
         let timeString = makeTimeString(minutes: time.0, seconds: time.1)
         durationcLBL.text = timeString
-        print("\(timeString)")
     }
     
     func timerc(){
