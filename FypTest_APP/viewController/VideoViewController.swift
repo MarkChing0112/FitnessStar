@@ -14,7 +14,7 @@ class VideoViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "now", ofType: "MOV")!))
+        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "MOV")!))
         
         let layer = AVPlayerLayer(player: player)
         layer.frame = view.bounds
@@ -22,10 +22,12 @@ class VideoViewController: UIViewController {
         player.volume = 0
         player.play()
         
+        /*
         //use AVPlayerViewController
         let vc = AVPlayerViewController()
         vc.player = player
         present(vc, animated: true)
+         */
     }
 
     /*
