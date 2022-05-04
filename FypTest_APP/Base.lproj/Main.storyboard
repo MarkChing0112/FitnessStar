@@ -146,9 +146,6 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="Ha8-HD-2dT" kind="show" id="FKh-Tp-9Hw"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOING OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-QF-Ygf">
                                 <rect key="frame" x="85" y="599" width="258" height="20.333333333333371"/>
@@ -423,6 +420,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwq-x7-kXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516" y="901"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="wOG-6N-wyV">
+            <objects>
+                <viewController id="JU2-0P-p8v" customClass="VideoViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="quK-Hr-7Ly">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="w83-rm-l5N"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HVr-92-5EA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwe-JY-kKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1581" y="61"/>
         </scene>
         <!--Training Record2 View Controller-->
         <scene sceneID="Tbd-fv-GYI">
