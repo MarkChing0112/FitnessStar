@@ -1,5 +1,5 @@
 //
-//  Stand_VideoCapture.swift
+//  Sitt_VideoCapture.swift
 //  FypTest_APP
 //
 //  Created by kin ming ching on 4/5/2022.
@@ -8,11 +8,11 @@
 import Foundation
 import AVFoundation
 import UIKit
-class Stand_VideoCapture:NSObject {
+class Sit_VideoCapture:NSObject {
     let captureSession = AVCaptureSession()
     let videoOutput = AVCaptureVideoDataOutput()
     
-    let stand_Challenge = Stand_Predictor()
+    let Sit_Challenge = Sit_Predictor()
     
     override init() {
         super.init()
@@ -32,8 +32,8 @@ class Stand_VideoCapture:NSObject {
     }
 
 
-extension Stand_VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension Sit_VideoCapture: AVCaptureVideoDataOutputSampleBufferDelegate {
     func captureOutput( _ output: AVCaptureOutput, didOutput sampleBuffer:CMSampleBuffer, from connection: AVCaptureConnection) {
-        stand_Challenge.estmation(sampleBuffer: sampleBuffer)
+        Sit_Challenge.estmation(sampleBuffer: sampleBuffer)
     }
 }

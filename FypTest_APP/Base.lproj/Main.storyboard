@@ -685,7 +685,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="C0i-0Y-eII" kind="show" id="fOl-Rz-Dzr"/>
+                                    <segue destination="C0i-0Y-eII" kind="show" id="fTo-bP-oqN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29O-yl-q4J">
@@ -705,7 +705,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="fXK-L7-k9X" kind="show" id="u5u-Pp-cIH"/>
+                                    <segue destination="fXK-L7-k9X" kind="show" id="Y54-U3-NOV"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1134,10 +1134,10 @@
             </objects>
             <point key="canvasLocation" x="-3462.3188405797105" y="900.66964285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Sit Challenge View Controller-->
         <scene sceneID="nAr-F6-17h">
             <objects>
-                <viewController id="T6p-vm-xOx" sceneMemberID="viewController">
+                <viewController id="T6p-vm-xOx" customClass="SitChallenge_ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hGf-sk-ozq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1246,10 +1246,10 @@
             </objects>
             <point key="canvasLocation" x="-3462" y="1604"/>
         </scene>
-        <!--View Controller-->
+        <!--Push Up Challenge View Controller-->
         <scene sceneID="JeX-OO-VKj">
             <objects>
-                <viewController id="59t-PN-qEu" sceneMemberID="viewController">
+                <viewController id="59t-PN-qEu" customClass="PushUpChallenge_ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DSl-aR-LDH">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1358,10 +1358,10 @@
             </objects>
             <point key="canvasLocation" x="-3462" y="2326"/>
         </scene>
-        <!--View Controller-->
+        <!--Stand Challenge View Controller-->
         <scene sceneID="hsi-mP-pqH">
             <objects>
-                <viewController id="MN0-yL-R5Z" sceneMemberID="viewController">
+                <viewController id="MN0-yL-R5Z" customClass="StandChallenge_ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uQi-5h-YQf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1697,7 +1697,7 @@
                                 <connections>
                                     <outlet property="gymTimeLabel" destination="2QC-k7-8Lu" id="aaQ-jg-LAM"/>
                                     <outlet property="gymTypeLabel" destination="GN1-Ir-1d9" id="tF7-MW-Agq"/>
-                                    <segue destination="ePx-sB-Y8T" kind="show" id="mgW-D4-9hp"/>
+                                    <segue destination="ePx-sB-Y8T" kind="show" id="ssG-KY-blL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1776,7 +1776,7 @@
                                 <connections>
                                     <outlet property="gymTimeLabel" destination="jiO-wh-F3O" id="qgf-Xy-g4g"/>
                                     <outlet property="gymTypeLabel" destination="Gu0-h9-VZ2" id="JhT-76-Jlk"/>
-                                    <segue destination="rnh-zm-fAV" kind="show" id="PXj-C4-Mql"/>
+                                    <segue destination="rnh-zm-fAV" kind="show" id="Pzg-B5-Q85"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1797,7 +1797,7 @@
             </objects>
             <point key="canvasLocation" x="-970" y="1604"/>
         </scene>
-        <!--Biceps Record View Controller-->
+        <!--Record Detail-->
         <scene sceneID="iIa-Zw-EQ6">
             <objects>
                 <viewController storyboardIdentifier="BVC" id="rnh-zm-fAV" customClass="BicepsRecordViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
@@ -1809,13 +1809,6 @@
                                 <rect key="frame" x="105" y="150" width="164" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kZt-fU-cNy">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="WORKOUT RECORDS" id="qbo-k1-rH7"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Biceps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I7-qA-APz">
                                 <rect key="frame" x="122" y="289" width="126" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1862,7 +1855,7 @@
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" id="CgJ-0e-VWn">
+                    <navigationItem key="navigationItem" title="Record Detail" id="CgJ-0e-VWn">
                         <barButtonItem key="rightBarButtonItem" image="house.fill" catalog="system" id="rZm-hj-9gm"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
