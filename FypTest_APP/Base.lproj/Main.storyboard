@@ -24,7 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1202.8985507246377" y="804.91071428571422"/>
+            <point key="canvasLocation" x="1422" y="901"/>
         </scene>
         <!--Search Map View Controller-->
         <scene sceneID="BcM-7D-fS3">
@@ -422,7 +422,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwq-x7-kXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="297.10144927536237" y="804.91071428571422"/>
+            <point key="canvasLocation" x="516" y="901"/>
         </scene>
         <!--Training Record2 View Controller-->
         <scene sceneID="Tbd-fv-GYI">
@@ -533,7 +533,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Szc-qF-mgB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298.39999999999998" y="1508.1280788177341"/>
+            <point key="canvasLocation" x="516" y="1604"/>
         </scene>
         <!--Sit Training View Controller-->
         <scene sceneID="ink-8M-zzf">
@@ -549,7 +549,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGK-ao-wJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1205.7971014492755" y="1508.7053571428571"/>
+            <point key="canvasLocation" x="1425" y="1604"/>
         </scene>
         <!--TRAINING-->
         <scene sceneID="lIc-wP-vOO">
@@ -859,11 +859,12 @@
             <objects>
                 <viewController id="cFj-4O-j9E" customClass="BicepsChallengeViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iBv-jy-Chl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="3Bh-cj-oOX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IPb-Iv-g3g"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NrH-pJ-drp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -872,23 +873,104 @@
         <!--Challenge Selection View Controller Biceps-->
         <scene sceneID="UMU-9e-OrP">
             <objects>
-                <viewController storyboardIdentifier="CSVC" id="J7H-Cs-5aN" customClass="Challenge_SelectionViewController_Biceps" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CSVC1" id="J7H-Cs-5aN" customClass="Challenge_SelectionViewController_Biceps" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XdW-KC-v7Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_110_Biceps" translatesAutoresizingMaskIntoConstraints="NO" id="ZxK-8q-5i7">
+                                <rect key="frame" x="18" y="97" width="133" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR WORKOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V8g-Bi-wy4">
+                                <rect key="frame" x="96" y="44" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2817431688" green="0.60523021219999995" blue="0.72943431140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WORKOUT DETAILS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XTp-hr-dDs">
+                                <rect key="frame" x="83" y="284" width="253" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2817431688" green="0.60523021219999995" blue="0.72943431140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="key positions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEh-xN-VpN">
+                                <rect key="frame" x="247" y="342" width="149" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.2817431688" green="0.60523021219999995" blue="0.72943431140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check the view for instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9w-Wg-xq5">
+                                <rect key="frame" x="33" y="616" width="337" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TvR-Sq-qxB">
+                                <rect key="frame" x="26" y="649" width="370" height="135"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="FullBtn_themeGradient"/>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="START">
+                                            <attributes>
+                                                <font key="NSFont" size="28" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="cFj-4O-j9E" kind="show" id="7q6-Pv-YLy"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TIME_LIMIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGI-Bg-NfQ">
+                                <rect key="frame" x="203" y="210" width="124" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.2817431688" green="0.60523021219999995" blue="0.72943431140000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This workout has" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AdP-Mh-kJV">
+                                <rect key="frame" x="18" y="342" width="176" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_54_2" translatesAutoresizingMaskIntoConstraints="NO" id="ikc-r6-5DM">
+                                <rect key="frame" x="184" y="327" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rf2-DA-wUW">
+                                <rect key="frame" x="170" y="125" width="190" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="64"/>
+                                <color key="textColor" red="0.45711052419999998" green="0.87483745810000002" blue="0.84706479310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="YmR-FC-0BJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="hl3-p1-01H"/>
+                    <connections>
+                        <outlet property="Time_limitLBL" destination="rf2-DA-wUW" id="vQ4-Co-lUn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yy1-yw-kFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3462" y="901"/>
+            <point key="canvasLocation" x="-3462.3188405797105" y="900.66964285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Challenge Selection View Controller Triceps-->
         <scene sceneID="U3A-9D-Trd">
             <objects>
-                <viewController id="yeL-G3-PxU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CSVC2" id="yeL-G3-PxU" customClass="Challenge_SelectionViewController_Triceps" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWq-ki-8NT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -898,12 +980,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a14-GZ-KZU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3430" y="1709"/>
+            <point key="canvasLocation" x="-3462" y="1604"/>
         </scene>
-        <!--View Controller-->
+        <!--Challenge Selection View Controller Chest-->
         <scene sceneID="HIT-84-fx4">
             <objects>
-                <viewController id="Crq-gO-1V2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CSVC3" id="Crq-gO-1V2" customClass="Challenge_SelectionViewController_Chest" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mBt-yH-MVb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -913,12 +995,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZS5-sG-DOw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3430" y="2415"/>
+            <point key="canvasLocation" x="-3462" y="2326"/>
         </scene>
-        <!--View Controller-->
+        <!--Challenge Selection View Controller Back-->
         <scene sceneID="ie9-5v-eFz">
             <objects>
-                <viewController id="48q-U8-ygV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CSVC4" id="48q-U8-ygV" customClass="Challenge_SelectionViewController_Back" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3Z-Wh-Sm1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -928,7 +1010,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZoF-7D-VHB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3430" y="3154"/>
+            <point key="canvasLocation" x="-3462" y="3015"/>
         </scene>
         <!--CHALLENGE-->
         <scene sceneID="ZmY-SZ-APf">
@@ -1436,7 +1518,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QqC-s0-pft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298.39999999999998" y="2229.3103448275865"/>
+            <point key="canvasLocation" x="516" y="2325"/>
         </scene>
         <!--Training Record4 View Controller-->
         <scene sceneID="Z0Y-GR-OZN">
@@ -1547,7 +1629,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmW-X4-fWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="298.39999999999998" y="2919.4581280788179"/>
+            <point key="canvasLocation" x="516" y="3015"/>
         </scene>
         <!--Push Up Training View Controller-->
         <scene sceneID="w0o-5c-obk">
@@ -1563,7 +1645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6C-iR-vsw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1206" y="2231"/>
+            <point key="canvasLocation" x="1425" y="2326"/>
         </scene>
         <!--Stand Training View Controller-->
         <scene sceneID="Inj-vS-9K9">
@@ -1579,7 +1661,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XDA-9M-wBa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1207" y="2920"/>
+            <point key="canvasLocation" x="1425" y="3015"/>
         </scene>
         <!--Login Home View Controller-->
         <scene sceneID="a4W-nn-2qp">

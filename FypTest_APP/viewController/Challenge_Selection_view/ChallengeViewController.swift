@@ -141,22 +141,22 @@ class ChallengeViewController: UIViewController {
     //to Selected body part page
     func toTrainBRecord(){
         let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR1") as! TrainingRecord1ViewController
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "CSVC1") as! Challenge_SelectionViewController_Biceps
         navigationController?.pushViewController(vc, animated: true)
     }
     func toTrainTRecord(){
         let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR2") as! TrainingRecord2ViewController
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "CSVC2") as! Challenge_SelectionViewController_Triceps
         navigationController?.pushViewController(vc, animated: true)
     }
     func toTrainCRecord(){
         let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR3") as! TrainingRecord3ViewController
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "CSVC3") as! Challenge_SelectionViewController_Chest
         navigationController?.pushViewController(vc, animated: true)
     }
     func toTrainBARecord(){
         let namestoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = namestoryboard.instantiateViewController(withIdentifier: "TR4") as! TrainingRecord4ViewController
+        let vc = namestoryboard.instantiateViewController(withIdentifier: "CSVC4") as! Challenge_SelectionViewController_Back
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -167,22 +167,22 @@ class ChallengeViewController: UIViewController {
         let user = Auth.auth().currentUser
         if let user = user {
         if BICEPS == true{
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"Time_Limit":(Time_Minus*60)])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"Time_Limit":(Time_Minus*60),"Time_Limit_Text":TimeLabel.text!])
             //TO next page
             toTrainBRecord()
         }else if TRICEPS == true{
             
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "TRICEPS" as NSString,"Time_Limit":(Time_Minus*60)])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "TRICEPS" as NSString,"Time_Limit":(Time_Minus*60),"Time_Limit_Text":TimeLabel.text!])
             //To next page
             toTrainTRecord()
         }else if CHEST == true{
             
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"Time_Limit":(Time_Minus*60)])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"Time_Limit":(Time_Minus*60),"Time_Limit_Text":TimeLabel.text!])
             //To next page
             toTrainCRecord()
         }else if BACK == true{
             
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BACK" as NSString,"Time_Limit":(Time_Minus*60)])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BACK" as NSString,"Time_Limit":(Time_Minus*60),"Time_Limit_Text":TimeLabel.text!])
             //To next page
             toTrainBARecord()
         }else{
