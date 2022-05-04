@@ -61,6 +61,11 @@
 		838BF7E32792B6110015AC84 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E22792B6110015AC84 /* FirebasePerformance */; };
 		838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E42792B6110015AC84 /* FirebaseStorage */; };
 		839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */; };
+		83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D4282276FE005F9C30 /* ChallengeViewController.swift */; };
+		83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */; };
+		83A361D928227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */; };
+		83A361DB28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361DA28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift */; };
+		83A361DD28227D1F005F9C30 /* Challenge_SelectionViewController_Back.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361DC28227D1F005F9C30 /* Challenge_SelectionViewController_Back.swift */; };
 		83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */; };
 		83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549ED282167A800A48745 /* SitTraining_Predictor.swift */; };
 		83F549F0282167C100A48745 /* SitTraining_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EF282167C100A48745 /* SitTraining_ViewController.swift */; };
@@ -120,6 +125,11 @@
 		836EFF75281A8F8C009FFE4A /* Sit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Sit.mlmodel; path = Transfer/Sit.mlmodel; sourceTree = SOURCE_ROOT; };
 		836EFF76281A8F8C009FFE4A /* Stand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Stand.mlmodel; path = Transfer/Stand.mlmodel; sourceTree = SOURCE_ROOT; };
 		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
+		83A361D4282276FE005F9C30 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
+		83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Biceps.swift; sourceTree = "<group>"; };
+		83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Triceps.swift; sourceTree = "<group>"; };
+		83A361DA28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Chest.swift; sourceTree = "<group>"; };
+		83A361DC28227D1F005F9C30 /* Challenge_SelectionViewController_Back.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Back.swift; sourceTree = "<group>"; };
 		83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_VideoCapture.swift; sourceTree = "<group>"; };
 		83F549ED282167A800A48745 /* SitTraining_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_Predictor.swift; sourceTree = "<group>"; };
 		83F549EF282167C100A48745 /* SitTraining_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_ViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +214,7 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				83A361D3282273DF005F9C30 /* Challenge_Selection_view */,
 				5D9F74AC28213DA70094DB19 /* Challenge */,
 				836EFF6C281A81EB009FFE4A /* AI_VIEW */,
 				836EFF72281A8A98009FFE4A /* Login */,
@@ -291,6 +302,18 @@
 				835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		83A361D3282273DF005F9C30 /* Challenge_Selection_view */ = {
+			isa = PBXGroup;
+			children = (
+				83A361D4282276FE005F9C30 /* ChallengeViewController.swift */,
+				83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */,
+				83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */,
+				83A361DA28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift */,
+				83A361DC28227D1F005F9C30 /* Challenge_SelectionViewController_Back.swift */,
+			);
+			path = Challenge_Selection_view;
 			sourceTree = "<group>";
 		};
 		83F549E9282164EF00A48745 /* PushUp */ = {
@@ -422,6 +445,7 @@
 				5D9F74A7282130A30094DB19 /* Pushup_1.mlmodel in Sources */,
 				83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */,
 				835E26EF27BA93CE00CD79BB /* ForgotPasswordViewController.swift in Sources */,
+				83A361DD28227D1F005F9C30 /* Challenge_SelectionViewController_Back.swift in Sources */,
 				836EFF79281A8F8C009FFE4A /* Sit.mlmodel in Sources */,
 				83F549F42821807D00A48745 /* StandTraining_Predictor.swift in Sources */,
 				5D9F74B42821410B0094DB19 /* Biceps_Predictor.swift in Sources */,
@@ -432,6 +456,7 @@
 				5D9F74B62821442C0094DB19 /* BicepsChallengeViewController.swift in Sources */,
 				835E26E527BA8A6E00CD79BB /* LoginHomeViewController.swift in Sources */,
 				83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */,
+				83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */,
 				835E26F127BA9E0500CD79BB /* SignOut.swift in Sources */,
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
@@ -448,6 +473,7 @@
 				83F549F62821809A00A48745 /* StandTraining_ViewController.swift in Sources */,
 				83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */,
 				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
+				83A361D928227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift in Sources */,
 				5D9F74B228213E2A0094DB19 /* Biceps_VideoCapture.swift in Sources */,
 				83F549F22821806700A48745 /* StandTraining_VideoCapture.swift in Sources */,
 				5D817F1D281D2281005FCD70 /* RecordModel.swift in Sources */,
@@ -457,6 +483,7 @@
 				83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */,
 				83F549FA282180E700A48745 /* PushUpTraining_Predictor.swift in Sources */,
 				5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */,
+				83A361DB28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift in Sources */,
 				5D60825C281C36AA00A76B99 /* RecordTableViewController.swift in Sources */,
 				835E26DE27BA89D700CD79BB /* LoginFirstPageViewController.swift in Sources */,
 				4F10C20026F748D10032B955 /* SceneDelegate.swift in Sources */,
@@ -465,6 +492,7 @@
 				83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */,
 				835E26DC27BA850600CD79BB /* FirstPageNavigationController.swift in Sources */,
 				5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */,
+				83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */,
 				835E26ED27BA8E9B00CD79BB /* Constant.swift in Sources */,
 				836EFF77281A8F8C009FFE4A /* Biceps.mlmodel in Sources */,
 				836EFF7A281A8F8C009FFE4A /* Stand.mlmodel in Sources */,
