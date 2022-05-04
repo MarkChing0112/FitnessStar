@@ -28,11 +28,7 @@ class LoginViewController: UIViewController {
         
         // Hide the error label
         errorLabel.alpha = 0
-        
         // Style the elements
-        Utilities.styleTextField(emailTextField)
-        Utilities.styleTextField(passwordTextField)
-        Utilities.styleFilledButton(loginButton)
         self.passwordTextField.isSecureTextEntry = true
     }
     

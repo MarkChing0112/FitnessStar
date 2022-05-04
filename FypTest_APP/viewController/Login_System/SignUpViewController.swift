@@ -28,14 +28,8 @@ class SignUpViewController: UIViewController {
     
         // Hide the error label
         errorLabel.alpha = 0
-    
-        // Style the elements
-        Utilities.styleTextField(firstNameText)
-        Utilities.styleTextField(lastNameText)
-        Utilities.styleTextField(User_NameText)
-        Utilities.styleTextField(emailText)
-        Utilities.styleTextField(passwordText)
-        Utilities.styleFilledButton(signUp)
+
+
     }
     func validateFields() -> String? {
         

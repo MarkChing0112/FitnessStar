@@ -1,15 +1,18 @@
 //
-//  RecordTableViewController.swift
+//  RecordChallenageTableViewController.swift
 //  FypTest_APP
+//
+//  Created by kin ming ching on 4/5/2022.
+//
 
 import UIKit
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
 
-class RecordTableViewController: UITableViewController {
+class RecordChallenageTableViewController: UITableViewController {
 
-    var record = [RecordModel]()
+    var recordChallenge = [RecordChallengeModel]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -23,7 +26,9 @@ class RecordTableViewController: UITableViewController {
         view.window?.makeKeyAndVisible()
     }
 
-
+    func toTrainingRecord(){
+        
+    }
     func getRecord() {
         let db = Firestore.firestore()
         
@@ -31,21 +36,20 @@ class RecordTableViewController: UITableViewController {
             let user = Auth.auth().currentUser
             
             if let user = user {
-                db.collection("Record").document(user.uid).collection("data").getDocuments() {
+                db.collection("Record_Challenge").document(user.uid).collection("data").getDocuments() {
                     (snapshot, err) in
                     
                     if err == nil {
                         if let snapshot = snapshot {
-                            self.record = snapshot.documents.map {
+                            self.recordChallenge = snapshot.documents.map {
                                 r in
                                 
-                                return RecordModel(
+                                return RecordChallengeModel(
                                     lastUpdated: r["lastUpdated"] as? String ?? "",
                                     gymType: r["GymType"] as? String ?? "",
                                     gymAccuracy: r["Accuracy"] as? String ?? "",
-                                    gymTrainSet: r["User_Train_Set"] as? Int ?? 0,
-                                    gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0,
-                                    gymTrainTime: r["User_Time"] as? String ?? ""
+                                    gymTimeLimit: r["User_TimeLimit"] as? String ?? "",
+                                    gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0
                                     )
                             }
                             
@@ -68,15 +72,14 @@ class RecordTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return record.count
+        return recordChallenge.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordTableViewCell
-
-        RecordCell.gymTypeLabel.text = record[indexPath.row].gymType
-        RecordCell.gymTimeLabel.text = record[indexPath.row].lastUpdated
+        let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RC1Cell", for: indexPath) as! RecordChallengeTableViewCell
+        RecordCell.gymTypeLabel.text = recordChallenge[indexPath.row].gymType
+        RecordCell.gymTimeLabel.text = recordChallenge[indexPath.row].lastUpdated
 
         return RecordCell
     }
@@ -84,16 +87,14 @@ class RecordTableViewController: UITableViewController {
     // pass data to next page
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BicepsRecordViewController {
+        if let destination = segue.destination as? Record_ChallengeViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 
-                destination.lastUpdated = record[indexPath.row].lastUpdated
-                destination.gymType = record[indexPath.row].gymType
-                destination.gymAccuracy = record[indexPath.row].gymAccuracy
-                destination.gymTrainSet = record[indexPath.row].gymTrainSet
-                destination.gymTrainAmount = record[indexPath.row].gymTrainAmount
-                destination.gymTrainTime = record[indexPath.row].gymTrainTime
-                
+                destination.lastUpdated = recordChallenge[indexPath.row].lastUpdated
+                destination.gymType = recordChallenge[indexPath.row].gymType
+                destination.gymAccuracy = recordChallenge[indexPath.row].gymAccuracy
+                destination.gymTimeLimit = recordChallenge[indexPath.row].gymTimeLimit
+                destination.gymTrainAmount = recordChallenge[indexPath.row].gymTrainAmount
                 
             }
         }
@@ -105,3 +106,4 @@ class RecordTableViewController: UITableViewController {
     
 
 }
+
