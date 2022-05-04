@@ -146,6 +146,9 @@
                                     </attributedString>
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Ha8-HD-2dT" kind="show" id="FKh-Tp-9Hw"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOING OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIC-QF-Ygf">
                                 <rect key="frame" x="85" y="599" width="258" height="20.333333333333371"/>
@@ -851,6 +854,37 @@
             </objects>
             <point key="canvasLocation" x="-491" y="901"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="UMU-9e-OrP">
+            <objects>
+                <viewController id="J7H-Cs-5aN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XdW-KC-v7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YmR-FC-0BJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yy1-yw-kFd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3428" y="914"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZmY-SZ-APf">
+            <objects>
+                <viewController id="Ha8-HD-2dT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ifn-gN-LlS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SjJ-0q-O9b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Yhh-lr-YMR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UpX-hh-OgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2562" y="901"/>
+        </scene>
         <!--Record Table View Controller-->
         <scene sceneID="Ecz-Dq-iiG">
             <objects>
@@ -1518,10 +1552,10 @@ TEgQVkM
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ycQ-DJ-dUr">
-                                <rect key="frame" x="40" y="112" width="334" height="250"/>
+                                <rect key="frame" x="40" y="111.99999999999997" width="334" height="314.33333333333326"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="200175386@stu.vtc.edu.hk" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3If-Uc-WKK">
-                                        <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="334" height="47"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="bh4-wd-RR5"/>
                                         </constraints>
@@ -1530,13 +1564,13 @@ TEgQVkM
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12345678Pp!" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bOR-Sh-xkg">
-                                        <rect key="frame" x="0.0" y="54" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="67" width="334" height="46.666666666666657"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEe-fv-cMO">
-                                        <rect key="frame" x="0.0" y="108" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="133.66666666666666" width="334" height="47"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Login"/>
                                         <connections>
@@ -1544,7 +1578,7 @@ TEgQVkM
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ymg-G1-uPF">
-                                        <rect key="frame" x="0.0" y="162" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="200.66666666666669" width="334" height="46.666666666666657"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password? Click It"/>
                                         <connections>
@@ -1553,7 +1587,7 @@ TEgQVkM
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYT-w5-btY">
-                                        <rect key="frame" x="0.0" y="216" width="334" height="34"/>
+                                        <rect key="frame" x="0.0" y="267.33333333333331" width="334" height="47"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <color key="textColor" systemColor="systemPinkColor"/>
                                         <nil key="highlightedColor"/>

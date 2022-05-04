@@ -202,6 +202,7 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				83A361D3282273DF005F9C30 /* Challenge_Selection_view */,
 				5D9F74AC28213DA70094DB19 /* Challenge */,
 				836EFF6C281A81EB009FFE4A /* AI_VIEW */,
 				836EFF72281A8A98009FFE4A /* Login */,
@@ -288,6 +289,13 @@
 				835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		83A361D3282273DF005F9C30 /* Challenge_Selection_view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Challenge_Selection_view;
 			sourceTree = "<group>";
 		};
 		83F549E9282164EF00A48745 /* PushUp */ = {
