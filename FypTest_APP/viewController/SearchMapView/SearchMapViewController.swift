@@ -16,7 +16,10 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     // firebase
     var x: String!
     var y: String!
-    var gymroom: String!
+    var GymRoom_name: String!
+    var TelPhone: String!
+    var Address: String!
+    var Website: String!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -34,7 +37,7 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordation
-        pin.title = gymroom
+        pin.title = GymRoom_name
         mapView.addAnnotation(pin)
     }
 

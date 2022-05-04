@@ -26,15 +26,18 @@ class SearchGymRoomTableViewController: UITableViewController {
     func getGymRoom(_ searchValue: String) {
         let db = Firestore.firestore()
         
-        db.collection("\(searchValue.uppercased())").getDocuments() {(snapshot, err) in
+        db.collection("GymRoomList").document("gymRoom").collection("\(searchValue.uppercased())").getDocuments() {(snapshot, err) in
             
             if err == nil {
                 if let snapshot = snapshot {
                     self.activity = snapshot.documents.map {
                         d in
                         return SearchGymRoomModel(x: d["x"] as? String ?? "",
-                                        y: d["y"] as? String ?? "",
-                                        GymRoom_name: d["name"] as? String ?? "")
+                                                  y: d["y"] as? String ?? "",
+                                                  GymRoom_name: d["GymRoom_name"] as? String ?? "",
+                                                  TelPhone: d["TelPhone"] as? String ?? "",
+                                                  Address: d["Address"] as? String ?? "",
+                                                  Website: d["Website"] as? String ?? "")
                     }
                     
                     DispatchQueue.main.async {
@@ -63,8 +66,6 @@ class SearchGymRoomTableViewController: UITableViewController {
         
         cell.gymRoom.text = activity[indexPath.row].GymRoom_name
 
-        // Configure the cell...
-
         return cell
     }
     
@@ -74,7 +75,10 @@ class SearchGymRoomTableViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 destination.x = activity[indexPath.row].x
                 destination.y = activity[indexPath.row].y
-                destination.gymroom = activity[indexPath.row].GymRoom_name
+                destination.GymRoom_name = activity[indexPath.row].GymRoom_name
+                destination.TelPhone = activity[indexPath.row].TelPhone
+                destination.Address = activity[indexPath.row].Address
+                destination.Website = activity[indexPath.row].Website
                 
             }
         }
