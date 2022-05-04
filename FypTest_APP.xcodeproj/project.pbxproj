@@ -72,6 +72,7 @@
 		839CD47628228D1100B24338 /* PushUp_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47528228D1100B24338 /* PushUp_VideoCapture.swift */; };
 		839CD47828228D1D00B24338 /* Sitt_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47728228D1D00B24338 /* Sitt_VideoCapture.swift */; };
 		839CD47A28228D3D00B24338 /* Stand_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47928228D3D00B24338 /* Stand_VideoCapture.swift */; };
+		839CD4812822B7B600B24338 /* Record_ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD4802822B7B600B24338 /* Record_ChallengeViewController.swift */; };
 		83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D4282276FE005F9C30 /* ChallengeViewController.swift */; };
 		83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */; };
 		83A361D928227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */; };
@@ -147,6 +148,7 @@
 		839CD47528228D1100B24338 /* PushUp_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUp_VideoCapture.swift; sourceTree = "<group>"; };
 		839CD47728228D1D00B24338 /* Sitt_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitt_VideoCapture.swift; sourceTree = "<group>"; };
 		839CD47928228D3D00B24338 /* Stand_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stand_VideoCapture.swift; sourceTree = "<group>"; };
+		839CD4802822B7B600B24338 /* Record_ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record_ChallengeViewController.swift; sourceTree = "<group>"; };
 		83A361D4282276FE005F9C30 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Biceps.swift; sourceTree = "<group>"; };
 		83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Triceps.swift; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				839CD47F2822B79000B24338 /* Record_Challenge_View */,
 				83A361D3282273DF005F9C30 /* Challenge_Selection_view */,
 				5D9F74AC28213DA70094DB19 /* Challenge */,
 				836EFF6C281A81EB009FFE4A /* AI_VIEW */,
@@ -367,6 +370,14 @@
 				839CD47928228D3D00B24338 /* Stand_VideoCapture.swift */,
 			);
 			name = Back_Challenge;
+			sourceTree = "<group>";
+		};
+		839CD47F2822B79000B24338 /* Record_Challenge_View */ = {
+			isa = PBXGroup;
+			children = (
+				839CD4802822B7B600B24338 /* Record_ChallengeViewController.swift */,
+			);
+			path = Record_Challenge_View;
 			sourceTree = "<group>";
 		};
 		83A361D3282273DF005F9C30 /* Challenge_Selection_view */ = {
@@ -534,6 +545,7 @@
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
 				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
+				839CD4812822B7B600B24338 /* Record_ChallengeViewController.swift in Sources */,
 				5D9F74A9282130B00094DB19 /* Sit_1.mlmodel in Sources */,
 				839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */,
 				83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */,

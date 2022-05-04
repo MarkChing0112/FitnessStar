@@ -190,7 +190,8 @@ class SitTraining_ViewController: UIViewController {
 
     func toRecordPage(){
         let recordTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordTableViewController) as? RecordTableViewController
-        self.navigationController?.pushViewController(recordTableViewController!, animated: true)
+        view.window?.rootViewController = recordTableViewController
+        view.window?.makeKeyAndVisible()
     }
     
     func Check_amount(){
