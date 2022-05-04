@@ -14,7 +14,6 @@ class TrainingRecord1ViewController: UIViewController {
 
     @IBOutlet weak var TrainAmount: UILabel!
     @IBOutlet weak var TrainSetLabel: UILabel!
-    @IBOutlet weak var videoView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,4 +39,7 @@ class TrainingRecord1ViewController: UIViewController {
     }
     }
     
+    
 }
+
+

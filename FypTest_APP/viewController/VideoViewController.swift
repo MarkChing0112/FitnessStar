@@ -21,13 +21,7 @@ class VideoViewController: UIViewController {
         view.layer.addSublayer(layer)
         player.volume = 0
         player.play()
-        
-        /*
-        //use AVPlayerViewController
-        let vc = AVPlayerViewController()
-        vc.player = player
-        present(vc, animated: true)
-         */
+
     }
 
     /*
