@@ -60,6 +60,7 @@
 		838BF7E32792B6110015AC84 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E22792B6110015AC84 /* FirebasePerformance */; };
 		838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E42792B6110015AC84 /* FirebaseStorage */; };
 		839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */; };
+		83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D4282276FE005F9C30 /* ChallengeViewController.swift */; };
 		83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */; };
 		83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549ED282167A800A48745 /* SitTraining_Predictor.swift */; };
 		83F549F0282167C100A48745 /* SitTraining_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F549EF282167C100A48745 /* SitTraining_ViewController.swift */; };
@@ -118,6 +119,7 @@
 		836EFF75281A8F8C009FFE4A /* Sit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Sit.mlmodel; path = Transfer/Sit.mlmodel; sourceTree = SOURCE_ROOT; };
 		836EFF76281A8F8C009FFE4A /* Stand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Stand.mlmodel; path = Transfer/Stand.mlmodel; sourceTree = SOURCE_ROOT; };
 		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
+		83A361D4282276FE005F9C30 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		83F549EB2821679500A48745 /* SitTraining_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_VideoCapture.swift; sourceTree = "<group>"; };
 		83F549ED282167A800A48745 /* SitTraining_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_Predictor.swift; sourceTree = "<group>"; };
 		83F549EF282167C100A48745 /* SitTraining_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitTraining_ViewController.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		83A361D3282273DF005F9C30 /* Challenge_Selection_view */ = {
 			isa = PBXGroup;
 			children = (
+				83A361D4282276FE005F9C30 /* ChallengeViewController.swift */,
 			);
 			path = Challenge_Selection_view;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 				83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */,
 				835E26DC27BA850600CD79BB /* FirstPageNavigationController.swift in Sources */,
 				5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */,
+				83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */,
 				835E26ED27BA8E9B00CD79BB /* Constant.swift in Sources */,
 				836EFF77281A8F8C009FFE4A /* Biceps.mlmodel in Sources */,
 				836EFF7A281A8F8C009FFE4A /* Stand.mlmodel in Sources */,
