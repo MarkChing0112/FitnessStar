@@ -13,7 +13,6 @@ class BicepsRecordViewController: UIViewController {
     var gymTrainSet: Int!
     var gymTrainAmount: Int!
     var gymTrainTime: String!
-    
     @IBOutlet weak var recordName: UILabel!
     @IBOutlet weak var recordDate: UILabel!
     @IBOutlet weak var recordTime: UILabel!
@@ -25,6 +24,7 @@ class BicepsRecordViewController: UIViewController {
     }
     
     func outPutData() {
+        let gymTotalAmount = gymTrainAmount * gymTrainSet
         recordDate.text = lastUpdated
         recordTime.text = gymTrainTime
         recordTrainSet.text = "No. of Set Completed: \(String(gymTrainSet))"

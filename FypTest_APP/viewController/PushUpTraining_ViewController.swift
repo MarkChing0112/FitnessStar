@@ -213,13 +213,13 @@ class PushUpTraining_ViewController: UIViewController {
                         let date = Date()
                         let time1 = formatter.string(from: date)
                         let time2 = formatter2.string(from: date)
-                        let total_User_Train = User_ActionAmount * User_TrainSetAmount
+                        let total_User_Train = User_ActionAmount*TrainSetCount
                         db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
                                     "lastUpdated":time1,
                                     "GymType": self.titleLBL.text!,
                                     "Accuracy": self.Accuracy_STR,
                                     "User_Train_Set": self.TrainSetCount,
-                                    "User_Train_Amount": total_User_Train,
+                                    "User_Train_Amount": User_ActionAmount,
                                     "User_Time": self.durationLabel.text!
                                 ])
                             //show alertf

@@ -1728,7 +1728,7 @@
             </objects>
             <point key="canvasLocation" x="-1807.2463768115942" y="1603.7946428571429"/>
         </scene>
-        <!--Record Challenge View Controller-->
+        <!--Record Detail-->
         <scene sceneID="yO1-LB-ggm">
             <objects>
                 <viewController id="ePx-sB-Y8T" customClass="Record_ChallengeViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
@@ -1738,11 +1738,13 @@
                         <viewLayoutGuide key="safeArea" id="1GO-Pv-mTY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KLF-Hp-j6X"/>
+                    <navigationItem key="navigationItem" title="Record Detail" id="KLF-Hp-j6X">
+                        <barButtonItem key="rightBarButtonItem" image="house.fill" catalog="system" id="Arx-CW-gXy"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHi-El-TCE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2212" y="2325"/>
+            <point key="canvasLocation" x="-2225" y="2326"/>
         </scene>
         <!--TRAINING-->
         <scene sceneID="Ecz-Dq-iiG">
@@ -1858,13 +1860,7 @@
                         <viewLayoutGuide key="safeArea" id="5Gk-AH-PYu"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem image="house.fill" catalog="system" id="alT-gn-v4D">
-                            <connections>
-                                <action selector="HomeBTNOnTap:" destination="C0i-0Y-eII" id="dKq-DG-Odi"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Record Detail" id="CgJ-0e-VWn">
                         <barButtonItem key="rightBarButtonItem" image="house.fill" catalog="system" id="rZm-hj-9gm"/>
                     </navigationItem>
@@ -1878,7 +1874,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuE-cj-Amk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-491" y="2326"/>
+            <point key="canvasLocation" x="-458" y="2326"/>
         </scene>
         <!--Search Gym Room Table View Controller-->
         <scene sceneID="i6E-pv-BLz">
