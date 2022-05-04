@@ -63,6 +63,15 @@
 		838BF7E32792B6110015AC84 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E22792B6110015AC84 /* FirebasePerformance */; };
 		838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E42792B6110015AC84 /* FirebaseStorage */; };
 		839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */; };
+		839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46928228C5600B24338 /* SitChallenge_ViewController.swift */; };
+		839CD46C28228C7C00B24338 /* PushUpChallenge_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46B28228C7C00B24338 /* PushUpChallenge_ViewController.swift */; };
+		839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46D28228CA300B24338 /* StandChallenge_ViewController.swift */; };
+		839CD47028228CC800B24338 /* PushUp__Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46F28228CC800B24338 /* PushUp__Predictor.swift */; };
+		839CD47228228CD700B24338 /* Sit_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47128228CD700B24338 /* Sit_Predictor.swift */; };
+		839CD47428228CE900B24338 /* Stand_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47328228CE900B24338 /* Stand_Predictor.swift */; };
+		839CD47628228D1100B24338 /* PushUp_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47528228D1100B24338 /* PushUp_VideoCapture.swift */; };
+		839CD47828228D1D00B24338 /* Sitt_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47728228D1D00B24338 /* Sitt_VideoCapture.swift */; };
+		839CD47A28228D3D00B24338 /* Stand_VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD47928228D3D00B24338 /* Stand_VideoCapture.swift */; };
 		83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D4282276FE005F9C30 /* ChallengeViewController.swift */; };
 		83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */; };
 		83A361D928227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */; };
@@ -129,6 +138,15 @@
 		836EFF75281A8F8C009FFE4A /* Sit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Sit.mlmodel; path = Transfer/Sit.mlmodel; sourceTree = SOURCE_ROOT; };
 		836EFF76281A8F8C009FFE4A /* Stand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Stand.mlmodel; path = Transfer/Stand.mlmodel; sourceTree = SOURCE_ROOT; };
 		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
+		839CD46928228C5600B24338 /* SitChallenge_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitChallenge_ViewController.swift; sourceTree = "<group>"; };
+		839CD46B28228C7C00B24338 /* PushUpChallenge_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpChallenge_ViewController.swift; sourceTree = "<group>"; };
+		839CD46D28228CA300B24338 /* StandChallenge_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandChallenge_ViewController.swift; sourceTree = "<group>"; };
+		839CD46F28228CC800B24338 /* PushUp__Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUp__Predictor.swift; sourceTree = "<group>"; };
+		839CD47128228CD700B24338 /* Sit_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sit_Predictor.swift; sourceTree = "<group>"; };
+		839CD47328228CE900B24338 /* Stand_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stand_Predictor.swift; sourceTree = "<group>"; };
+		839CD47528228D1100B24338 /* PushUp_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUp_VideoCapture.swift; sourceTree = "<group>"; };
+		839CD47728228D1D00B24338 /* Sitt_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sitt_VideoCapture.swift; sourceTree = "<group>"; };
+		839CD47928228D3D00B24338 /* Stand_VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stand_VideoCapture.swift; sourceTree = "<group>"; };
 		83A361D4282276FE005F9C30 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Biceps.swift; sourceTree = "<group>"; };
 		83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Triceps.swift; sourceTree = "<group>"; };
@@ -208,9 +226,10 @@
 		5D9F74AC28213DA70094DB19 /* Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				5D9F74B128213E2A0094DB19 /* Biceps_VideoCapture.swift */,
-				5D9F74B32821410B0094DB19 /* Biceps_Predictor.swift */,
-				5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */,
+				839CD46828228BC700B24338 /* Back_Challenge */,
+				839CD46728228BAD00B24338 /* Triceps_Challenge */,
+				839CD46628228B9D00B24338 /* Chest_Challenge */,
+				839CD46528228B7800B24338 /* Biceps_Challenge */,
 			);
 			path = Challenge;
 			sourceTree = "<group>";
@@ -308,6 +327,46 @@
 				835E26EE27BA93CE00CD79BB /* ForgotPasswordViewController.swift */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		839CD46528228B7800B24338 /* Biceps_Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				5D9F74B128213E2A0094DB19 /* Biceps_VideoCapture.swift */,
+				5D9F74B32821410B0094DB19 /* Biceps_Predictor.swift */,
+				5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */,
+			);
+			name = Biceps_Challenge;
+			sourceTree = "<group>";
+		};
+		839CD46628228B9D00B24338 /* Chest_Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				839CD46B28228C7C00B24338 /* PushUpChallenge_ViewController.swift */,
+				839CD46F28228CC800B24338 /* PushUp__Predictor.swift */,
+				839CD47528228D1100B24338 /* PushUp_VideoCapture.swift */,
+			);
+			name = Chest_Challenge;
+			sourceTree = "<group>";
+		};
+		839CD46728228BAD00B24338 /* Triceps_Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				839CD46928228C5600B24338 /* SitChallenge_ViewController.swift */,
+				839CD47128228CD700B24338 /* Sit_Predictor.swift */,
+				839CD47728228D1D00B24338 /* Sitt_VideoCapture.swift */,
+			);
+			name = Triceps_Challenge;
+			sourceTree = "<group>";
+		};
+		839CD46828228BC700B24338 /* Back_Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				839CD46D28228CA300B24338 /* StandChallenge_ViewController.swift */,
+				839CD47328228CE900B24338 /* Stand_Predictor.swift */,
+				839CD47928228D3D00B24338 /* Stand_VideoCapture.swift */,
+			);
+			name = Back_Challenge;
 			sourceTree = "<group>";
 		};
 		83A361D3282273DF005F9C30 /* Challenge_Selection_view */ = {
@@ -448,24 +507,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839CD47828228D1D00B24338 /* Sitt_VideoCapture.swift in Sources */,
 				5D9F74AB282130B80094DB19 /* Stand_1.mlmodel in Sources */,
+				839CD47028228CC800B24338 /* PushUp__Predictor.swift in Sources */,
 				5D9F74A7282130A30094DB19 /* Pushup_1.mlmodel in Sources */,
+				839CD47428228CE900B24338 /* Stand_Predictor.swift in Sources */,
 				83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */,
 				835E26EF27BA93CE00CD79BB /* ForgotPasswordViewController.swift in Sources */,
 				83A361DD28227D1F005F9C30 /* Challenge_SelectionViewController_Back.swift in Sources */,
 				836EFF79281A8F8C009FFE4A /* Sit.mlmodel in Sources */,
+				839CD47228228CD700B24338 /* Sit_Predictor.swift in Sources */,
 				83F549F42821807D00A48745 /* StandTraining_Predictor.swift in Sources */,
 				5D9F74B42821410B0094DB19 /* Biceps_Predictor.swift in Sources */,
 				4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */,
 				83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */,
 				5DA6A1E627EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift in Sources */,
 				835E26E227BA8A1400CD79BB /* LoginViewController.swift in Sources */,
+				839CD47A28228D3D00B24338 /* Stand_VideoCapture.swift in Sources */,
 				5D9F74B62821442C0094DB19 /* BicepsChallengeViewController.swift in Sources */,
 				835E26E527BA8A6E00CD79BB /* LoginHomeViewController.swift in Sources */,
 				83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */,
 				83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */,
 				835E26F127BA9E0500CD79BB /* SignOut.swift in Sources */,
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
+				839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
 				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
@@ -474,6 +539,7 @@
 				83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */,
 				83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
+				839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */,
 				5D9F74A5282130960094DB19 /* Biceps_1.mlmodel in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
 				5D05DF7128227E2C00F2F6AF /* Biceps_3.mlmodel in Sources */,
@@ -500,8 +566,10 @@
 				835E26DC27BA850600CD79BB /* FirstPageNavigationController.swift in Sources */,
 				5D05DF73282284BC00F2F6AF /* VideoViewController.swift in Sources */,
 				5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */,
+				839CD46C28228C7C00B24338 /* PushUpChallenge_ViewController.swift in Sources */,
 				83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */,
 				835E26ED27BA8E9B00CD79BB /* Constant.swift in Sources */,
+				839CD47628228D1100B24338 /* PushUp_VideoCapture.swift in Sources */,
 				836EFF77281A8F8C009FFE4A /* Biceps.mlmodel in Sources */,
 				836EFF7A281A8F8C009FFE4A /* Stand.mlmodel in Sources */,
 			);
