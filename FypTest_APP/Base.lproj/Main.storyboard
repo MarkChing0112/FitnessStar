@@ -870,24 +870,20 @@
             </objects>
             <point key="canvasLocation" x="-3429" y="901"/>
         </scene>
-        <!--View Controller-->
+        <!--CHALLENGE-->
         <scene sceneID="ZmY-SZ-APf">
             <objects>
-                <viewController id="Ha8-HD-2dT" sceneMemberID="viewController">
+                <viewController id="Ha8-HD-2dT" customClass="ChallengeViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ifn-gN-LlS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_54_1" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-fD-Enr">
-                                <rect key="frame" x="20" y="61" width="50" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_54_2" translatesAutoresizingMaskIntoConstraints="NO" id="Ggl-6K-hrm">
                                 <rect key="frame" x="20" y="533" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECT A BODY PART" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsc-iq-sPi">
-                                <rect key="frame" x="75" y="76" width="249" height="20.666666666666671"/>
+                                <rect key="frame" x="83" y="88" width="249" height="20.666666666666671"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -907,7 +903,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="BicepsBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="vus-5p-tIg"/>
+                                    <action selector="BicepsBtn:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="jdw-WV-Rce"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWg-1Q-Qg3">
@@ -920,7 +916,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="BackBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="6iE-X8-eGw"/>
+                                    <action selector="BackBtn:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="fXW-li-FkZ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SET UP YOUR TTIME LIMIT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXo-rA-E5L">
@@ -946,7 +942,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="amountminBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="Y18-oP-1gz"/>
+                                    <action selector="amountminBtn:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="pHW-ak-7ES"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jz3-tE-vDh">
@@ -957,11 +953,11 @@
                                     <backgroundConfiguration key="background" image="Icon_46_plus"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="amountPlusBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="5fo-Sg-8Y9"/>
+                                    <action selector="amountPlusBtn:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="Ucd-8G-A4A"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-4B-akr">
-                                <rect key="frame" x="112" y="611" width="85" height="74"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="12:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ll-4B-akr">
+                                <rect key="frame" x="112" y="611" width="189" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="62"/>
                                 <color key="textColor" red="0.45711052419999998" green="0.87483745810000002" blue="0.84706479310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -977,7 +973,7 @@
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="ChestBtn:" destination="jkS-5e-hcS" eventType="touchUpInside" id="VOC-4q-RhT"/>
+                                    <action selector="ChestBtn:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="cRc-f2-Mae"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1fw-Pv-V48">
@@ -997,8 +993,7 @@
                                     </attributedString>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="NextPageBtnOnTap:" destination="jkS-5e-hcS" eventType="touchUpInside" id="bbn-b0-Kmg"/>
-                                    <segue destination="J7H-Cs-5aN" kind="show" id="1UX-Mx-LO3"/>
+                                    <action selector="NextPageBtnOnTap:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="67B-Rd-DUi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jf4-Vk-abl">
@@ -1010,19 +1005,30 @@
                                         <color key="strokeColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </backgroundConfiguration>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="TricepsBtn:" destination="Ha8-HD-2dT" eventType="touchUpInside" id="rOl-kV-0Eh"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZh-gn-6Dw">
-                                <rect key="frame" x="195" y="611" width="106" height="74"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon_54_1" translatesAutoresizingMaskIntoConstraints="NO" id="fWd-fD-Enr">
+                                <rect key="frame" x="25" y="71" width="50" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="62"/>
-                                <color key="textColor" red="0.45711052419999998" green="0.87483745810000002" blue="0.84706479310000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SjJ-0q-O9b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Yhh-lr-YMR"/>
+                    <navigationItem key="navigationItem" title="CHALLENGE" id="Yhh-lr-YMR"/>
+                    <connections>
+                        <outlet property="BackImage" destination="RWg-1Q-Qg3" id="vnn-j1-Ucd"/>
+                        <outlet property="BackOutBtn" destination="RWg-1Q-Qg3" id="doH-1V-2YU"/>
+                        <outlet property="BicepsOutBtn" destination="VHD-oW-ecv" id="DsT-7B-73V"/>
+                        <outlet property="Bicepsimage" destination="VHD-oW-ecv" id="t7I-kX-2LC"/>
+                        <outlet property="ChestImage" destination="SVD-xV-Xoq" id="GWc-6y-749"/>
+                        <outlet property="ChestOutBtn" destination="SVD-xV-Xoq" id="HSb-X2-ruP"/>
+                        <outlet property="TimeLabel" destination="5Ll-4B-akr" id="4eb-xA-aNF"/>
+                        <outlet property="TricepsOutBtn" destination="Jf4-Vk-abl" id="2CO-bh-TD3"/>
+                        <outlet property="Tricepsimage" destination="Jf4-Vk-abl" id="hsS-9x-4to"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UpX-hh-OgZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

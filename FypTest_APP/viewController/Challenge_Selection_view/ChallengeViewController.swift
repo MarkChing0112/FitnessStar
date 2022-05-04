@@ -31,14 +31,13 @@ class ChallengeViewController: UIViewController {
     @IBOutlet weak var ChestImage: UIButton!
     @IBOutlet weak var BackImage: UIButton!
     //label amount
-    @IBOutlet var SetAmountLabel: UILabel!
     @IBOutlet var TimeLabel: UILabel!
 
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        TimeLabel.text = String(Time_Minus);
+        TimeLabel.text = "\(String(Time_Minus)):00";
     }
     
 //Btn func
@@ -127,7 +126,7 @@ class ChallengeViewController: UIViewController {
     @IBAction func amountminBtn(_ sender: Any) {
         if Time_Minus > 1{
             Time_Minus -= 1
-            TimeLabel.text = String(Time_Minus)
+            TimeLabel.text = "\(String(Time_Minus)):00"
         }else{
             showAlertM()
         }
@@ -136,7 +135,7 @@ class ChallengeViewController: UIViewController {
     @IBAction func amountPlusBtn(_ sender: Any) {
         if Time_Minus <= 29{
             Time_Minus += 1
-            TimeLabel.text = String(Time_Minus)
+            TimeLabel.text = "\(String(Time_Minus)):00"
         }
     }
     //to Selected body part page
@@ -168,22 +167,22 @@ class ChallengeViewController: UIViewController {
         let user = Auth.auth().currentUser
         if let user = user {
         if BICEPS == true{
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"Time_Limit":TimeLabel.text!])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BICEPS" as NSString,"Time_Limit":(Time_Minus*60)])
             //TO next page
             toTrainBRecord()
         }else if TRICEPS == true{
             
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "TRICEPS" as NSString,"Time_Limit":TimeLabel.text!])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "TRICEPS" as NSString,"Time_Limit":(Time_Minus*60)])
             //To next page
             toTrainTRecord()
         }else if CHEST == true{
             
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"Time_Limit":TimeLabel.text!])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "CHEST" as NSString,"Time_Limit":(Time_Minus*60)])
             //To next page
             toTrainCRecord()
         }else if BACK == true{
             
-            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BACK" as NSString,"Time_Limit":TimeLabel.text!])
+            ref.child("User_Challenge_Selection").child(user.uid).setValue(["BodyPart": "BACK" as NSString,"Time_Limit":(Time_Minus*60)])
             //To next page
             toTrainBARecord()
         }else{
