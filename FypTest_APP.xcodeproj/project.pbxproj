@@ -76,6 +76,7 @@
 		839CD4832822B86500B24338 /* RecordChallenageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD4822822B86500B24338 /* RecordChallenageTableViewController.swift */; };
 		839CD4852822B95C00B24338 /* RecordChallengeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD4842822B95C00B24338 /* RecordChallengeTableViewCell.swift */; };
 		839CD4872822B97B00B24338 /* RecordChallengeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD4862822B97B00B24338 /* RecordChallengeModel.swift */; };
+		839CD48A2822C45D00B24338 /* RecordSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD4892822C45D00B24338 /* RecordSelectionViewController.swift */; };
 		83A361D5282276FE005F9C30 /* ChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D4282276FE005F9C30 /* ChallengeViewController.swift */; };
 		83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */; };
 		83A361D928227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */; };
@@ -155,6 +156,7 @@
 		839CD4822822B86500B24338 /* RecordChallenageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordChallenageTableViewController.swift; sourceTree = "<group>"; };
 		839CD4842822B95C00B24338 /* RecordChallengeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordChallengeTableViewCell.swift; sourceTree = "<group>"; };
 		839CD4862822B97B00B24338 /* RecordChallengeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordChallengeModel.swift; sourceTree = "<group>"; };
+		839CD4892822C45D00B24338 /* RecordSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSelectionViewController.swift; sourceTree = "<group>"; };
 		83A361D4282276FE005F9C30 /* ChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewController.swift; sourceTree = "<group>"; };
 		83A361D628227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Biceps.swift; sourceTree = "<group>"; };
 		83A361D828227CF7005F9C30 /* Challenge_SelectionViewController_Triceps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_SelectionViewController_Triceps.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
+				839CD4882822C43600B24338 /* Common View */,
 				839CD47F2822B79000B24338 /* Record_Challenge_View */,
 				83A361D3282273DF005F9C30 /* Challenge_Selection_view */,
 				5D9F74AC28213DA70094DB19 /* Challenge */,
@@ -254,8 +257,6 @@
 				836EFF6E281A8231009FFE4A /* AImodel */,
 				836EFF6D281A8212009FFE4A /* SearchMapView */,
 				836EFF6B281A8193009FFE4A /* TrainingView */,
-				83329E2E2792CCB600600104 /* HomeViewController.swift */,
-				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
 				5D05DF72282284BC00F2F6AF /* VideoViewController.swift */,
 				5D05DF74282284C900F2F6AF /* now.MOV */,
 			);
@@ -387,6 +388,16 @@
 				839CD4862822B97B00B24338 /* RecordChallengeModel.swift */,
 			);
 			path = Record_Challenge_View;
+			sourceTree = "<group>";
+		};
+		839CD4882822C43600B24338 /* Common View */ = {
+			isa = PBXGroup;
+			children = (
+				83329E2E2792CCB600600104 /* HomeViewController.swift */,
+				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
+				839CD4892822C45D00B24338 /* RecordSelectionViewController.swift */,
+			);
+			name = "Common View";
 			sourceTree = "<group>";
 		};
 		83A361D3282273DF005F9C30 /* Challenge_Selection_view */ = {
@@ -553,6 +564,7 @@
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
 				839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
+				839CD48A2822C45D00B24338 /* RecordSelectionViewController.swift in Sources */,
 				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				839CD4812822B7B600B24338 /* Record_ChallengeViewController.swift in Sources */,

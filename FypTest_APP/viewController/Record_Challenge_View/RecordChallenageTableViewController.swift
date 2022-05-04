@@ -26,9 +26,6 @@ class RecordChallenageTableViewController: UITableViewController {
         view.window?.makeKeyAndVisible()
     }
 
-    func toTrainingRecord(){
-        
-    }
     func getRecord() {
         let db = Firestore.firestore()
         
