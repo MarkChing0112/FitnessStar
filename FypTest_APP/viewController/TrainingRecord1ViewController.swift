@@ -7,8 +7,6 @@ import UIKit
 import Firebase
 import FirebaseAuth
 import FirebaseFirestore
-import AVKit
-import AVFoundation
 
 class TrainingRecord1ViewController: UIViewController {
 

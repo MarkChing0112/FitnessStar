@@ -12,6 +12,8 @@ class TrainingRecord3ViewController: UIViewController {
     @IBOutlet weak var TrainAmount: UILabel!
     @IBOutlet weak var TrainSetLabel: UILabel!
     
+    var videosName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GetUserData()
@@ -34,5 +36,13 @@ class TrainingRecord3ViewController: UIViewController {
           print(error.localizedDescription)
         }
     }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoViewController {
+                
+            destination.videoName = self.videosName
+            
+        }
     }
 }
