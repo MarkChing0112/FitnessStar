@@ -5,7 +5,7 @@
 import Foundation
 import Vision
 
-typealias ThrowingClassifies_1 = Biceps_1
+typealias ThrowingClassifies_1 = Biceps_3
 
 protocol Biceps_ChallengeDelegte: AnyObject {
     func Biceps_Challenge( Biceps_Challenge_predictor: Biceps_Predictor,didFindNewRecognizedPoints point:[CGPoint])

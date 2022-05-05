@@ -6,8 +6,9 @@
 //
 
 import UIKit
-
+import FirebaseStorage
 class Record_ChallengeViewController: UIViewController {
+    
     var lastUpdated: String!
     var gymType: String!
     var gymAccuracy: String!
@@ -18,9 +19,30 @@ class Record_ChallengeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        printdata()
     }
     
+    @IBOutlet weak var GymTypeImageView: UIImageView!
+    @IBOutlet weak var GymTypeLBL: UILabel!
+    @IBOutlet weak var GymDurationLBL: UILabel!
+    @IBOutlet weak var GymAccuracyLBL: UILabel!
+    @IBOutlet weak var GymTrainAmount: UILabel!
     func printdata(){
+        //get text
+        GymTypeLBL.text = gymType
+        GymDurationLBL.text = gymTimeLimit
+        GymAccuracyLBL.text = gymAccuracy
+        GymTrainAmount.text = String(gymTrainAmount)
         
+        //get image
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let fileRef = storageRef.child(gymRecordURL)
+        
+        fileRef.getData(maxSize: 10*3024*4032) { Data, Error in
+            if Error == nil && Data != nil {
+                self.GymTypeImageView.image = UIImage(data: Data!)
+            }
+        }
     }
 }
