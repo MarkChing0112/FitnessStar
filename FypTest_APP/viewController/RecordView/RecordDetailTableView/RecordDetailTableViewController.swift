@@ -31,13 +31,28 @@ class RecordDetailTableViewController: UITableViewController {
     @IBOutlet weak var GymTypeImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        outPutData()
+        getRecord()
+        self.tableView.reloadData()
     }
     //view output data
     func outPutData() {
         //get user train data form server
-
+        recordAccuracy.text = gymAccuracy
+        recordTrainingReps.text = String(gymTrainAmount)
+        recordTime.text = gymTrainTime
+        recordTrainSet.text = String(gymTrainSet)
         
+        //get image
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let fileRef = storageRef.child(gymRecordURL)
+        
+        fileRef.getData(maxSize: 10*3024*4032) { Data, Error in
+            if Error == nil && Data != nil {
+                self.GymTypeImageView.image = UIImage(data: Data!)
+            }
+        }
     }
     
     //table view data
@@ -58,7 +73,7 @@ class RecordDetailTableViewController: UITableViewController {
                                 
                                 return RecordDetailModel(
                                     SetAccuracy: r["Accuracy"] as? String ?? "",
-                                    SetTrainSet: r["User_Train_Set"] as? Int ?? 0,
+                                    SetTrainSet: r["User_Train_Set"] as? String ?? "",
                                     SetTotalTime: r["Total_Time"] as? String ?? "",
                                     SetTimeOfSet: r["TimeOfSet"] as? String ?? ""
                                     )
@@ -73,6 +88,19 @@ class RecordDetailTableViewController: UITableViewController {
             }
         }
     }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RecordCell3", for: indexPath) as! RecordDetailTableViewCell
+
+        
+        //get user set detail data
+        RecordCell.User_Train_Set.text = record2[indexPath.row].SetTrainSet
+        RecordCell.User_Total_Time.text = record2[indexPath.row].SetTotalTime
+        RecordCell.TimeOfSet.text = record2[indexPath.row].SetTimeOfSet
+        RecordCell.AccuraryLBL.text = record2[indexPath.row].SetAccuracy
+
+        return RecordCell
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -82,7 +110,7 @@ class RecordDetailTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return record2.count
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
