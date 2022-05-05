@@ -11,8 +11,8 @@ class RecordDetailTableViewCell: UITableViewCell {
 
     @IBOutlet weak var User_Train_Set: UILabel!
     @IBOutlet weak var User_Total_Time: UILabel!
-    @IBOutlet weak var TimeOfSet: UILabel!
     @IBOutlet weak var AccuraryLBL: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
