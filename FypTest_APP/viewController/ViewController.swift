@@ -242,7 +242,7 @@ class ViewController: UIViewController {
                                 "TimeOfset": self.User_Set_Timer
                             ])
                     //reset timer
-                    Time_S2 = 0
+                    self.Time_S2 = 0
                     timer_Set1()
                 
                     if((TrainSetCount == User_TrainSetAmount)){
