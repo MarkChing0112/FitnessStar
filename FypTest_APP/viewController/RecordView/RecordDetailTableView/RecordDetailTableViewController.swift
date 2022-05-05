@@ -31,8 +31,9 @@ class RecordDetailTableViewController: UITableViewController {
     @IBOutlet weak var GymTypeImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        outPutData()
+        
         getRecord()
+        outPutData()
         self.tableView.reloadData()
     }
     //view output data

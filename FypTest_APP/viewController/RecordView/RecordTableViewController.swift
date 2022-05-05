@@ -96,7 +96,7 @@ class RecordTableViewController: UITableViewController {
     // pass data to next page
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? BicepsRecordViewController {
+        if let destination = segue.destination as? RecordDetailTableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 
                 destination.lastUpdated = record[indexPath.row].lastUpdated
