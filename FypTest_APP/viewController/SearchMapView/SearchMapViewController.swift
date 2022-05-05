@@ -6,12 +6,17 @@
 import UIKit
 import MapKit
 import CoreLocation
+import FirebaseStorage
 
 class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     
-    //mpa
+    @IBOutlet weak var GymRoomImageView: UIImageView!
+    
+    //map
     let manager = CLLocationManager()
     let geoCoder = CLGeocoder()
+    
+    //var activity = [SearchGymRoomModel]()
     
     // firebase
     var x: String!
@@ -20,6 +25,7 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     var TelPhone: String!
     var Address: String!
     var Website: String!
+    var GymRoomURL: String!
     
     @IBOutlet weak var mapView: MKMapView!
     
@@ -39,6 +45,21 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         pin.coordinate = coordation
         pin.title = GymRoom_name
         mapView.addAnnotation(pin)
+        
+        getGymRoomImage()
+    }
+    
+    func getGymRoomImage() {
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let fileRef = storageRef.child(GymRoomURL)
+        
+        
+        fileRef.getData(maxSize: 10*3024*4032) { Data, Error in
+            if Error == nil && Data != nil {
+                self.GymRoomImageView.image = UIImage(data: Data!)
+            }
+        }
     }
 
 }

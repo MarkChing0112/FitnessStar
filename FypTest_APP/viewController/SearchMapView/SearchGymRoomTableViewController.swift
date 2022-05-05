@@ -13,7 +13,6 @@ class SearchGymRoomTableViewController: UITableViewController {
     
     var activity = [SearchGymRoomModel]()
     
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
@@ -37,7 +36,8 @@ class SearchGymRoomTableViewController: UITableViewController {
                                                   GymRoom_name: d["GymRoom_name"] as? String ?? "",
                                                   TelPhone: d["TelPhone"] as? String ?? "",
                                                   Address: d["Address"] as? String ?? "",
-                                                  Website: d["Website"] as? String ?? "")
+                                                  Website: d["Website"] as? String ?? "",
+                                                  GymRoomURL: d["GymRoomURL"] as? String ?? "")
                     }
                     
                     DispatchQueue.main.async {
@@ -65,7 +65,7 @@ class SearchGymRoomTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "gymRoomCell", for: indexPath) as! searchGymRoomTableViewCell
         
         cell.gymRoom.text = activity[indexPath.row].GymRoom_name
-
+        
         return cell
     }
     
@@ -73,12 +73,14 @@ class SearchGymRoomTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? SearchMapViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
+                
                 destination.x = activity[indexPath.row].x
                 destination.y = activity[indexPath.row].y
                 destination.GymRoom_name = activity[indexPath.row].GymRoom_name
                 destination.TelPhone = activity[indexPath.row].TelPhone
                 destination.Address = activity[indexPath.row].Address
                 destination.Website = activity[indexPath.row].Website
+                destination.GymRoomURL = activity[indexPath.row].GymRoomURL
                 
             }
         }

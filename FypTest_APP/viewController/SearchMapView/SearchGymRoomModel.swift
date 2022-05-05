@@ -12,4 +12,5 @@ struct SearchGymRoomModel{
     var TelPhone: String!
     var Address: String!
     var Website: String!
+    var GymRoomURL: String!
 }
