@@ -11,4 +11,5 @@ struct RecordModel {
     var gymTrainSet: Int!
     var gymTrainAmount: Int!
     var gymTrainTime: String!
+    var gymRecordURL: String!
 }

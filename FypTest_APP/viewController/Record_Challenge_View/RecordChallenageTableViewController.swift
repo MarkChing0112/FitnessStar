@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
-
+import FirebaseStorage
 class RecordChallenageTableViewController: UITableViewController {
 
     var recordChallenge = [RecordChallengeModel]()
@@ -46,7 +46,8 @@ class RecordChallenageTableViewController: UITableViewController {
                                     gymType: r["GymType"] as? String ?? "",
                                     gymAccuracy: r["Accuracy"] as? String ?? "",
                                     gymTimeLimit: r["User_TimeLimit"] as? String ?? "",
-                                    gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0
+                                    gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0,
+                                    gymRecordURL: r["Record_URL"] as? String ?? ""
                                     )
                             }
                             
@@ -75,6 +76,16 @@ class RecordChallenageTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RC1Cell", for: indexPath) as! RecordChallengeTableViewCell
+        //get firebase storage image
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let fileRef = storageRef.child(recordChallenge[indexPath.row].gymRecordURL)
+        
+        fileRef.getData(maxSize: 10*3024*4032) { Data, Error in
+            if Error == nil && Data != nil {
+                RecordCell.gymTypeImageView.image = UIImage(data: Data!)
+            }
+        }
         RecordCell.gymTypeLabel.text = recordChallenge[indexPath.row].gymType
         RecordCell.gymTimeLabel.text = recordChallenge[indexPath.row].lastUpdated
 
@@ -92,7 +103,7 @@ class RecordChallenageTableViewController: UITableViewController {
                 destination.gymAccuracy = recordChallenge[indexPath.row].gymAccuracy
                 destination.gymTimeLimit = recordChallenge[indexPath.row].gymTimeLimit
                 destination.gymTrainAmount = recordChallenge[indexPath.row].gymTrainAmount
-                
+                destination.gymRecordURL = recordChallenge[indexPath.row].gymRecordURL
             }
         }
     }

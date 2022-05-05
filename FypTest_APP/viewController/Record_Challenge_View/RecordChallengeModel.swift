@@ -13,4 +13,5 @@ struct RecordChallengeModel {
     var gymAccuracy: String!
     var gymTimeLimit: String!
     var gymTrainAmount: Int!
+    var gymRecordURL: String!
 }

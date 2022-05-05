@@ -10,6 +10,7 @@ import UIKit
 class RecordChallengeTableViewCell: UITableViewCell {
     @IBOutlet weak var gymTypeLabel: UILabel!
     @IBOutlet weak var gymTimeLabel: UILabel!
+    @IBOutlet weak var gymTypeImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

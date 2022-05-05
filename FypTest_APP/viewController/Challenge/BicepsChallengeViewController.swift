@@ -135,7 +135,8 @@ class BicepsChallengeViewController: UIViewController {
                                 "GymType": self.titleLBL.text!,
                                 "Accuracy": self.Accuracy_STR,
                                 "User_TimeLimit": self.TimeLimit_STR,
-                                "User_Train_Amount": self.Actioncount
+                                "User_Train_Amount": self.Actioncount,
+                                "Record_URL": "Record/Icon_50_Biceps@3x.png"
                             ])
                         //show alertf
                     self.showAlertF()
@@ -192,8 +193,8 @@ class BicepsChallengeViewController: UIViewController {
     }
 
     func toRecordPage(){
-        let recordTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordTableViewController) as? RecordTableViewController
-        view.window?.rootViewController = recordTableViewController
+        let recordSelectionViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionViewController) as? RecordSelectionViewController
+        view.window?.rootViewController = recordSelectionViewController
         view.window?.makeKeyAndVisible()
     }
     

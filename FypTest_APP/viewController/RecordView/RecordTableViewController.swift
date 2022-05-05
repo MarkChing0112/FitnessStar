@@ -6,7 +6,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import FirebaseAuth
-
+import FirebaseStorage
 class RecordTableViewController: UITableViewController {
 
     var record = [RecordModel]()
@@ -45,7 +45,8 @@ class RecordTableViewController: UITableViewController {
                                     gymAccuracy: r["Accuracy"] as? String ?? "",
                                     gymTrainSet: r["User_Train_Set"] as? Int ?? 0,
                                     gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0,
-                                    gymTrainTime: r["User_Time"] as? String ?? ""
+                                    gymTrainTime: r["User_Time"] as? String ?? "",
+                                    gymRecordURL: r["Record_URL"] as? String ?? ""
                                     )
                             }
                             
@@ -75,6 +76,16 @@ class RecordTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath) as! RecordTableViewCell
 
+        //get firebase storage image
+        let storage = Storage.storage()
+        let storageRef = storage.reference()
+        let fileRef = storageRef.child(record[indexPath.row].gymRecordURL)
+        
+        fileRef.getData(maxSize: 10*3024*4032) { Data, Error in
+            if Error == nil && Data != nil {
+                RecordCell.gymTypeImageView.image = UIImage(data: Data!)
+            }
+        }
         RecordCell.gymTypeLabel.text = record[indexPath.row].gymType
         RecordCell.gymTimeLabel.text = record[indexPath.row].lastUpdated
 
@@ -93,7 +104,7 @@ class RecordTableViewController: UITableViewController {
                 destination.gymTrainSet = record[indexPath.row].gymTrainSet
                 destination.gymTrainAmount = record[indexPath.row].gymTrainAmount
                 destination.gymTrainTime = record[indexPath.row].gymTrainTime
-                
+                destination.gymRecordURL = record[indexPath.row].gymRecordURL
                 
             }
         }

@@ -191,8 +191,8 @@ class StandTraining_ViewController: UIViewController {
     }
 
     func toRecordPage(){
-        let recordTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordTableViewController) as? RecordTableViewController
-        view.window?.rootViewController = recordTableViewController
+        let recordSelectionViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionViewController) as? RecordSelectionViewController
+        view.window?.rootViewController = recordSelectionViewController
         view.window?.makeKeyAndVisible()
     }
     
@@ -221,7 +221,8 @@ class StandTraining_ViewController: UIViewController {
                                     "Accuracy": self.Accuracy_STR,
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": User_ActionAmount,
-                                    "User_Time": self.durationLabel.text!
+                                    "User_Time": self.durationLabel.text!,
+                                    "Record_URL": "Record/Icon_50_backMuscles@3x.png"
                                 ])
                             //show alertf
                             showAlertF()

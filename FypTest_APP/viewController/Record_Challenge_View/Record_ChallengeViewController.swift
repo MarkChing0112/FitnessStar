@@ -13,7 +13,7 @@ class Record_ChallengeViewController: UIViewController {
     var gymAccuracy: String!
     var gymTimeLimit: String!
     var gymTrainAmount: Int!
-    
+    var gymRecordURL: String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
