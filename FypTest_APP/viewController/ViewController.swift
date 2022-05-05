@@ -197,7 +197,7 @@ class ViewController: UIViewController {
     var time3 : String = ""
     func Addstardate(){
         let date = Date()
-        time3 = formatter.string(from: date)
+        time3 = formatter2.string(from: date)
     }
     
     func Check_amount(){
