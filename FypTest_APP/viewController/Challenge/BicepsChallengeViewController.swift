@@ -120,7 +120,7 @@ class BicepsChallengeViewController: UIViewController {
                 let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
                 self.durationLabel.text = timeString
                 print("\(timeString)")
-                
+                let gymTypeName = "Biceps"
                 if((self.Time_S == 0)){
                 //show alert & save data to firebase
                     let user = Auth.auth().currentUser
@@ -132,11 +132,11 @@ class BicepsChallengeViewController: UIViewController {
                     let time2 = self.formatter2.string(from: date)
                     db.collection("Record_Challenge").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
                                 "lastUpdated":time1,
-                                "GymType": self.titleLBL.text!,
+                                "GymType": gymTypeName,
                                 "Accuracy": self.Accuracy_STR,
                                 "User_TimeLimit": self.TimeLimit_STR,
                                 "User_Train_Amount": self.Actioncount,
-                                "Record_URL": "Record/Icon_50_Biceps@3x.png"
+                                "Record_URL": "Record/Biceps.jpg"
                             ])
                         //show alertf
                     self.showAlertF()

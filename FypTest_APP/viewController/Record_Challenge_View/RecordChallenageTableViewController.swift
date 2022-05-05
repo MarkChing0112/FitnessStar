@@ -21,8 +21,8 @@ class RecordChallenageTableViewController: UITableViewController {
     }
     
     @IBAction func HomeBTNOnTap(_ sender: Any) {
-        let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        view.window?.rootViewController = homeViewController
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
         view.window?.makeKeyAndVisible()
     }
 
@@ -75,7 +75,7 @@ class RecordChallenageTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let RecordCell = tableView.dequeueReusableCell(withIdentifier: "RC1Cell", for: indexPath) as! RecordChallengeTableViewCell
+        let Record1Cell = tableView.dequeueReusableCell(withIdentifier: "RC1Cell", for: indexPath) as! RecordChallengeTableViewCell
         //get firebase storage image
         let storage = Storage.storage()
         let storageRef = storage.reference()
@@ -83,13 +83,13 @@ class RecordChallenageTableViewController: UITableViewController {
         
         fileRef.getData(maxSize: 10*3024*4032) { Data, Error in
             if Error == nil && Data != nil {
-                RecordCell.gymTypeImageView.image = UIImage(data: Data!)
+                Record1Cell.gymTypeImageView.image = UIImage(data: Data!)
             }
         }
-        RecordCell.gymTypeLabel.text = recordChallenge[indexPath.row].gymType
-        RecordCell.gymTimeLabel.text = recordChallenge[indexPath.row].lastUpdated
+        Record1Cell.gymTypeLabel.text = recordChallenge[indexPath.row].gymType
+        Record1Cell.gymTimeLabel.text = recordChallenge[indexPath.row].lastUpdated
 
-        return RecordCell
+        return Record1Cell
     }
     
     // pass data to next page

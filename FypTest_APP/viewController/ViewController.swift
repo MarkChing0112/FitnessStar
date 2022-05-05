@@ -225,7 +225,7 @@ class ViewController: UIViewController {
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": User_ActionAmount,
                                     "User_Time": self.durationLabel.text!,
-                                    "Record_URL": "Record/Icon_50_Biceps@3x.png"
+                                    "Record_URL": "Record/Biceps.jpg"
                                 ])
                             //show alertf
                             showAlertF()

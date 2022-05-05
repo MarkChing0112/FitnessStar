@@ -137,7 +137,7 @@ class SitChallenge_ViewController: UIViewController {
                                 "Accuracy": self.Accuracy_STR,
                                 "User_TimeLimit": self.TimeLimit_STR,
                                 "User_Train_Amount": self.Actioncount,
-                                "Record_URL": "Record/Icon_50_Triceps@3x.png"
+                                "Record_URL": "Record/Triceps.jpg"
                             ])
                         //show alertf
                     self.showAlertF()

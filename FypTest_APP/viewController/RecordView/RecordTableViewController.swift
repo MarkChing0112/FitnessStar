@@ -18,8 +18,8 @@ class RecordTableViewController: UITableViewController {
     }
     
     @IBAction func HomeBTNOnTap(_ sender: Any) {
-        let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        view.window?.rootViewController = homeViewController
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
         view.window?.makeKeyAndVisible()
     }
 
