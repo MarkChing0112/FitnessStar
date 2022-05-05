@@ -76,7 +76,7 @@ class RecordDetailTableViewController: UITableViewController {
                                     SetAccuracy: r["Accuracy"] as? String ?? "",
                                     SetTrainSet: r["User_Train_Set"] as? String ?? "",
                                     SetTotalTime: r["Total_Time"] as? String ?? "",
-                                    SetTimeOfSet: r["TimeOfSet"] as? String ?? ""
+                                    SetTimeOfSet: r["TimeOfset"] as? String ?? ""
                                     )
                             }
                             

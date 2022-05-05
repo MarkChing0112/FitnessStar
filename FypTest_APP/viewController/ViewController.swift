@@ -229,7 +229,7 @@ class ViewController: UIViewController {
                     //update label
                     trainingcLabel.text = "\(Actioncount)"
                     trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
-
+                    timer_Set.invalidate()
                     //save user set detail
                     let db = Firestore.firestore()
                     let date = Date()
@@ -241,11 +241,10 @@ class ViewController: UIViewController {
                                 "Total_Time": self.durationLabel.text!,
                                 "TimeOfset": self.User_Set_Timer
                             ])
-                    
                     //reset timer
-                    timer_Set.invalidate()
+                    Time_S2 = 0
                     timer_Set1()
-                    
+                
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
