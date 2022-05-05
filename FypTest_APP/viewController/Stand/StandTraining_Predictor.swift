@@ -8,7 +8,7 @@
 import Foundation
 import Vision
 //AImodel biceps file
-typealias ThrowingClassifies_StandTraining = Stand
+typealias ThrowingClassifies_StandTraining = Stand_2
 
 protocol StandTrainingDelegte: AnyObject {
     func StandTraining( standTraining_predictor: StandTraining_Predictor,didFindNewRecognizedPoints point:[CGPoint])
