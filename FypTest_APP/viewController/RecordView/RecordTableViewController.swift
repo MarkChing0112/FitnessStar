@@ -46,7 +46,8 @@ class RecordTableViewController: UITableViewController {
                                     gymTrainSet: r["User_Train_Set"] as? Int ?? 0,
                                     gymTrainAmount: r["User_Train_Amount"] as? Int ?? 0,
                                     gymTrainTime: r["User_Time"] as? String ?? "",
-                                    gymRecordURL: r["Record_URL"] as? String ?? ""
+                                    gymRecordURL: r["Record_URL"] as? String ?? "",
+                                    User_SetDetail_collection: r["User_SetDetail_Collection"] as? String ?? ""
                                     )
                             }
                             
@@ -105,7 +106,7 @@ class RecordTableViewController: UITableViewController {
                 destination.gymTrainAmount = record[indexPath.row].gymTrainAmount
                 destination.gymTrainTime = record[indexPath.row].gymTrainTime
                 destination.gymRecordURL = record[indexPath.row].gymRecordURL
-                
+                destination.User_SetDetail_collection = record[indexPath.row].User_SetDetail_collection
             }
         }
     }

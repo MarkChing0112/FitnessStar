@@ -15,6 +15,7 @@ class BicepsRecordViewController: UIViewController {
     var gymTrainAmount: Int!
     var gymTrainTime: String!
     var gymRecordURL: String!
+    var User_SetDetail_collection: String!
     
     @IBOutlet weak var recordName: UILabel!
     @IBOutlet weak var recordTime: UILabel!

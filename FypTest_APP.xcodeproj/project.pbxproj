@@ -36,6 +36,9 @@
 		5DA6A1E627EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */; };
 		5DED5C772823C59600911049 /* Biceps_3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DED5C762823C59600911049 /* Biceps_3.mlmodel */; };
 		8304581F2823F5C6007B58E1 /* RecordSelectionNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */; };
+		8304582228240037007B58E1 /* RecordDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304582128240037007B58E1 /* RecordDetailTableViewController.swift */; };
+		8304582428240152007B58E1 /* RecordDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304582328240152007B58E1 /* RecordDetailModel.swift */; };
+		83045826282406FE007B58E1 /* RecordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83045825282406FE007B58E1 /* RecordDetailTableViewCell.swift */; };
 		83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E262792CC7800600104 /* TrainingSelectionViewController.swift */; };
 		83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */; };
 		83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E2C2792CCAB00600104 /* SearchMapViewController.swift */; };
@@ -126,6 +129,9 @@
 		5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		5DED5C762823C59600911049 /* Biceps_3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Biceps_3.mlmodel; sourceTree = "<group>"; };
 		8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSelectionNavigationViewController.swift; sourceTree = "<group>"; };
+		8304582128240037007B58E1 /* RecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewController.swift; sourceTree = "<group>"; };
+		8304582328240152007B58E1 /* RecordDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailModel.swift; sourceTree = "<group>"; };
+		83045825282406FE007B58E1 /* RecordDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewCell.swift; sourceTree = "<group>"; };
 		83329E262792CC7800600104 /* TrainingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSelectionViewController.swift; sourceTree = "<group>"; };
 		83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord1ViewController.swift; sourceTree = "<group>"; };
 		83329E2C2792CCAB00600104 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
@@ -250,6 +256,16 @@
 			path = Challenge;
 			sourceTree = "<group>";
 		};
+		8304582028240002007B58E1 /* RecordDetailTableView */ = {
+			isa = PBXGroup;
+			children = (
+				8304582128240037007B58E1 /* RecordDetailTableViewController.swift */,
+				8304582328240152007B58E1 /* RecordDetailModel.swift */,
+				83045825282406FE007B58E1 /* RecordDetailTableViewCell.swift */,
+			);
+			path = RecordDetailTableView;
+			sourceTree = "<group>";
+		};
 		83329E252792CC4700600104 /* viewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,6 +338,7 @@
 		836EFF71281A874D009FFE4A /* RecordView */ = {
 			isa = PBXGroup;
 			children = (
+				8304582028240002007B58E1 /* RecordDetailTableView */,
 				839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */,
 				5D608257281C364F00A76B99 /* RecordTableViewCell.swift */,
 				5D60825B281C36AA00A76B99 /* RecordTableViewController.swift */,
@@ -568,6 +585,7 @@
 				835E26E527BA8A6E00CD79BB /* LoginHomeViewController.swift in Sources */,
 				83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */,
 				83A361D728227C7E005F9C30 /* Challenge_SelectionViewController_Biceps.swift in Sources */,
+				8304582428240152007B58E1 /* RecordDetailModel.swift in Sources */,
 				835E26F127BA9E0500CD79BB /* SignOut.swift in Sources */,
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
 				839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */,
@@ -578,8 +596,10 @@
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				839CD4812822B7B600B24338 /* Record_ChallengeViewController.swift in Sources */,
 				5D9F74A9282130B00094DB19 /* Sit_1.mlmodel in Sources */,
+				8304582228240037007B58E1 /* RecordDetailTableViewController.swift in Sources */,
 				839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */,
 				83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */,
+				83045826282406FE007B58E1 /* RecordDetailTableViewCell.swift in Sources */,
 				83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */,

@@ -12,4 +12,5 @@ struct RecordModel {
     var gymTrainAmount: Int!
     var gymTrainTime: String!
     var gymRecordURL: String!
+    var User_SetDetail_collection: String!
 }

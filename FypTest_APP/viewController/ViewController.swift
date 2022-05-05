@@ -126,7 +126,7 @@ class ViewController: UIViewController {
     //time count
     var timer:Timer = Timer()
     var Time_S : Int = 0
-    var timerCounting:Bool = false
+
     //timer main
     func timerc(){
             timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
@@ -199,7 +199,22 @@ class ViewController: UIViewController {
         let date = Date()
         time3 = formatter2.string(from: date)
     }
-    
+    //time count
+    var timer_Set:Timer = Timer()
+    var Time_S2 : Int = 0
+    var User_Set_Timer: String = ""
+    //timer main
+    func timer_Set1(){
+            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
+                guard let self = self else { return }
+                self.Time_S2 += 1
+                let time = self.secondsToMinutesSconds(seconds: self.Time_S)
+                let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
+                print("time Of Set: \(timeString)")
+                self.User_Set_Timer = timeString
+            })
+    }
+
     func Check_amount(){
         let user = Auth.auth().currentUser
         //check the user action equal the user amount setting
@@ -207,23 +222,30 @@ class ViewController: UIViewController {
             if((Actioncount<User_ActionAmount)&&(TrainSetCount != User_TrainSetAmount)){
                 Actioncount += 1
                 trainingcLabel.text = "\(Actioncount)"
+                
                 if((Actioncount == User_ActionAmount)&&(TrainSetCount < User_TrainSetAmount)){
                     TrainSetCount += 1
                     Actioncount = 0
+                    //update label
                     trainingcLabel.text = "\(Actioncount)"
                     trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
-                    let gymTypeName1 = "Biceps"
+
                     //save user set detail
                     let db = Firestore.firestore()
                     let date = Date()
                     let time4 = formatter.string(from: date)
                     db.collection("RecordofSet").document(user.uid).collection("User_Start_Date \(time3)").document("TrainingRecord\(TrainSetCount)").setData([
                                 "lastUpdated":time4,
-                                "GymType": gymTypeName1,
                                 "Accuracy": self.Accuracy_STR,
                                 "User_Train_Set": self.TrainSetCount,
-                                "User_Time": self.durationLabel.text!,
+                                "Total_Time": self.durationLabel.text!,
+                                "TimeOfset": self.User_Set_Timer
                             ])
+                    
+                    //reset timer
+                    timer_Set.invalidate()
+                    timer_Set1()
+                    
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
@@ -239,6 +261,7 @@ class ViewController: UIViewController {
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": User_ActionAmount,
                                     "User_Time": self.durationLabel.text!,
+                                    "User_SetDetail_Collection": "User_Start_Date \(self.time3)",
                                     "Record_URL": "Record/Biceps.jpg"
                                 ])
                             //show alertf
@@ -297,6 +320,7 @@ class ViewController: UIViewController {
         view.addSubview(durationLabel)
         //timer
         timerc()
+        timer_Set1()
     }
 }
 
