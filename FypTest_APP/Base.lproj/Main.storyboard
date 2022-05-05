@@ -2037,6 +2037,22 @@
             </objects>
             <point key="canvasLocation" x="-2562" y="-703"/>
         </scene>
+        <!--Record Selection Navigation View Controller-->
+        <scene sceneID="QSc-QD-ZXq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4nZ-9I-fuX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="RSNVC" id="c2g-9y-4mj" customClass="RecordSelectionNavigationViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uUO-zC-dHC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UIl-Ry-FjM" kind="relationship" relationship="rootViewController" id="O8h-jy-mGz"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-3378" y="137"/>
+        </scene>
         <!--First Page Navigation Controller-->
         <scene sceneID="xwe-jo-k8x">
             <objects>
@@ -3074,6 +3090,7 @@ TEgQVkM
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="O8h-jy-mGz"/>
         <segue reference="OPI-42-Rgk"/>
     </inferredMetricsTieBreakers>
     <resources>

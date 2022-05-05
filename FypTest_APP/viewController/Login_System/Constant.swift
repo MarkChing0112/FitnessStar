@@ -14,6 +14,7 @@ struct Constants {
         static let recordChallengeTableViewController = "RCTVC"
         static let homeViewController = "HVC"
         static let recordSelectionViewController = "RSVC"
+        static let recordSelectionNavigationViewController = "RSNVC"
     }
     
     

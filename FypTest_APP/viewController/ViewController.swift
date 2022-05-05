@@ -157,7 +157,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //get star time
+        Addstardate()
         //get firebase data
         Read_Data()
         //setup camera
@@ -192,14 +194,13 @@ class ViewController: UIViewController {
             }}
     }
 
-    func toRecordPage(){
-        let recordSelectionViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionViewController) as? RecordSelectionViewController
-        view.window?.rootViewController = recordSelectionViewController
-        view.window?.makeKeyAndVisible()
+    var time3 : String = ""
+    func Addstardate(){
+        let date = Date()
+        time3 = formatter.string(from: date)
     }
     
     func Check_amount(){
-
         let user = Auth.auth().currentUser
         //check the user action equal the user amount setting
         if let user = user {
@@ -211,6 +212,18 @@ class ViewController: UIViewController {
                     Actioncount = 0
                     trainingcLabel.text = "\(Actioncount)"
                     trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
+                    let gymTypeName1 = "Biceps"
+                    //save user set detail
+                    let db = Firestore.firestore()
+                    let date = Date()
+                    let time4 = formatter.string(from: date)
+                    db.collection("RecordofSet").document(user.uid).collection("User_Start_Date \(time3)").document("TrainingRecord\(TrainSetCount)").setData([
+                                "lastUpdated":time4,
+                                "GymType": gymTypeName1,
+                                "Accuracy": self.Accuracy_STR,
+                                "User_Train_Set": self.TrainSetCount,
+                                "User_Time": self.durationLabel.text!,
+                            ])
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
@@ -218,7 +231,7 @@ class ViewController: UIViewController {
                         let time1 = formatter.string(from: date)
                         let time2 = formatter2.string(from: date)
                         let gymTypeName = "Biceps"
-                        let total_User_Train = User_ActionAmount*TrainSetCount
+                        
                         db.collection("Record").document(user.uid).collection("data").document("TrainingRecord \(String(time2))").setData([
                                     "lastUpdated":time1,
                                     "GymType": gymTypeName,
@@ -235,11 +248,20 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    func toRecordPage(){
+        let recordSelectionNavigationViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionNavigationViewController) as? RecordSelectionNavigationViewController
+        view.window?.rootViewController = recordSelectionNavigationViewController
+        view.window?.makeKeyAndVisible()
+    }
+    func toHomePage(){
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
+        view.window?.makeKeyAndVisible()
+    }
     func showAlertF(){
         let alert = UIAlertController(title: "Fininsh Training", message: "did you want to check your Record?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.toRecordPage()}))
-        alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: {action in self.toHomePage()}))
         present(alert, animated: true)
     }
     

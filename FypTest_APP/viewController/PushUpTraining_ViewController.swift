@@ -188,11 +188,6 @@ class PushUpTraining_ViewController: UIViewController {
             }}
     }
 
-    func toRecordPage(){
-        let recordSelectionViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionViewController) as? RecordSelectionViewController
-        view.window?.rootViewController = recordSelectionViewController
-        view.window?.makeKeyAndVisible()
-    }
     
     func Check_amount(){
         let user = Auth.auth().currentUser
@@ -230,11 +225,20 @@ class PushUpTraining_ViewController: UIViewController {
             }
         }
     }
-    
+    func toRecordPage(){
+        let recordSelectionNavigationViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionNavigationViewController) as? RecordSelectionNavigationViewController
+        view.window?.rootViewController = recordSelectionNavigationViewController
+        view.window?.makeKeyAndVisible()
+    }
+    func toHomePage(){
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
+        view.window?.makeKeyAndVisible()
+    }
     func showAlertF(){
         let alert = UIAlertController(title: "Fininsh Training", message: "did you want to check your Record?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.toRecordPage()}))
-        alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: {action in self.toHomePage()}))
         present(alert, animated: true)
     }
     
