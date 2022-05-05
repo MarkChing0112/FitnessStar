@@ -203,24 +203,17 @@ class ViewController: UIViewController {
     var timer_Set:Timer = Timer()
     var Time_S2 : Int = 0
     var User_Set_Timer: String = ""
-    var SetCount: Bool = false
     //timer main
     func timer_Set1(){
-            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
-                guard let self = self else { return }
+            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {timer_Set in
                 self.Time_S2 += 1
                 //call function second to min
-                let time = self.secondsToMinutesSconds(seconds: self.Time_S)
-                //call function 
-                let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
-                print("time Of Set: \(timeString)")
-                self.User_Set_Timer = timeString
-                
-                //reset timer
-                if(self.SetCount == true){
-                    self.Time_S2 = 0
-                    self.SetCount = false
-                }
+                let time_Set = self.secondsToMinutesSconds(seconds: self.Time_S)
+                //call function
+                let timeString2 = self.makeTimeString(minutes: time_Set.0, seconds: time_Set.1)
+                print("time Of Set: \(timeString2)")
+                self.User_Set_Timer = timeString2
+                //Reset timer
                 //stop timer
                 if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
                     self.timer_Set.invalidate()
@@ -239,11 +232,10 @@ class ViewController: UIViewController {
                 if((Actioncount == User_ActionAmount)&&(TrainSetCount < User_TrainSetAmount)){
                     TrainSetCount += 1
                     Actioncount = 0
-                    SetCount = true
                     //update label
                     trainingcLabel.text = "\(Actioncount)"
                     trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
-                    timer_Set.invalidate()
+ 
                     //save user set detail
                     let db = Firestore.firestore()
                     let date = Date()
@@ -255,7 +247,7 @@ class ViewController: UIViewController {
                                 "Total_Time": self.durationLabel.text!,
                                 "TimeOfset": self.User_Set_Timer
                             ])
-                
+                    
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()

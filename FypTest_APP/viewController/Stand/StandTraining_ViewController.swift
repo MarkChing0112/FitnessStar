@@ -189,7 +189,32 @@ class StandTraining_ViewController: UIViewController {
           print(error.localizedDescription)
             }}
     }
-    
+    var time3 : String = ""
+    func Addstardate(){
+        let date = Date()
+        time3 = formatter2.string(from: date)
+    }
+    //time count
+    var timer_Set:Timer = Timer()
+    var Time_S2 : Int = 0
+    var User_Set_Timer: String = ""
+    //timer main
+    func timer_Set1(){
+            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {timer_Set in
+                self.Time_S2 += 1
+                //call function second to min
+                let time_Set = self.secondsToMinutesSconds(seconds: self.Time_S)
+                //call function
+                let timeString2 = self.makeTimeString(minutes: time_Set.0, seconds: time_Set.1)
+                print("time Of Set: \(timeString2)")
+                self.User_Set_Timer = timeString2
+                //Reset timer
+                //stop timer
+                if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
+                    self.timer_Set.invalidate()
+                    }
+            })
+    }
     func Check_amount(){
         let user = Auth.auth().currentUser
         //check the user action equal the user amount setting
@@ -202,6 +227,18 @@ class StandTraining_ViewController: UIViewController {
                     Actioncount = 0
                     trainingcLabel.text = "\(Actioncount)"
                     trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
+                    //save user set detail
+                    let db = Firestore.firestore()
+                    let date = Date()
+                    let time4 = formatter.string(from: date)
+                    db.collection("RecordofSet").document(user.uid).collection("User_Start_Date \(time3)").document("TrainingRecord\(TrainSetCount)").setData([
+                                "lastUpdated":time4,
+                                "Accuracy": self.Accuracy_STR,
+                                "User_Train_Set": String(self.TrainSetCount),
+                                "Total_Time": self.durationLabel.text!,
+                                "TimeOfset": self.User_Set_Timer
+                            ])
+                    
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
@@ -209,13 +246,14 @@ class StandTraining_ViewController: UIViewController {
                         let time1 = formatter.string(from: date)
                         let time2 = formatter2.string(from: date)
                         let gymTypeName = "BackMuscles"
-                        db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
+                        db.collection("Record").document(user.uid).collection("data").document("TrainingRecord \(String(time2))").setData([
                                     "lastUpdated":time1,
                                     "GymType": gymTypeName,
                                     "Accuracy": self.Accuracy_STR,
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": User_ActionAmount,
                                     "User_Time": self.durationLabel.text!,
+                                    "User_SetDetail_Collection": "User_Start_Date \(self.time3)",
                                     "Record_URL": "Record/backMuscles.jpg"
                                 ])
                             //show alertf
@@ -276,6 +314,7 @@ class StandTraining_ViewController: UIViewController {
         
         //call timer function
         timerc()
+        timer_Set1()
     }
 }
 
