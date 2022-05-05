@@ -206,14 +206,14 @@ class ViewController: UIViewController {
     var SetCount: Bool = false
     //timer main
     func timer_Set1(){
-            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {timer in
+            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {timer_Set in
                 self.Time_S2 += 1
                 //call function second to min
-                let time = self.secondsToMinutesSconds(seconds: self.Time_S)
+                let time_Set = self.secondsToMinutesSconds(seconds: self.Time_S)
                 //call function
-                let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
-                print("time Of Set: \(timeString)")
-                self.User_Set_Timer = timeString
+                let timeString2 = self.makeTimeString(minutes: time_Set.0, seconds: time_Set.1)
+                print("time Of Set: \(timeString2)")
+                self.User_Set_Timer = timeString2
                 //Reset timer
                 if(self.SetCount == true){
                     self.Time_S2 = 0
