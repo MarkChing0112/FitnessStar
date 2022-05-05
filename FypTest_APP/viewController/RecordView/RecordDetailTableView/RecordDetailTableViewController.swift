@@ -43,7 +43,7 @@ class RecordDetailTableViewController: UITableViewController {
         recordTrainingReps.text = String(gymTrainAmount)
         recordTime.text = gymTrainTime
         recordTrainSet.text = String(gymTrainSet)
-        
+        recordName.text = gymType
         //get image
         let storage = Storage.storage()
         let storageRef = storage.reference()
