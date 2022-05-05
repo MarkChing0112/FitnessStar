@@ -7,7 +7,7 @@
 import Foundation
 import Vision
 //AImodel biceps file
-typealias ThrowingClassifies_SitTraining = Sit_1
+typealias ThrowingClassifies_SitTraining = Sit
 
 protocol SitTrainingDelegte: AnyObject {
     func SitTraining( sitTraining_predictor: SitTraining_Predictor,didFindNewRecognizedPoints point:[CGPoint])

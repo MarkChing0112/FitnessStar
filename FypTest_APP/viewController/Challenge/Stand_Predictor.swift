@@ -51,9 +51,9 @@ class Stand_Predictor {
     }
     
     func  labelActionType(){
-        guard let throwingClassifier = try? ThrowingClassifies_1(configuration:         MLModelConfiguration()),
+        guard let throwingClassifier4 = try? ThrowingClassifies_C_3(configuration:         MLModelConfiguration()),
               let poseMultiArray = prepareInputWithObservation( observation:posesWindow),
-              let predictions = try? throwingClassifier.prediction( poses: poseMultiArray)else{ return }
+              let predictions = try? throwingClassifier4.prediction( poses: poseMultiArray)else{ return }
         
         let label = predictions.label
         let confience = predictions.labelProbabilities[label] ?? 0
