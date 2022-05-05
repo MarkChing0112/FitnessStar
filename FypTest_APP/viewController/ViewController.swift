@@ -206,17 +206,15 @@ class ViewController: UIViewController {
     var SetCount: Bool = false
     //timer main
     func timer_Set1(){
-            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {[weak self] timer in
-                guard let self = self else { return }
+            timer_Set = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {timer in
                 self.Time_S2 += 1
                 //call function second to min
                 let time = self.secondsToMinutesSconds(seconds: self.Time_S)
-                //call function 
+                //call function
                 let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
                 print("time Of Set: \(timeString)")
                 self.User_Set_Timer = timeString
-                
-                //reset timer
+                //Reset timer
                 if(self.SetCount == true){
                     self.Time_S2 = 0
                     self.SetCount = false
@@ -243,7 +241,6 @@ class ViewController: UIViewController {
                     //update label
                     trainingcLabel.text = "\(Actioncount)"
                     trainsetLabel.text = "\(TrainSetCount)/\(String(User_TrainSetAmount))"
-                    timer_Set.invalidate()
                     //save user set detail
                     let db = Firestore.firestore()
                     let date = Date()
@@ -255,7 +252,8 @@ class ViewController: UIViewController {
                                 "Total_Time": self.durationLabel.text!,
                                 "TimeOfset": self.User_Set_Timer
                             ])
-                
+
+                    
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
