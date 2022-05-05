@@ -8,7 +8,7 @@
 import Foundation
 struct RecordDetailModel {
     var SetAccuracy: String!
-    var SetTrainSet: Int!
+    var SetTrainSet: String!
     var SetTotalTime: String!
     var SetTimeOfSet: String!
     var lastUpdated: String!

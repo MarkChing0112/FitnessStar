@@ -237,7 +237,7 @@ class ViewController: UIViewController {
                     db.collection("RecordofSet").document(user.uid).collection("User_Start_Date \(time3)").document("TrainingRecord\(TrainSetCount)").setData([
                                 "lastUpdated":time4,
                                 "Accuracy": self.Accuracy_STR,
-                                "User_Train_Set": self.TrainSetCount,
+                                "User_Train_Set": String(self.TrainSetCount),
                                 "Total_Time": self.durationLabel.text!,
                                 "TimeOfset": self.User_Set_Timer
                             ])
