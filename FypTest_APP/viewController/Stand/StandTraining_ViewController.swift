@@ -239,8 +239,6 @@ class StandTraining_ViewController: UIViewController {
                                 "TimeOfset": self.User_Set_Timer
                             ])
                     
-                    
-                    
                     if((TrainSetCount == User_TrainSetAmount)){
                     //show alert & save data to firebase
                         let db = Firestore.firestore()
@@ -248,13 +246,14 @@ class StandTraining_ViewController: UIViewController {
                         let time1 = formatter.string(from: date)
                         let time2 = formatter2.string(from: date)
                         let gymTypeName = "BackMuscles"
-                        db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
+                        db.collection("Record").document(user.uid).collection("data").document("TrainingRecord \(String(time2))").setData([
                                     "lastUpdated":time1,
                                     "GymType": gymTypeName,
                                     "Accuracy": self.Accuracy_STR,
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": User_ActionAmount,
                                     "User_Time": self.durationLabel.text!,
+                                    "User_SetDetail_Collection": "User_Start_Date \(self.time3)",
                                     "Record_URL": "Record/backMuscles.jpg"
                                 ])
                             //show alertf
