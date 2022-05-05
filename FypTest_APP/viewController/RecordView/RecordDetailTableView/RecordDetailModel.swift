@@ -11,5 +11,4 @@ struct RecordDetailModel {
     var SetTrainSet: String!
     var SetTotalTime: String!
     var SetTimeOfSet: String!
-    var lastUpdated: String!
 }
