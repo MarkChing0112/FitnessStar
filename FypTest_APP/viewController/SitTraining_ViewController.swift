@@ -130,7 +130,7 @@ class SitTraining_ViewController: UIViewController {
                 let time = self.secondsToMinutesSconds(seconds: self.Time_S)
                 let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
                 self.durationLabel.text = timeString
-                print("\(timeString)")
+ 
                 
                 if(self.TrainSetCount == self.User_TrainSetAmount && self.Actioncount == 0){
                     self.timer.invalidate()
@@ -212,10 +212,11 @@ class SitTraining_ViewController: UIViewController {
                         let date = Date()
                         let time1 = formatter.string(from: date)
                         let time2 = formatter2.string(from: date)
+                        let gymTypeName = "Triceps"
                         let total_User_Train = User_ActionAmount*TrainSetCount
                         db.collection("Record").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
                                     "lastUpdated":time1,
-                                    "GymType": self.titleLBL.text!,
+                                    "GymType": gymTypeName,
                                     "Accuracy": self.Accuracy_STR,
                                     "User_Train_Set": self.TrainSetCount,
                                     "User_Train_Amount": User_ActionAmount,

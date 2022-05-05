@@ -120,8 +120,8 @@ class PushUpChallenge_ViewController: UIViewController {
                 let time = self.secondsToMinutesSconds(seconds: self.Time_S)
                 let timeString = self.makeTimeString(minutes: time.0, seconds: time.1)
                 self.durationLabel.text = timeString
-                print("\(timeString)")
-                
+
+                let gymTypeName = "Chest"
                 if((self.Time_S == 0)){
                 //show alert & save data to firebase
                     let user = Auth.auth().currentUser
@@ -131,9 +131,9 @@ class PushUpChallenge_ViewController: UIViewController {
                     let date = Date()
                     let time1 = self.formatter.string(from: date)
                     let time2 = self.formatter2.string(from: date)
-                    db.collection("Record_Challenge").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
+                    db.collection("Record_Challenge").document(user.uid).collection("data").document("ChallengeRecord \(String(time2))").setData([
                                 "lastUpdated":time1,
-                                "GymType": self.titleLBL.text!,
+                                "GymType": gymTypeName,
                                 "Accuracy": self.Accuracy_STR,
                                 "User_TimeLimit": self.TimeLimit_STR,
                                 "User_Train_Amount": self.Actioncount,
@@ -248,7 +248,7 @@ extension PushUpChallenge_ViewController: Chest_ChallengeDelegte{
     func Chest_Challenge(chest_Challenge_predictor: Chest_Predictor, didLableAction action: String, with confience: Double) {
         print("Detected: \(action),Confidence: \(confience)")
         print("Action Count\(Actioncount)")
-        if action == "BicepsCorrect" && confience > 0.70 && isThrowDetected == false{
+        if action == "PushupCorrect" && confience > 0.70 && isThrowDetected == false{
             
             print("Throw detected")
             isThrowDetected = true

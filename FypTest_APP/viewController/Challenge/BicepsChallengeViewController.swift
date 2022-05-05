@@ -130,7 +130,7 @@ class BicepsChallengeViewController: UIViewController {
                     let date = Date()
                     let time1 = self.formatter.string(from: date)
                     let time2 = self.formatter2.string(from: date)
-                    db.collection("Record_Challenge").document(user.uid).collection("data").document("\(self.titleLBL.text!) \(String(time2))").setData([
+                    db.collection("Record_Challenge").document(user.uid).collection("data").document("ChallengeRecord \(String(time2))").setData([
                                 "lastUpdated":time1,
                                 "GymType": gymTypeName,
                                 "Accuracy": self.Accuracy_STR,
