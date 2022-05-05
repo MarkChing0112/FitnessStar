@@ -15,7 +15,6 @@
 		4F10C20A26F748D30032B955 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F10C20826F748D30032B955 /* LaunchScreen.storyboard */; };
 		4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10C21126F74EEB0032B955 /* VideoCapture.swift */; };
 		4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB64CC26F8FC6C008BFF14 /* predictor.swift */; };
-		5D05DF7128227E2C00F2F6AF /* Biceps_3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5D05DF7028227E2C00F2F6AF /* Biceps_3.mlmodel */; };
 		5D05DF73282284BC00F2F6AF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05DF72282284BC00F2F6AF /* VideoViewController.swift */; };
 		5D05DF792822CBDD00F2F6AF /* test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 5D05DF782822CBDD00F2F6AF /* test.MOV */; };
 		5D05DF7D2822DC4E00F2F6AF /* now.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 5D05DF7C2822DC4E00F2F6AF /* now.MOV */; };
@@ -35,6 +34,7 @@
 		5D9F74B62821442C0094DB19 /* BicepsChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */; };
 		5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */; };
 		5DA6A1E627EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */; };
+		5DED5C772823C59600911049 /* Biceps_3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5DED5C762823C59600911049 /* Biceps_3.mlmodel */; };
 		83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E262792CC7800600104 /* TrainingSelectionViewController.swift */; };
 		83329E292792CC8E00600104 /* TrainingRecord1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */; };
 		83329E2D2792CCAB00600104 /* SearchMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E2C2792CCAB00600104 /* SearchMapViewController.swift */; };
@@ -105,7 +105,6 @@
 		4F10C20B26F748D30032B955 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F10C21126F74EEB0032B955 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		4FAB64CC26F8FC6C008BFF14 /* predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = predictor.swift; sourceTree = "<group>"; };
-		5D05DF7028227E2C00F2F6AF /* Biceps_3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Biceps_3.mlmodel; sourceTree = "<group>"; };
 		5D05DF72282284BC00F2F6AF /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		5D05DF782822CBDD00F2F6AF /* test.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.MOV; sourceTree = "<group>"; };
 		5D05DF7C2822DC4E00F2F6AF /* now.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = now.MOV; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsChallengeViewController.swift; sourceTree = "<group>"; };
 		5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGymRoomTableViewCell.swift; sourceTree = "<group>"; };
 		5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
+		5DED5C762823C59600911049 /* Biceps_3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Biceps_3.mlmodel; sourceTree = "<group>"; };
 		83329E262792CC7800600104 /* TrainingSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSelectionViewController.swift; sourceTree = "<group>"; };
 		83329E282792CC8E00600104 /* TrainingRecord1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord1ViewController.swift; sourceTree = "<group>"; };
 		83329E2C2792CCAB00600104 /* SearchMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMapViewController.swift; sourceTree = "<group>"; };
@@ -303,7 +303,7 @@
 		836EFF6E281A8231009FFE4A /* AImodel */ = {
 			isa = PBXGroup;
 			children = (
-				5D05DF7028227E2C00F2F6AF /* Biceps_3.mlmodel */,
+				5DED5C762823C59600911049 /* Biceps_3.mlmodel */,
 				5D9566062822720D00B55AFD /* Biceps_2.mlmodel */,
 				5D9F74AA282130B80094DB19 /* Stand_1.mlmodel */,
 				5D9F74A8282130B00094DB19 /* Sit_1.mlmodel */,
@@ -568,6 +568,7 @@
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
 				839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
+				5DED5C772823C59600911049 /* Biceps_3.mlmodel in Sources */,
 				839CD48A2822C45D00B24338 /* RecordSelectionViewController.swift in Sources */,
 				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
@@ -580,7 +581,6 @@
 				839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */,
 				5D9F74A5282130960094DB19 /* Biceps_1.mlmodel in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
-				5D05DF7128227E2C00F2F6AF /* Biceps_3.mlmodel in Sources */,
 				83F549F62821809A00A48745 /* StandTraining_ViewController.swift in Sources */,
 				83F549EC2821679500A48745 /* SitTraining_VideoCapture.swift in Sources */,
 				83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */,
