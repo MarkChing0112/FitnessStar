@@ -12,6 +12,12 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var GymRoomImageView: UIImageView!
     
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var telePhoneLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    @IBOutlet weak var gymRoomNameLabel: UILabel!
+    
+    
     //map
     let manager = CLLocationManager()
     let geoCoder = CLGeocoder()
@@ -32,6 +38,14 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
+        
+        // print GymRoom Detail
+        gymRoomNameLabel.text = GymRoom_name
+        addressLabel.text = Address
+        telePhoneLabel.text = TelPhone
+        websiteLabel.text = Website
+        
+        
         // call search the location function
         // set location xy
         let coordation = CLLocationCoordinate2D(latitude: Double(x) ?? 0.0, longitude: Double(y) ?? 0.0)
@@ -49,6 +63,7 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         getGymRoomImage()
     }
     
+    // get gymRoom Image from firebase
     func getGymRoomImage() {
         let storage = Storage.storage()
         let storageRef = storage.reference()

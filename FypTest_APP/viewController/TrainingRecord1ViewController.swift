@@ -39,6 +39,7 @@ class TrainingRecord1ViewController: UIViewController {
     }
     }
     
+    // pass data to videoView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? VideoViewController {
                 
