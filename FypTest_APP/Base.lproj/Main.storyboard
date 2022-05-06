@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tC0-lm-1fX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tC0-lm-1fX">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment version="5376" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -497,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwe-JY-kKN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1343" y="3106"/>
+            <point key="canvasLocation" x="-1375" y="3110"/>
         </scene>
         <!--Training Record2 View Controller-->
         <scene sceneID="Tbd-fv-GYI">
@@ -3342,6 +3342,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="" buttonSize="large">
                                     <backgroundConfiguration key="background" image="Icon_54_play"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="JU2-0P-p8v" kind="showDetail" id="gdF-L3-WYt"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGJ-sw-a9F">
                                 <rect key="frame" x="187" y="274" width="45" height="20"/>
@@ -3414,7 +3417,6 @@
         <!--Training Record4 View Controller-->
         <scene sceneID="Z0Y-GR-OZN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kmW-X4-fWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="TR4" id="mFl-50-fIQ" customClass="TrainingRecord4ViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vP9-Zr-Qx4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -3594,6 +3596,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="" buttonSize="large">
                                     <backgroundConfiguration key="background" image="Icon_54_play"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="JU2-0P-p8v" kind="showDetail" id="FQb-Mc-Zy8"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72a-US-yv5">
                                 <rect key="frame" x="276" y="189" width="98" height="77"/>
@@ -3653,6 +3658,7 @@
                         <outlet property="TrainSetLabel" destination="lT1-KQ-hbx" id="cyY-7U-BVn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmW-X4-fWI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516" y="3015"/>
         </scene>
@@ -4306,7 +4312,7 @@ TEgQVkM
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="c9S-BR-K8I"/>
-        <segue reference="OPI-42-Rgk"/>
+        <segue reference="FQb-Mc-Zy8"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="3dLogoBg" width="390" height="844"/>

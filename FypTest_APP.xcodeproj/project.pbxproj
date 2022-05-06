@@ -16,8 +16,10 @@
 		4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F10C21126F74EEB0032B955 /* VideoCapture.swift */; };
 		4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB64CC26F8FC6C008BFF14 /* predictor.swift */; };
 		5D05DF73282284BC00F2F6AF /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D05DF72282284BC00F2F6AF /* VideoViewController.swift */; };
-		5D05DF792822CBDD00F2F6AF /* test.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 5D05DF782822CBDD00F2F6AF /* test.MOV */; };
-		5D05DF7D2822DC4E00F2F6AF /* now.MOV in Resources */ = {isa = PBXBuildFile; fileRef = 5D05DF7C2822DC4E00F2F6AF /* now.MOV */; };
+		5D212EA3282559C1009F5930 /* Sit.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212E9F282559BF009F5930 /* Sit.mov */; };
+		5D212EA4282559C1009F5930 /* Stand.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA0282559BF009F5930 /* Stand.mov */; };
+		5D212EA5282559C1009F5930 /* Biceps.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA1282559C0009F5930 /* Biceps.mov */; };
+		5D212EA6282559C1009F5930 /* PushUp.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA2282559C0009F5930 /* PushUp.mov */; };
 		5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */; };
 		5D4A60E027ECD166004070D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */; };
 		5D5BB0D827C7816B00CF2920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */; };
@@ -111,8 +113,10 @@
 		4F10C21126F74EEB0032B955 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		4FAB64CC26F8FC6C008BFF14 /* predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = predictor.swift; sourceTree = "<group>"; };
 		5D05DF72282284BC00F2F6AF /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
-		5D05DF782822CBDD00F2F6AF /* test.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = test.MOV; sourceTree = "<group>"; };
-		5D05DF7C2822DC4E00F2F6AF /* now.MOV */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = now.MOV; sourceTree = "<group>"; };
+		5D212E9F282559BF009F5930 /* Sit.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Sit.mov; sourceTree = "<group>"; };
+		5D212EA0282559BF009F5930 /* Stand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stand.mov; sourceTree = "<group>"; };
+		5D212EA1282559C0009F5930 /* Biceps.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Biceps.mov; sourceTree = "<group>"; };
+		5D212EA2282559C0009F5930 /* PushUp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PushUp.mov; sourceTree = "<group>"; };
 		5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomModel.swift; sourceTree = "<group>"; };
 		5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D608257281C364F00A76B99 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,6 +212,7 @@
 		4F10C1F126F748D10032B955 = {
 			isa = PBXGroup;
 			children = (
+				5D212E9E282559AB009F5930 /* SampleVideo */,
 				4F10C1FC26F748D10032B955 /* FypTest_APP */,
 				4F10C1FB26F748D10032B955 /* Products */,
 				5D4A60DE27ECD166004070D6 /* Frameworks */,
@@ -230,14 +235,24 @@
 				4F10C1FF26F748D10032B955 /* SceneDelegate.swift */,
 				83329E252792CC4700600104 /* viewController */,
 				4F10C20326F748D10032B955 /* Main.storyboard */,
-				5D05DF7C2822DC4E00F2F6AF /* now.MOV */,
-				5D05DF782822CBDD00F2F6AF /* test.MOV */,
 				4F10C20626F748D30032B955 /* Assets.xcassets */,
 				4F10C20826F748D30032B955 /* LaunchScreen.storyboard */,
 				5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */,
 				4F10C20B26F748D30032B955 /* Info.plist */,
 			);
 			path = FypTest_APP;
+			sourceTree = "<group>";
+		};
+		5D212E9E282559AB009F5930 /* SampleVideo */ = {
+			isa = PBXGroup;
+			children = (
+				5D212EA1282559C0009F5930 /* Biceps.mov */,
+				5D212EA2282559C0009F5930 /* PushUp.mov */,
+				5D212E9F282559BF009F5930 /* Sit.mov */,
+				5D212EA0282559BF009F5930 /* Stand.mov */,
+				5D05DF72282284BC00F2F6AF /* VideoViewController.swift */,
+			);
+			path = SampleVideo;
 			sourceTree = "<group>";
 		};
 		5D4A60DE27ECD166004070D6 /* Frameworks */ = {
@@ -281,7 +296,6 @@
 				836EFF6E281A8231009FFE4A /* AImodel */,
 				836EFF6D281A8212009FFE4A /* SearchMapView */,
 				836EFF6B281A8193009FFE4A /* TrainingView */,
-				5D05DF72282284BC00F2F6AF /* VideoViewController.swift */,
 			);
 			path = viewController;
 			sourceTree = "<group>";
@@ -551,10 +565,12 @@
 			files = (
 				4F10C20A26F748D30032B955 /* LaunchScreen.storyboard in Resources */,
 				5D5BB0D827C7816B00CF2920 /* GoogleService-Info.plist in Resources */,
+				5D212EA5282559C1009F5930 /* Biceps.mov in Resources */,
 				4F10C20726F748D30032B955 /* Assets.xcassets in Resources */,
-				5D05DF7D2822DC4E00F2F6AF /* now.MOV in Resources */,
-				5D05DF792822CBDD00F2F6AF /* test.MOV in Resources */,
+				5D212EA3282559C1009F5930 /* Sit.mov in Resources */,
 				4F10C20526F748D10032B955 /* Main.storyboard in Resources */,
+				5D212EA4282559C1009F5930 /* Stand.mov in Resources */,
+				5D212EA6282559C1009F5930 /* PushUp.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,9 +1,7 @@
 //
 //  Challenge_SelectionViewController_Biceps.swift
 //  FypTest_APP
-//
-//  Created by kin ming ching on 4/5/2022.
-//
+
 
 import UIKit
 import Firebase
@@ -11,9 +9,11 @@ import FirebaseAuth
 import FirebaseFirestore
 
 class Challenge_SelectionViewController_Biceps: UIViewController {
-
     
     @IBOutlet weak var Time_limitLBL: UILabel!
+    
+    var videosName = "Biceps"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GetUserData()
@@ -34,5 +34,13 @@ class Challenge_SelectionViewController_Biceps: UIViewController {
           print(error.localizedDescription)
         }
     }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoViewController {
+                
+            destination.videoName = self.videosName
+            
+        }
     }
 }

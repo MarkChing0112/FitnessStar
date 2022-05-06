@@ -12,7 +12,7 @@ class TrainingRecord3ViewController: UIViewController {
     @IBOutlet weak var TrainAmount: UILabel!
     @IBOutlet weak var TrainSetLabel: UILabel!
     
-    var videosName = ""
+    var videosName = "PushUp"
     
     override func viewDidLoad() {
         super.viewDidLoad()

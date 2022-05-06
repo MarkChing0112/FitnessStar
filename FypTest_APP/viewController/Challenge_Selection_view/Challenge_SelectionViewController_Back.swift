@@ -13,6 +13,9 @@ import FirebaseFirestore
 class Challenge_SelectionViewController_Back: UIViewController {
 
     @IBOutlet weak var Time_limitLBL: UILabel!
+    
+    var videosName = "Stand"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GetUserData()
@@ -33,5 +36,13 @@ class Challenge_SelectionViewController_Back: UIViewController {
           print(error.localizedDescription)
         }
     }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoViewController {
+                
+            destination.videoName = self.videosName
+            
+        }
     }
 }

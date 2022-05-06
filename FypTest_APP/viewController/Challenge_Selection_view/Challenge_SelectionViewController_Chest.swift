@@ -1,9 +1,7 @@
 //
 //  Challenge_SelectionViewController_Chest.swift
 //  FypTest_APP
-//
-//  Created by kin ming ching on 4/5/2022.
-//
+
 
 import UIKit
 import Firebase
@@ -13,6 +11,9 @@ import FirebaseFirestore
 class Challenge_SelectionViewController_Chest: UIViewController {
 
     @IBOutlet weak var Time_limitLBL: UILabel!
+    
+    var videosName = "PushUp"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         GetUserData()
@@ -35,4 +36,11 @@ class Challenge_SelectionViewController_Chest: UIViewController {
     }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoViewController {
+                
+            destination.videoName = self.videosName
+            
+        }
+    }
 }
