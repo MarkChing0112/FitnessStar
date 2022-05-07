@@ -199,9 +199,8 @@ class BicepsChallengeViewController: UIViewController {
     }
     
     func toRecordPage(){
-        let recordSelectionNavigationViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionNavigationViewController) as? RecordSelectionNavigationViewController
-        view.window?.rootViewController = recordSelectionNavigationViewController
-        view.window?.makeKeyAndVisible()
+        let recordChallengeTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordChallengeTableViewController) as? RecordChallenageTableViewController
+        self.navigationController?.pushViewController(recordChallengeTableViewController!, animated: true)
     }
     func toHomePage(){
         let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController

@@ -21,6 +21,11 @@ class Record_ChallengeViewController: UIViewController {
         // Do any additional setup after loading the view.
         printdata()
     }
+    @IBAction func HomeBTNonTap(_ sender: Any) {
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
+        view.window?.makeKeyAndVisible()
+    }
     
     @IBOutlet weak var GymTypeImageView: UIImageView!
     @IBOutlet weak var GymTypeLBL: UILabel!

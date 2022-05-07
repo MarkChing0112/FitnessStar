@@ -266,9 +266,8 @@ class PushUpTraining_ViewController: UIViewController {
         }
     }
     func toRecordPage(){
-        let recordSelectionNavigationViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordSelectionNavigationViewController) as? RecordSelectionNavigationViewController
-        view.window?.rootViewController = recordSelectionNavigationViewController
-        view.window?.makeKeyAndVisible()
+        let recordTableViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.recordTableViewController) as? RecordTableViewController
+        self.navigationController?.pushViewController(recordTableViewController!, animated: true)
     }
     func toHomePage(){
         let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController

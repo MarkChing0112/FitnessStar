@@ -435,7 +435,13 @@
                             <constraint firstItem="pPQ-Mc-lcp" firstAttribute="leading" secondItem="ncv-9a-ESv" secondAttribute="leading" constant="165" id="x4w-TQ-Rol"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vjX-4f-v2E"/>
+                    <navigationItem key="navigationItem" id="vjX-4f-v2E">
+                        <barButtonItem key="rightBarButtonItem" image="rectangle.portrait.and.arrow.right.fill" catalog="system" id="LHQ-lE-Lff">
+                            <connections>
+                                <action selector="SignOutBtn:" destination="EG9-ax-bVg" id="SnM-q7-pfg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cDa-ja-SRU" sceneMemberID="firstResponder"/>
             </objects>
@@ -2900,7 +2906,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Challenge Record Detail" id="KLF-Hp-j6X">
-                        <barButtonItem key="rightBarButtonItem" image="house.fill" catalog="system" id="Arx-CW-gXy"/>
+                        <barButtonItem key="rightBarButtonItem" image="house.fill" catalog="system" id="Arx-CW-gXy">
+                            <connections>
+                                <action selector="HomeBTNonTap:" destination="ePx-sB-Y8T" id="VTP-K9-GMk"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="GymAccuracyLBL" destination="8zR-lW-5EH" id="6uP-PA-s6u"/>
@@ -2978,7 +2988,7 @@
         <!--Record Detail Table View Controller-->
         <scene sceneID="pJg-Lr-79f">
             <objects>
-                <tableViewController id="c2R-Gu-SLq" customClass="RecordDetailTableViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="RDTVC" id="c2R-Gu-SLq" customClass="RecordDetailTableViewController" customModule="FypTest_APP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hut-I7-wMs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3246,7 +3256,13 @@
                             <outlet property="delegate" destination="c2R-Gu-SLq" id="JPW-Lr-HvA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="qpJ-JP-hUO"/>
+                    <navigationItem key="navigationItem" id="qpJ-JP-hUO">
+                        <barButtonItem key="rightBarButtonItem" image="house.fill" catalog="system" id="pWG-EY-55C">
+                            <connections>
+                                <action selector="HomeBtnOnTap:" destination="c2R-Gu-SLq" id="5rb-gy-4ls"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="GymTypeImageView" destination="5St-ge-WI9" id="atk-jC-UyQ"/>
                         <outlet property="recordAccuracy" destination="wXg-WJ-VTO" id="CJB-38-vMv"/>
@@ -4539,6 +4555,7 @@ TEgQVkM
         <image name="icon80_key" width="80" height="80"/>
         <image name="list.triangle" catalog="system" width="128" height="91"/>
         <image name="minus.circle" catalog="system" width="128" height="121"/>
+        <image name="rectangle.portrait.and.arrow.right.fill" catalog="system" width="128" height="108"/>
         <image name="教練1" width="1053" height="644"/>
         <image name="教練2" width="837" height="512"/>
         <image name="教練3" width="837" height="512"/>

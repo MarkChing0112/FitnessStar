@@ -4,7 +4,8 @@
 
 
 import UIKit
-
+import FirebaseAuth
+import Firebase
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -14,14 +15,26 @@ class HomeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func SignOutBtn(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do{
+        try firebaseAuth.signOut()
+              let firebaseAuth = Auth.auth()
+              print("signout success")
+              showAlertS()
+          } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+          }
     }
-    */
-
+    func showAlertS(){
+        let alert = UIAlertController(title: "SignOut Success!", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "ok!", style: .cancel, handler: {action in self.toHomeView()}))
+        present(alert, animated: true)
+    }
+    func toHomeView(){
+        let loginFirstPageViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.loginFirstPageViewController) as? LoginFirstPageViewController
+        
+        view.window?.rootViewController = loginFirstPageViewController
+        view.window?.makeKeyAndVisible()
+    }
 }

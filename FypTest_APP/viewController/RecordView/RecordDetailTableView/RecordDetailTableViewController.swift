@@ -55,6 +55,11 @@ class RecordDetailTableViewController: UITableViewController {
             }
         }
     }
+    @IBAction func HomeBtnOnTap(_ sender: Any) {
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
+        view.window?.makeKeyAndVisible()
+    }
     
     //table view data
     func getRecord() {
