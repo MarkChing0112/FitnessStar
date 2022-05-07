@@ -5,27 +5,23 @@
 import UIKit
 import Firebase
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate{
     
-    let data = ["Apple", "Avacode", "Bananas", "Oranges", "Pears"]
     var filteredData = [Mode]()
-    
     var gymRoom = [Mode]()
-    var g: [String]!
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        getData()
-        filteredData = gymRoom
+    override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         searchBar.delegate = self
+        getData()
+        filteredData = gymRoom
+        
     }
-    
     
     func getData() {
         let db = Firestore.firestore()
@@ -38,15 +34,19 @@ class SearchViewController: UIViewController {
                 let address = i.get("Address") as? String ?? ""
                 
                 self.gymRoom.append(Mode(GymRoom_name: name, address: address))
+                self.filteredData.append(Mode(GymRoom_name: name, address: address))
             }
+            self.tableView.reloadData()
         }
     }
-    
-}
 
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredData.count
+
+   func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,10 +59,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
-}
-
-extension SearchViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
         filteredData = []
         
         if searchText == "" {
@@ -78,3 +77,4 @@ extension SearchViewController: UISearchBarDelegate {
         self.tableView.reloadData()
     }
 }
+
