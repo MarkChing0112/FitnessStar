@@ -20,6 +20,7 @@
 		5D212EA4282559C1009F5930 /* Stand.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA0282559BF009F5930 /* Stand.mov */; };
 		5D212EA5282559C1009F5930 /* Biceps.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA1282559C0009F5930 /* Biceps.mov */; };
 		5D212EA6282559C1009F5930 /* PushUp.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA2282559C0009F5930 /* PushUp.mov */; };
+		5D212EB42826943D009F5930 /* Stand_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EB32826943D009F5930 /* Stand_2.mlmodel */; };
 		5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */; };
 		5D4A60E027ECD166004070D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */; };
 		5D5BB0D827C7816B00CF2920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */; };
@@ -112,6 +113,7 @@
 		5D212EA0282559BF009F5930 /* Stand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stand.mov; sourceTree = "<group>"; };
 		5D212EA1282559C0009F5930 /* Biceps.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Biceps.mov; sourceTree = "<group>"; };
 		5D212EA2282559C0009F5930 /* PushUp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PushUp.mov; sourceTree = "<group>"; };
+		5D212EB32826943D009F5930 /* Stand_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Stand_2.mlmodel; sourceTree = "<group>"; };
 		5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomModel.swift; sourceTree = "<group>"; };
 		5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D608257281C364F00A76B99 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				836EFF74281A8F8C009FFE4A /* Pushup.mlmodel */,
 				836EFF75281A8F8C009FFE4A /* Sit.mlmodel */,
 				836EFF76281A8F8C009FFE4A /* Stand.mlmodel */,
+				5D212EB32826943D009F5930 /* Stand_2.mlmodel */,
 			);
 			name = AImodel;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */,
 				83045826282406FE007B58E1 /* RecordDetailTableViewCell.swift in Sources */,
 				83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */,
+				5D212EB42826943D009F5930 /* Stand_2.mlmodel in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
 				833DD3D928268BBF003028A5 /* MakeHyperLink.swift in Sources */,
 				839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */,
