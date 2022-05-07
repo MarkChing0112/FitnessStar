@@ -39,7 +39,9 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
-        
+        //image view
+        GymRoomImageView.layer.masksToBounds = true
+        GymRoomImageView.layer.cornerRadius = 30
         // print GymRoom Detail
         gymRoomNameLabel.text = GymRoom_name
         addressLabel.text = Address
@@ -48,8 +50,7 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         let attributedString = NSAttributedString.makeHypelink(for: "\(Website!)", in: "\(Website!)", as: "\(Website!)")
 
         WebsiteTextView.attributedText = attributedString
-        
-        
+
         // call search the location function
         // set location xy
         let coordation = CLLocationCoordinate2D(latitude: Double(x) ?? 0.0, longitude: Double(y) ?? 0.0)

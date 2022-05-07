@@ -360,7 +360,7 @@
                                 <buttonConfiguration key="configuration" style="plain">
                                     <backgroundConfiguration key="background" image="FullBtn_themeGradient" imageContentMode="scaleToFill"/>
                                     <attributedString key="attributedTitle">
-                                        <fragment content="GYM SEARCH">
+                                        <fragment content="GYM ROOM SEARCH">
                                             <attributes>
                                                 <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <font key="NSFont" size="31" name="Helvetica-Bold"/>
