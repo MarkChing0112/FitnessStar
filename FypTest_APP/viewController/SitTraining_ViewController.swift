@@ -153,7 +153,7 @@ class SitTraining_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //get star time
+        //get start time
         Addstartdate()
         //get firebase data
         Read_Data()

@@ -155,7 +155,7 @@ class StandTraining_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //get star time
+        //get start time
         Addstardate()
         //get firebase data
         Read_Data()
