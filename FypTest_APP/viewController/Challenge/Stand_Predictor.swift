@@ -8,7 +8,7 @@
 import Foundation
 import Vision
 
-typealias ThrowingClassifies_C_3 = Stand_2
+typealias ThrowingClassifies_C_3 = Stand
 
 protocol Stand_ChallengeDelegte: AnyObject {
     func Stand_Challenge( stand_Challenge_predictor: Stand_Predictor,didFindNewRecognizedPoints point:[CGPoint])
