@@ -20,6 +20,9 @@
 		5D212EA4282559C1009F5930 /* Stand.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA0282559BF009F5930 /* Stand.mov */; };
 		5D212EA5282559C1009F5930 /* Biceps.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA1282559C0009F5930 /* Biceps.mov */; };
 		5D212EA6282559C1009F5930 /* PushUp.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA2282559C0009F5930 /* PushUp.mov */; };
+		5D212EA828264E60009F5930 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EA728264E60009F5930 /* SearchTableViewController.swift */; };
+		5D212EAC2826566B009F5930 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EAB2826566B009F5930 /* SearchViewController.swift */; };
+		5D212EB028265CAB009F5930 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EAF28265CAB009F5930 /* Mode.swift */; };
 		5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */; };
 		5D4A60E027ECD166004070D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */; };
 		5D5BB0D827C7816B00CF2920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */; };
@@ -110,6 +113,9 @@
 		5D212EA0282559BF009F5930 /* Stand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stand.mov; sourceTree = "<group>"; };
 		5D212EA1282559C0009F5930 /* Biceps.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Biceps.mov; sourceTree = "<group>"; };
 		5D212EA2282559C0009F5930 /* PushUp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PushUp.mov; sourceTree = "<group>"; };
+		5D212EA728264E60009F5930 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		5D212EAB2826566B009F5930 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5D212EAF28265CAB009F5930 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomModel.swift; sourceTree = "<group>"; };
 		5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D608257281C364F00A76B99 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -198,6 +204,9 @@
 		4F10C1F126F748D10032B955 = {
 			isa = PBXGroup;
 			children = (
+				5D212EAF28265CAB009F5930 /* Mode.swift */,
+				5D212EAB2826566B009F5930 /* SearchViewController.swift */,
+				5D212EA728264E60009F5930 /* SearchTableViewController.swift */,
 				5D212E9E282559AB009F5930 /* SampleVideo */,
 				4F10C1FC26F748D10032B955 /* FypTest_APP */,
 				4F10C1FB26F748D10032B955 /* Products */,
@@ -584,7 +593,9 @@
 				8304582428240152007B58E1 /* RecordDetailModel.swift in Sources */,
 				835E26F127BA9E0500CD79BB /* SignOut.swift in Sources */,
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
+				5D212EB028265CAB009F5930 /* Mode.swift in Sources */,
 				839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */,
+				5D212EA828264E60009F5930 /* SearchTableViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
 				839CD48A2822C45D00B24338 /* RecordSelectionViewController.swift in Sources */,
 				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
@@ -609,6 +620,7 @@
 				839CD4852822B95C00B24338 /* RecordChallengeTableViewCell.swift in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,
 				83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */,
+				5D212EAC2826566B009F5930 /* SearchViewController.swift in Sources */,
 				83F549FA282180E700A48745 /* PushUpTraining_Predictor.swift in Sources */,
 				5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */,
 				83A361DB28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift in Sources */,
