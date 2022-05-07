@@ -31,7 +31,6 @@
 		5D9F74B42821410B0094DB19 /* Biceps_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F74B32821410B0094DB19 /* Biceps_Predictor.swift */; };
 		5D9F74B62821442C0094DB19 /* BicepsChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */; };
 		5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */; };
-		5DA6A1E627EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */; };
 		8304581F2823F5C6007B58E1 /* RecordSelectionNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */; };
 		8304582228240037007B58E1 /* RecordDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304582128240037007B58E1 /* RecordDetailTableViewController.swift */; };
 		8304582428240152007B58E1 /* RecordDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304582328240152007B58E1 /* RecordDetailModel.swift */; };
@@ -123,7 +122,6 @@
 		5D9F74B32821410B0094DB19 /* Biceps_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biceps_Predictor.swift; sourceTree = "<group>"; };
 		5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsChallengeViewController.swift; sourceTree = "<group>"; };
 		5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGymRoomTableViewCell.swift; sourceTree = "<group>"; };
-		5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomTableViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSelectionNavigationViewController.swift; sourceTree = "<group>"; };
 		8304582128240037007B58E1 /* RecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewController.swift; sourceTree = "<group>"; };
 		8304582328240152007B58E1 /* RecordDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailModel.swift; sourceTree = "<group>"; };
@@ -330,7 +328,6 @@
 				83329E2C2792CCAB00600104 /* SearchMapViewController.swift */,
 				5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */,
 				5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */,
-				5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */,
 				833DD3D528267C9F003028A5 /* SearchGymViewController.swift */,
 			);
 			path = SearchMapView;
@@ -591,7 +588,6 @@
 				839CD4872822B97B00B24338 /* RecordChallengeModel.swift in Sources */,
 				4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */,
 				83329E272792CC7800600104 /* TrainingSelectionViewController.swift in Sources */,
-				5DA6A1E627EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift in Sources */,
 				835E26E227BA8A1400CD79BB /* LoginViewController.swift in Sources */,
 				839CD47A28228D3D00B24338 /* Stand_VideoCapture.swift in Sources */,
 				5D9F74B62821442C0094DB19 /* BicepsChallengeViewController.swift in Sources */,
