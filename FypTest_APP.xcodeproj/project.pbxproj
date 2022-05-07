@@ -20,9 +20,6 @@
 		5D212EA4282559C1009F5930 /* Stand.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA0282559BF009F5930 /* Stand.mov */; };
 		5D212EA5282559C1009F5930 /* Biceps.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA1282559C0009F5930 /* Biceps.mov */; };
 		5D212EA6282559C1009F5930 /* PushUp.mov in Resources */ = {isa = PBXBuildFile; fileRef = 5D212EA2282559C0009F5930 /* PushUp.mov */; };
-		5D212EA828264E60009F5930 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EA728264E60009F5930 /* SearchTableViewController.swift */; };
-		5D212EAC2826566B009F5930 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EAB2826566B009F5930 /* SearchViewController.swift */; };
-		5D212EB028265CAB009F5930 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D212EAF28265CAB009F5930 /* Mode.swift */; };
 		5D4A60DD27ECCD13004070D6 /* SearchGymRoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */; };
 		5D4A60E027ECD166004070D6 /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 5D4A60DF27ECD166004070D6 /* FirebaseStorageSwift-Beta */; };
 		5D5BB0D827C7816B00CF2920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */; };
@@ -45,6 +42,8 @@
 		83329E3527931C8B00600104 /* TrainingRecord2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */; };
 		83329E3727931C9E00600104 /* TrainingRecord3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */; };
 		83329E3927931CAA00600104 /* TrainingRecord4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */; };
+		833DD3D628267C9F003028A5 /* SearchGymViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DD3D528267C9F003028A5 /* SearchGymViewController.swift */; };
+		833DD3D928268BBF003028A5 /* MakeHyperLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833DD3D828268BBF003028A5 /* MakeHyperLink.swift */; };
 		835E26DC27BA850600CD79BB /* FirstPageNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */; };
 		835E26DE27BA89D700CD79BB /* LoginFirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E26DD27BA89D700CD79BB /* LoginFirstPageViewController.swift */; };
 		835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835E26DF27BA8A0D00CD79BB /* SignUpViewController.swift */; };
@@ -113,9 +112,6 @@
 		5D212EA0282559BF009F5930 /* Stand.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Stand.mov; sourceTree = "<group>"; };
 		5D212EA1282559C0009F5930 /* Biceps.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = Biceps.mov; sourceTree = "<group>"; };
 		5D212EA2282559C0009F5930 /* PushUp.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = PushUp.mov; sourceTree = "<group>"; };
-		5D212EA728264E60009F5930 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		5D212EAB2826566B009F5930 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		5D212EAF28265CAB009F5930 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymRoomModel.swift; sourceTree = "<group>"; };
 		5D5BB0D727C7816B00CF2920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5D608257281C364F00A76B99 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
@@ -137,6 +133,8 @@
 		83329E3427931C8A00600104 /* TrainingRecord2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord2ViewController.swift; sourceTree = "<group>"; };
 		83329E3627931C9E00600104 /* TrainingRecord3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord3ViewController.swift; sourceTree = "<group>"; };
 		83329E3827931CAA00600104 /* TrainingRecord4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingRecord4ViewController.swift; sourceTree = "<group>"; };
+		833DD3D528267C9F003028A5 /* SearchGymViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGymViewController.swift; sourceTree = "<group>"; };
+		833DD3D828268BBF003028A5 /* MakeHyperLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeHyperLink.swift; sourceTree = "<group>"; };
 		835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageNavigationController.swift; sourceTree = "<group>"; };
 		835E26DD27BA89D700CD79BB /* LoginFirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginFirstPageViewController.swift; path = Login_System/LoginFirstPageViewController.swift; sourceTree = "<group>"; };
 		835E26DF27BA8A0D00CD79BB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpViewController.swift; path = Login_System/SignUpViewController.swift; sourceTree = "<group>"; };
@@ -204,9 +202,6 @@
 		4F10C1F126F748D10032B955 = {
 			isa = PBXGroup;
 			children = (
-				5D212EAF28265CAB009F5930 /* Mode.swift */,
-				5D212EAB2826566B009F5930 /* SearchViewController.swift */,
-				5D212EA728264E60009F5930 /* SearchTableViewController.swift */,
 				5D212E9E282559AB009F5930 /* SampleVideo */,
 				4F10C1FC26F748D10032B955 /* FypTest_APP */,
 				4F10C1FB26F748D10032B955 /* Products */,
@@ -295,6 +290,14 @@
 			path = viewController;
 			sourceTree = "<group>";
 		};
+		833DD3D728268BA1003028A5 /* HyperLink */ = {
+			isa = PBXGroup;
+			children = (
+				833DD3D828268BBF003028A5 /* MakeHyperLink.swift */,
+			);
+			path = HyperLink;
+			sourceTree = "<group>";
+		};
 		836EFF6B281A8193009FFE4A /* TrainingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,10 +324,12 @@
 		836EFF6D281A8212009FFE4A /* SearchMapView */ = {
 			isa = PBXGroup;
 			children = (
+				833DD3D728268BA1003028A5 /* HyperLink */,
 				83329E2C2792CCAB00600104 /* SearchMapViewController.swift */,
 				5D4A60DC27ECCD13004070D6 /* SearchGymRoomModel.swift */,
 				5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */,
 				5DA6A1E527EE0D6F00A2D80A /* SearchGymRoomTableViewController.swift */,
+				833DD3D528267C9F003028A5 /* SearchGymViewController.swift */,
 			);
 			path = SearchMapView;
 			sourceTree = "<group>";
@@ -593,9 +598,7 @@
 				8304582428240152007B58E1 /* RecordDetailModel.swift in Sources */,
 				835E26F127BA9E0500CD79BB /* SignOut.swift in Sources */,
 				835E26E027BA8A0D00CD79BB /* SignUpViewController.swift in Sources */,
-				5D212EB028265CAB009F5930 /* Mode.swift in Sources */,
 				839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */,
-				5D212EA828264E60009F5930 /* SearchTableViewController.swift in Sources */,
 				835E26E727BA8A8900CD79BB /* Utilities.swift in Sources */,
 				839CD48A2822C45D00B24338 /* RecordSelectionViewController.swift in Sources */,
 				836EFF78281A8F8C009FFE4A /* Pushup.mlmodel in Sources */,
@@ -607,6 +610,7 @@
 				83045826282406FE007B58E1 /* RecordDetailTableViewCell.swift in Sources */,
 				83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */,
 				4FAB64CD26F8FC6C008BFF14 /* predictor.swift in Sources */,
+				833DD3D928268BBF003028A5 /* MakeHyperLink.swift in Sources */,
 				839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */,
 				4F10C20226F748D10032B955 /* ViewController.swift in Sources */,
 				83F549F62821809A00A48745 /* StandTraining_ViewController.swift in Sources */,
@@ -620,7 +624,6 @@
 				839CD4852822B95C00B24338 /* RecordChallengeTableViewCell.swift in Sources */,
 				4F10C1FE26F748D10032B955 /* AppDelegate.swift in Sources */,
 				83F549EE282167A900A48745 /* SitTraining_Predictor.swift in Sources */,
-				5D212EAC2826566B009F5930 /* SearchViewController.swift in Sources */,
 				83F549FA282180E700A48745 /* PushUpTraining_Predictor.swift in Sources */,
 				5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */,
 				83A361DB28227D10005F9C30 /* Challenge_SelectionViewController_Chest.swift in Sources */,
@@ -640,6 +643,7 @@
 				839CD47628228D1100B24338 /* PushUp_VideoCapture.swift in Sources */,
 				836EFF77281A8F8C009FFE4A /* Biceps.mlmodel in Sources */,
 				836EFF7A281A8F8C009FFE4A /* Stand.mlmodel in Sources */,
+				833DD3D628267C9F003028A5 /* SearchGymViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

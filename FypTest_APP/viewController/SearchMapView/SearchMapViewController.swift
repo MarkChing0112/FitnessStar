@@ -14,9 +14,10 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var telePhoneLabel: UILabel!
-    @IBOutlet weak var websiteLabel: UILabel!
+
     @IBOutlet weak var gymRoomNameLabel: UILabel!
     
+    @IBOutlet weak var WebsiteTextView: UITextView!
     
     //map
     let manager = CLLocationManager()
@@ -43,7 +44,10 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         gymRoomNameLabel.text = GymRoom_name
         addressLabel.text = Address
         telePhoneLabel.text = TelPhone
-        websiteLabel.text = Website
+        //Call HyperLink function
+        let attributedString = NSAttributedString.makeHypelink(for: "\(Website!)", in: "\(Website!)", as: "\(Website!)")
+
+        WebsiteTextView.attributedText = attributedString
         
         
         // call search the location function
