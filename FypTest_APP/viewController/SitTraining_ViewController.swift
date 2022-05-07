@@ -153,7 +153,8 @@ class SitTraining_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //get star time
+        Addstartdate()
         //get firebase data
         Read_Data()
         //setup camera
@@ -189,7 +190,7 @@ class SitTraining_ViewController: UIViewController {
     }
 
     var time3 : String = ""
-    func Addstardate(){
+    func Addstartdate(){
         let date = Date()
         time3 = formatter2.string(from: date)
     }
