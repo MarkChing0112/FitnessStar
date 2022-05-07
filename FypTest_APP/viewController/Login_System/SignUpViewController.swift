@@ -84,7 +84,7 @@ class SignUpViewController: UIViewController {
         
     }
     //insert user data to database
-    func FirebaseinsertData_Senior(){
+    func FirebaseinsertData(){
         // Create cleaned versions of the data
         let firstName = firstNameText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         let lastName = lastNameText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -106,15 +106,23 @@ class SignUpViewController: UIViewController {
                 let ref = Database.database().reference()
                 // User was created successfully, now store the first name and last name
                 let db = Firestore.firestore()
-                ref.child("users").child(result!.user.uid).setValue(["User_Name":User_Name,"firstname":firstName, "lastname":lastName,"uid": result!.user.uid ])
-                db.collection("USERS").document("User_Data").setData(["User_Name":User_Name,"firstname":firstName, "lastname":lastName,"uid": result!.user.uid ]) { (error) in
-                    
+                //realtime
+                ref.child("users").child(result!.user.uid).setValue([
+                    "User_Name":User_Name,
+                    "firstname":firstName,
+                    "lastname":lastName,
+                    "uid": result!.user.uid ])
+                //firestore
+                db.collection("USERS").document(result!.user.uid).setData([
+                    "User_Name":User_Name,
+                    "firstname":firstName,
+                    "lastname":lastName,
+                    "uid": result!.user.uid ]) { (error) in
                     if error != nil {
                         // Show error message
                         self.showError("Error saving user data")
                     }
                 }
-                
                 // Transition to the home screen
                 self.transitionToHome()
             }
@@ -125,7 +133,7 @@ class SignUpViewController: UIViewController {
     //show senior confirm alert
     func showAlert() {
         let alert = UIAlertController(title: "Your Account detail", message: "did you confirm data is true?", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.FirebaseinsertData_Senior()}))
+        alert.addAction(UIAlertAction(title: "Sure!", style: .default, handler: {action in self.FirebaseinsertData()}))
         alert.addAction(UIAlertAction(title: "no!", style: .cancel, handler: nil))
         present(alert, animated: true)
     }
