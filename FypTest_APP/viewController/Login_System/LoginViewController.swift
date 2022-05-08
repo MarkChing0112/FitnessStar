@@ -8,7 +8,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -21,7 +21,18 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
-        // Do any additional setup after loading the view.
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        emailTextField.returnKeyType = UIReturnKeyType.done
+        passwordTextField.returnKeyType = UIReturnKeyType.done
+    }
+    
+    // touch space to close keyboard
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        self.view?.endEditing(false)
     }
     
     func setUpElements() {

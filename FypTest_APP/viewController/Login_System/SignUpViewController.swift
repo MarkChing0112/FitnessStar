@@ -36,6 +36,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         passwordText.returnKeyType = UIReturnKeyType.done
     }
     
+    // touch space to close keyboard
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         firstNameText.resignFirstResponder()
         lastNameText.resignFirstResponder()
@@ -43,11 +44,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         User_NameText.resignFirstResponder()
         passwordText.resignFirstResponder()
         self.view?.endEditing(false)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view?.endEditing(false)
-        return true
     }
     
     func setUpElements() {
