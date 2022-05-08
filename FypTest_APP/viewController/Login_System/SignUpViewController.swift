@@ -8,7 +8,8 @@
 import UIKit
 import Firebase
 import FirebaseAuth
-class SignUpViewController: UIViewController {
+import SwiftUI
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var firstNameText: UITextField!
     @IBOutlet weak var lastNameText: UITextField!
@@ -22,6 +23,31 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpElements()
+        firstNameText.delegate = self
+        lastNameText.delegate = self
+        emailText.delegate = self
+        User_NameText.delegate = self
+        passwordText.delegate = self
+        
+        firstNameText.returnKeyType = UIReturnKeyType.done
+        lastNameText.returnKeyType = UIReturnKeyType.done
+        emailText.returnKeyType = UIReturnKeyType.done
+        User_NameText.returnKeyType = UIReturnKeyType.done
+        passwordText.returnKeyType = UIReturnKeyType.done
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        firstNameText.resignFirstResponder()
+        lastNameText.resignFirstResponder()
+        emailText.resignFirstResponder()
+        User_NameText.resignFirstResponder()
+        passwordText.resignFirstResponder()
+        self.view?.endEditing(false)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view?.endEditing(false)
+        return true
     }
     
     func setUpElements() {
