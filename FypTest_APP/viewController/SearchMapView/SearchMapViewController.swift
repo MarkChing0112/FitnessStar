@@ -68,6 +68,12 @@ class SearchMapViewController: UIViewController, CLLocationManagerDelegate {
         getGymRoomImage()
     }
     
+    @IBAction func HomeBTNOnTap(_ sender: Any) {
+        let firstPageNavigationController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.firstPageNavigationController) as? FirstPageNavigationController
+        view.window?.rootViewController = firstPageNavigationController
+        view.window?.makeKeyAndVisible()
+    }
+    
     // get gymRoom Image from firebase
     func getGymRoomImage() {
         let storage = Storage.storage()

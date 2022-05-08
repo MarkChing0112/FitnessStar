@@ -31,7 +31,6 @@
 		5D9F74B42821410B0094DB19 /* Biceps_Predictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F74B32821410B0094DB19 /* Biceps_Predictor.swift */; };
 		5D9F74B62821442C0094DB19 /* BicepsChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */; };
 		5DA6A1E427EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */; };
-		8304581F2823F5C6007B58E1 /* RecordSelectionNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */; };
 		8304582228240037007B58E1 /* RecordDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304582128240037007B58E1 /* RecordDetailTableViewController.swift */; };
 		8304582428240152007B58E1 /* RecordDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8304582328240152007B58E1 /* RecordDetailModel.swift */; };
 		83045826282406FE007B58E1 /* RecordDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83045825282406FE007B58E1 /* RecordDetailTableViewCell.swift */; };
@@ -65,7 +64,6 @@
 		838BF7E12792B6110015AC84 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E02792B6110015AC84 /* FirebaseMessaging */; };
 		838BF7E32792B6110015AC84 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E22792B6110015AC84 /* FirebasePerformance */; };
 		838BF7E52792B6110015AC84 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 838BF7E42792B6110015AC84 /* FirebaseStorage */; };
-		839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */; };
 		839CD46A28228C5600B24338 /* SitChallenge_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46928228C5600B24338 /* SitChallenge_ViewController.swift */; };
 		839CD46C28228C7C00B24338 /* PushUpChallenge_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46B28228C7C00B24338 /* PushUpChallenge_ViewController.swift */; };
 		839CD46E28228CA300B24338 /* StandChallenge_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839CD46D28228CA300B24338 /* StandChallenge_ViewController.swift */; };
@@ -122,7 +120,6 @@
 		5D9F74B32821410B0094DB19 /* Biceps_Predictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Biceps_Predictor.swift; sourceTree = "<group>"; };
 		5D9F74B52821442C0094DB19 /* BicepsChallengeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsChallengeViewController.swift; sourceTree = "<group>"; };
 		5DA6A1E327EE0B7B00A2D80A /* searchGymRoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchGymRoomTableViewCell.swift; sourceTree = "<group>"; };
-		8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSelectionNavigationViewController.swift; sourceTree = "<group>"; };
 		8304582128240037007B58E1 /* RecordDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewController.swift; sourceTree = "<group>"; };
 		8304582328240152007B58E1 /* RecordDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailModel.swift; sourceTree = "<group>"; };
 		83045825282406FE007B58E1 /* RecordDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -148,7 +145,6 @@
 		836EFF74281A8F8C009FFE4A /* Pushup.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Pushup.mlmodel; path = Transfer/Pushup.mlmodel; sourceTree = SOURCE_ROOT; };
 		836EFF75281A8F8C009FFE4A /* Sit.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Sit.mlmodel; path = Transfer/Sit.mlmodel; sourceTree = SOURCE_ROOT; };
 		836EFF76281A8F8C009FFE4A /* Stand.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = Stand.mlmodel; path = Transfer/Stand.mlmodel; sourceTree = SOURCE_ROOT; };
-		839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BicepsRecordViewController.swift; sourceTree = "<group>"; };
 		839CD46928228C5600B24338 /* SitChallenge_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SitChallenge_ViewController.swift; sourceTree = "<group>"; };
 		839CD46B28228C7C00B24338 /* PushUpChallenge_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushUpChallenge_ViewController.swift; sourceTree = "<group>"; };
 		839CD46D28228CA300B24338 /* StandChallenge_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandChallenge_ViewController.swift; sourceTree = "<group>"; };
@@ -349,7 +345,6 @@
 			isa = PBXGroup;
 			children = (
 				8304582028240002007B58E1 /* RecordDetailTableView */,
-				839B89CC27EB008200FC0CBF /* BicepsRecordViewController.swift */,
 				5D608257281C364F00A76B99 /* RecordTableViewCell.swift */,
 				5D60825B281C36AA00A76B99 /* RecordTableViewController.swift */,
 				5D817F1C281D2281005FCD70 /* RecordModel.swift */,
@@ -428,7 +423,6 @@
 				83329E2E2792CCB600600104 /* HomeViewController.swift */,
 				835E26DB27BA850600CD79BB /* FirstPageNavigationController.swift */,
 				839CD4892822C45D00B24338 /* RecordSelectionViewController.swift */,
-				8304581E2823F5C5007B58E1 /* RecordSelectionNavigationViewController.swift */,
 			);
 			name = "Common View";
 			sourceTree = "<group>";
@@ -583,7 +577,6 @@
 				836EFF79281A8F8C009FFE4A /* Sit.mlmodel in Sources */,
 				839CD47228228CD700B24338 /* Sit_Predictor.swift in Sources */,
 				83F549F42821807D00A48745 /* StandTraining_Predictor.swift in Sources */,
-				8304581F2823F5C6007B58E1 /* RecordSelectionNavigationViewController.swift in Sources */,
 				5D9F74B42821410B0094DB19 /* Biceps_Predictor.swift in Sources */,
 				839CD4872822B97B00B24338 /* RecordChallengeModel.swift in Sources */,
 				4F10C21226F74EEB0032B955 /* VideoCapture.swift in Sources */,
@@ -604,7 +597,6 @@
 				83329E2F2792CCB600600104 /* HomeViewController.swift in Sources */,
 				839CD4812822B7B600B24338 /* Record_ChallengeViewController.swift in Sources */,
 				8304582228240037007B58E1 /* RecordDetailTableViewController.swift in Sources */,
-				839B89CD27EB008200FC0CBF /* BicepsRecordViewController.swift in Sources */,
 				83F549FC282180FA00A48745 /* PushUpTraining_ViewController.swift in Sources */,
 				83045826282406FE007B58E1 /* RecordDetailTableViewCell.swift in Sources */,
 				83F549F8282180D400A48745 /* PushUpTraining_VideoCapture.swift in Sources */,
