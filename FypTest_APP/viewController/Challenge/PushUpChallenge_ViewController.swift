@@ -89,9 +89,9 @@ class PushUpChallenge_ViewController: UIViewController {
         return Label }()
     
     private let trainingcLabel: UILabel = {
-        let Label = UILabel(frame: CGRect(x: 295, y: 126, width: 68, height: 62))
+        let Label = UILabel(frame: CGRect(x: 285, y: 126, width: 68, height: 62))
         Label.text = "0"
-        Label.bounds.origin = CGPoint(x: 295, y: 126)
+        Label.bounds.origin = CGPoint(x: 285, y: 126)
         Label.font = UIFont.boldSystemFont(ofSize: Label.font.pointSize)
         Label.font = Label.font.withSize(25)
         Label.textColor = UIColor.white
