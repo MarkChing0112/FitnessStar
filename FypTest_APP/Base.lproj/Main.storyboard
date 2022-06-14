@@ -277,7 +277,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3dLogoBg" translatesAutoresizingMaskIntoConstraints="NO" id="P6Q-zx-vD3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3dLogoBg3x" translatesAutoresizingMaskIntoConstraints="NO" id="P6Q-zx-vD3">
                                 <rect key="frame" x="0.0" y="-317" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="7WQ-LP-D84"/>
@@ -3862,7 +3862,7 @@ TEgQVkM
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3dLogoBg" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-MU-ot7">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3dLogoBg3x" translatesAutoresizingMaskIntoConstraints="NO" id="6nm-MU-ot7">
                                 <rect key="frame" x="0.0" y="-254" width="414" height="896"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="afJ-gv-XWb"/>
@@ -4069,7 +4069,7 @@ TEgQVkM
                                     <constraint firstAttribute="width" constant="314" id="VT7-gZ-1Og"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIconLogo-1" translatesAutoresizingMaskIntoConstraints="NO" id="cjg-q1-kVs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon_HomeVc" translatesAutoresizingMaskIntoConstraints="NO" id="cjg-q1-kVs">
                                 <rect key="frame" x="107" y="88" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8SF-D0-JIH"/>
@@ -4143,7 +4143,7 @@ TEgQVkM
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIconLogo-1" translatesAutoresizingMaskIntoConstraints="NO" id="XBg-X6-yzM">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon_HomeVc" translatesAutoresizingMaskIntoConstraints="NO" id="XBg-X6-yzM">
                                 <rect key="frame" x="105" y="88" width="205" height="204"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="205" id="iYq-8Q-TpZ"/>
@@ -4471,8 +4471,8 @@ TEgQVkM
         <segue reference="FQb-Mc-Zy8"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="3dLogoBg" width="390" height="844"/>
-        <image name="AppIconLogo-1" width="128" height="138"/>
+        <image name="3dLogoBg3x" width="1170" height="2532"/>
+        <image name="AppIcon_HomeVc" width="108" height="108"/>
         <image name="FullBtn_themeGradient" width="352" height="118"/>
         <image name="GymImage_inner" width="364" height="194"/>
         <image name="Icon_110_Biceps" width="110" height="110"/>
